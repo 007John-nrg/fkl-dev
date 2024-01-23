@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Menu from './Components/Menu/Menu';
+import Home from './Pages/Home/Home';
+import AcumaticaErp from './Pages/AcumaticaErp/AcumaticaErp';
+import Service from './Pages/Services/Service';
+import HrPayroll from './Pages/HrPayroll/HrPayroll';
+import Pricing from './Pages/Pricing/Pricing';
+import Contact from './Pages/Contact/Contact';
+import Work from './Pages/Work/Work';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div style={{ display: 'flex' }}>
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="AcumaticaErp" element={<AcumaticaErp />} />
+          <Route path="Service" element={<Service />} />
+          <Route path="Pricing" element={<Pricing />} />
+          <Route path="Payspace" element={<HrPayroll />} />
+          <Route path="Career" element={<Work />} />
+          <Route path="Contact" element={<Contact />} />  
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
