@@ -4,7 +4,11 @@ const Home = () => {
   const homeStyle = {
     marginLeft: '21%',
     padding: '1.5rem',
-    height: '300vh',
+    minHeight: '100vh',
+    backgroundImage: 'url("../../assets/fkl2.png")', 
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    color: 'white',
   };
 
   return (
