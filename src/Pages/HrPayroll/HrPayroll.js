@@ -1,8 +1,11 @@
 import React from 'react'
+import './HrPayroll.css'
 
 const HrPayroll = () => {
   return (
-    <div>HrPayroll</div>
+    <div className='payrollContainer'>
+      HrPayroll
+    </div>
   )
 }
 

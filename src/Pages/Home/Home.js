@@ -1,21 +1,23 @@
 import React from 'react';
+import './Home.css';
+import Landing from '../../Components/landing';
+import IndustryErp from '../../Components/industryErp';
+import Portfolio from '../../Components/portfolio';
+import Contact from '../../Components/Contact';
+import Footer from '../../Components/Footer';
 
 const Home = () => {
-  const homeStyle = {
-    marginLeft: '21%',
-    padding: '1.5rem',
-    minHeight: '100vh',
-    backgroundImage: 'url("../../assets/fkl2.png")', 
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    color: 'white',
-  };
 
   return (
-    <div style={homeStyle}>
-      Home Page
+    <div className='homeContainer'>
+      <Landing />
+      <IndustryErp />
+      <Portfolio />
+      <Contact />
+      <Footer />
     </div>
   );
 };
 
 export default Home;
+

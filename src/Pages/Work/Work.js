@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './Work.css'
 
 const Work = () => {
   return (
-    <div>Work</div>
+    <div className='workContainer'>
+      Work
+    </div>
   )
 }
 

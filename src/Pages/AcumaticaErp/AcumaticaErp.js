@@ -3,7 +3,9 @@ import './AcumaticaErp.css'
 
 const AcumaticaErp = () => {
   return (
-    <div className='acumaticaContainer'>AcumaticaErp</div>
+    <div className='acumaticaContainer'>
+      AcumaticaErp
+    </div>
   )
 }
 

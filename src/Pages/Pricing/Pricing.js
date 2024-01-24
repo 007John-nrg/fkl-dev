@@ -1,8 +1,11 @@
 import React from 'react'
+import './Pricing.css'
 
 const Pricing = () => {
   return (
-    <div>Pricing</div>
+    <div className='pricingContainer'>
+      Pricing
+    </div>
   )
 }
 
