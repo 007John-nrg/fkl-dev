@@ -3,21 +3,18 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './components.css'
-import AfroStyles from './AfroStyle';
+import Companies from './Companies';
 
 const Portfolio = () => {
 
   const settings = {
     dots: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 1000,
-    customPaging: function(i) { 
-      return <span className="custom-dot"></span>;
-    }
+    autoplaySpeed: 3000,
   };
 
   return (
@@ -27,7 +24,7 @@ const Portfolio = () => {
       </div>
       <div className="portfolioSlider">
         <Slider {...settings}>
-          {AfroStyles.map((item) => (
+          {Companies.map((item) => (
             <div key={item.id}>
               <div className="img-body">
                 <img src={item.src} alt={item.alt} />

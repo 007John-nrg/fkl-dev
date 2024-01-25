@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import './components.css';
 
 const OpenHours = () => {
-const currentDay = new Date().getDay();
+  const currentDay = new Date().getDay();
 
   const openHours = [
     "Closed",
@@ -19,14 +20,10 @@ const currentDay = new Date().getDay();
     <div className="open-hours">
       <h2>Hours</h2>
       <ul>
-        {/* Display open hours for the current day */}
-        <li>{getDayOfWeek(currentDay)}: {openHours[currentDay]}</li>
-        {/* Display arrow to toggle additional open hours */}
+        <li className="selected">{getDayOfWeek(currentDay)}: {openHours[currentDay]}</li>
         <li onClick={() => setShowAllHours(!showAllHours)} className="toggle-arrow">
-          {/* {showAllHours ? 'Hide' : 'Show'} other days */}
-          
+          {showAllHours ? 'Hide' : 'Show'} other days {/* Toggle arrow text */}
         </li>
-        {/* Display additional open hours if toggled */}
         {showAllHours && (
           openHours.map((hours, index) => (
             index !== currentDay && (
@@ -39,7 +36,6 @@ const currentDay = new Date().getDay();
   );
 };
 
-// Function to get the day of the week from its index
 const getDayOfWeek = (dayIndex) => {
   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   return daysOfWeek[dayIndex];

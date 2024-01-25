@@ -1,4 +1,4 @@
-const AfroStyles = [
+const Companies = [
     {
       id: 1,
       title: "Company #1",
@@ -78,4 +78,4 @@ const AfroStyles = [
     },
 ]
   
-  export default AfroStyles;
+  export default Companies;

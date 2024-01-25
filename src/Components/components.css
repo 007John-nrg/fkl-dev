@@ -1,8 +1,3 @@
-
-   .body{
-    font-family: Raleway , sans-serif;;
-   }
-   
    /* Menu.css */
 
 .menuContainer {
@@ -112,18 +107,18 @@
 
     /* IndustryERP CSS */
 
-  h1 {
+  /* h1 {
     font-size: 70px;
     font-weight: 600;
     background-image: linear-gradient(to left, #553c9a, #b393d3);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-  }
+  } */
 
   .container{
     font-size: 30px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     text-align: center;
     width: 100%;
   }
@@ -183,30 +178,69 @@
     text-align: center; 
   }
 
+    /* industry erps styles */
+
+  .industryContainer {
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .industyBox {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .erpBox {
+    width: calc(33.33% - 20px);
+    padding: 1.3rem;
+  }
+
+  .erpBox .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+  }
+
+  .erpBox .image img {
+    width: 100%; 
+    height: auto;
+  }
+  .erpBox h4 {
+    margin-top: 10px;
+  }
+
+  .erpBox p {
+    font-size: 14px;
+  }
+
+
   /* portfolio styles */
 
   .portfolioContainer {
     text-align: start;
-    margin-top: 5rem;
     padding: 1.5rem;
   }
 
   .sectionTitle {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: gray;
   }
 
   .portfolioSlider {
     margin: 0 auto;
-    /* margin-left: -3rem; */
-    /* width: 80%; */
-    /* height: 80vh; */
-    border-color: white;
+    padding-left: 3rem;
   }
 
   .img-body {
-    width: 340px;
+    width: 400px;
     aspect-ratio: 1/1;
     display: inline-block;
   }
@@ -240,12 +274,46 @@
   /* contact styles */
 
   .contactBox {
-    /* text-align: center; */
-    /* width: 80%; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  .open-hours {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .open-hours h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .open-hours ul {
+    list-style-type: none;
+    padding: 0;
+    /* display: flex; */
+  }
+  
+  .open-hours li {
+    margin-bottom: 5px;
+  }
+
+  .selected {
+    color: #64a953;
+    font-size: 1rem;
+  }
+  
+  
+  .toggle-arrow {
+    cursor: pointer;
+    color: blue; 
+  }
+
+  .portalLink a {
+    color: #111;
+      text-decoration: none;
   }
 
   .banner {

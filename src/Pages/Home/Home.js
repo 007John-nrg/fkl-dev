@@ -5,13 +5,15 @@ import IndustryErp from '../../Components/industryErp';
 import Portfolio from '../../Components/portfolio';
 import Contact from '../../Components/Contact';
 import Footer from '../../Components/Footer';
+import Industry from '../../Components/industry';
 
 const Home = () => {
 
   return (
     <div className='homeContainer'>
       <Landing />
-      <IndustryErp />
+      {/* <IndustryErp /> */}
+      <Industry />
       <Portfolio />
       <Contact />
       <Footer />
