@@ -1,4 +1,8 @@
 
+   .body{
+    font-family: Raleway , sans-serif;;
+   }
+   
    /* Menu.css */
 
 .menuContainer {
@@ -102,4 +106,78 @@
     background-color: #64a953;
     cursor: pointer;
     border: #64a953;
+  }
+
+
+    /* IndustryERP CSS */
+
+  h1 {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .container{
+    font-size: 30px;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
+  }
+  .content{
+    font-weight:bold;
+    align-items: center;
+    font-size: 15px;
+    width: auto;
+    height: 100vh;
+    margin-top: 20px;
+  }
+
+  .solutions{
+    display: flex;
+    font-style:normal;
+    box-sizing: border-box;
+    position: absolute;
+  }
+
+  .solution{
+    flex: 1;
+    padding: 20px;
+    /* border: red 5px solid; */
+    max-height: 100%;
+  }
+
+  .pictures{
+     
+    /* height:fit-content; */
+    /* border: green solid 5px; */
+    display: flex;
+    box-sizing: border-box;
+    position:relative;
+  }
+  .picture{
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 0px;
+    max-height: 100%;
+    /* border: red 5px solid;     */
+  }
+
+  .drop {
+    margin-top: 30px;
+    height: auto;
+    display: block;
+  }
+
+  .heading{
+    text-decoration:wavy;
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333; 
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    border-radius: 5px; 
+    text-align: center; 
   }
