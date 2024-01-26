@@ -9,7 +9,12 @@ const Contact = () => {
         <h5>CONTACT US</h5>
       </div>
       <div className='portalLink'>
-        <a href="">Sign up now on our self service portal</a>
+        <a 
+        href="https://acumatica.futurekenya.com/SelfServicePortal"
+        target="_blank"
+        >
+          Sign up now on our self service portal
+        </a>
       </div>
       <OpenHours />
 
