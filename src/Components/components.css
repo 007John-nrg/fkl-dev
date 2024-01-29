@@ -31,14 +31,14 @@
     margin-bottom: 4.5rem;
   }
   
-  .menuBox ul {
+  .menuList {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
   
-  .menuBox li {
+  .ListLink {
     margin-bottom: 20px;
     font-size: 16px;
   }
@@ -53,9 +53,23 @@
     font-weight: bold;
   }
 
+  .sublink {
+    list-style: none;
+  }
+
+  .sublinkList {
+    margin-left: -.7rem;
+    padding-top: 1rem;
+  }
+
   .activeLink {
     color: green;
   }
+
+  .visible {
+    display: none;
+  }
+  
   
   /* LANDING CSS */
    
@@ -107,18 +121,8 @@
 
     /* IndustryERP CSS */
 
-  /* h1 {
-    font-size: 70px;
-    font-weight: 600;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-  } */
-
   .container{
     font-size: 30px;
-    /* min-height: 100vh; */
     text-align: center;
     width: 100%;
   }
@@ -141,14 +145,10 @@
   .solution{
     flex: 1;
     padding: 20px;
-    /* border: red 5px solid; */
     max-height: 100%;
   }
 
   .pictures{
-     
-    /* height:fit-content; */
-    /* border: green solid 5px; */
     display: flex;
     box-sizing: border-box;
     position:relative;
@@ -158,7 +158,6 @@
     padding: 20px;
     padding-bottom: 0px;
     max-height: 100%;
-    /* border: red 5px solid;     */
   }
 
   .drop {
@@ -293,7 +292,6 @@
   .open-hours ul {
     list-style-type: none;
     padding: 0;
-    /* display: flex; */
   }
   
   .open-hours li {
@@ -316,171 +314,44 @@
       text-decoration: none;
   }
 
-  .banner {
-    max-height: 100%;
-    height: 500px;
-    box-sizing: border-box;
-    text-align: center;
-    background-image: linear-gradient(to left, #553c9a, #b393d3);
-   
-  }
-  
-  .networks {
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .networks-outer {
-    display: table;
-    position: relative;
-    width: 5em;
-    height: 5em;
-    border: 2px solid white;
-    border-radius: 4em;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .networks-outer a {
-    display: table-cell;
-    vertical-align: middle;
-    color: white;
-  }
-  
-  .fa:before {
-    font-size: 40px;
-  }
-  
-  .networks:hover .networks-outer {
-    background: rgba(255,255,255,.5);
-    cursor: pointer;
-  }
-  
-  /**** Social-Network-Specific ****/
-  
-  .networks:hover .fa-facebook {
-    color: rgb(59,89,152);
-  }
-  
-  #facebook.networks-outer:hover {
-    border-color: rgb(59,89,152);
-    border: green solid 2px;
-  }
-  
-  .networks:hover .fa-instagram {
-    color: black;
-  }
-  
-  #instagram.networks-outer:hover {
-    border-color: black;
-  }
-  
-  .networks:hover .fa-youtube-play {
-    color: red;
-  }
-  
-  #youtube.networks-outer:hover {
-    border-color: red;
-  }
-  
-  .networks:hover .fa-twitter {
-    color: rgb(29,161,242);
-  }
-  
-  #twitter.networks-outer:hover {
-    border-color: rgb(29,161,242);
-  }
-  
-  .networks:hover .fa-google-plus-official {
-    animation: multicolor 4s linear 0s infinite alternate;
-    color: #db3236;
-  }
-  
-  #google-plus.networks-outer:hover {
-    animation: multicolorBorder 4s linear 0s infinite alternate;
-    border-color: #db3236;
-  }
-  
-  @keyframes multicolor {
-    0% {
-      color: #4885ed;
-    }
-    33% {
-      color: #3cba54;
-    }
-    66% {
-      color: #f4c20d;
-    }
-    100% {
-      color: #db3236;
-    }
-  }
-  
-  @keyframes multicolorBorder {
-    0% {
-      border-color: #4885ed;
-    }
-    33% {
-      border-color: #3cba54;
-    }
-    66% {
-      border-color: #f4c20d;
-    }
-    100% {
-      border-color: #db3236;
-    }
-  }
-  
-  
-  .networks:hover .fa-pinterest {
-    color: rgb(189,8,28); 
-  }
-  
-  #pinterest.networks-outer:hover {
-    border-color: rgb(189,8,28);
-  }
-  
-  .networks:hover .fa-tumblr {
-    color: #36465d;
-  }
-  
-  #tumblr.networks-outer:hover {
-    border-color: #36465d;
-  }
-  
-  .networks:hover .fa-linkedin {
-    color: #0077B5;
-  }
-  
-  #linkedin.networks-outer:hover {
-    border-color: #0077B5;
-  }
-  
-  .networks:hover .fa-rss {
-    color: #ee802f;
-  }
-  
-  #rss.networks-outer:hover {
-    border-color: #ee802f;
-  }
-  
-  .networks:hover .fa-deviantart {
-    color: #05cc47;
-  }
-  
-  #deviantart.networks-outer:hover {
-    border-color: #05cc47;
-  }
-  
-  .networks:hover .fa-vimeo {
-    color: #1ab7ea;
-  }
-  
-  #vimeo.networks-outer:hover {
-    border-color: #1ab7ea;
-  }
-
  /* footer styles */
+
+ .FooterBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+ }
+
+ .FooterTitle {
+  text-align: center;
+  font-size: 1.7rem;
+  color: gray;
+ }
+
+ .SocialLink {
+  /* border: 1px solid red; */
+ }
+
+ .SocialLink ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  /* border: 1px solid blue; */
+  padding-left: -2rem;
+ }
+
+ .SocialLink li {
+
+  list-style: none;
+  color: #64a953;
+  cursor: pointer;
+  font-size: 1.5rem;
+ }
+
+ .copyright {
+  color: gray
+ }
 
   

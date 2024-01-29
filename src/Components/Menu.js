@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/fkl1.png';
 import './components.css';
 
 const Menu = () => {
   const location = useLocation();
+  const [activeMainLink, setActiveMainLink] = useState(null);
 
   const isActive = (pathname) => {
     return location.pathname === pathname;
+  };
+
+  const handleMainLinkClick = (linkName) => {
+    setActiveMainLink(activeMainLink === linkName ? null : linkName);
+    console.log(linkName)
   };
 
   return (
@@ -16,57 +22,69 @@ const Menu = () => {
         <div className="logoContainer">
           <img src={logo} alt="logo image" className="menuLogo" />
         </div>
-        <ul>
-          <li>
-            <Link to="/" className={isActive('/') ? 'activeLink' : ''}>
+        <ul className='menuList'>
+          <li className='ListLink'>
+            <Link to="/" className={isActive('/') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('')}>
               Home
             </Link>
           </li>
-          <li>
-            <Link to="/AcumaticaErp" className={isActive('/AcumaticaErp') ? 'activeLink' : ''}>
+
+          <li className='ListLink'>
+            <Link to="/AcumaticaErp" className={isActive('/AcumaticaErp') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('AcumaticaErp')}>
               Acumatica & ERP
             </Link>
-          </li>
-          <li>
-            <Link to="/AcumaticaErp" className={isActive('/AcumaticaErp') ? 'activeLink' : ''}>
-              Acumatica & ERP
-            </Link>
-            <ul>
-              <li>
-                <Link to="/sublink1">Sublink 1</Link>
+            <ul className={`sublink ${activeMainLink === 'AcumaticaErp' ? '' : 'visible'}`}>
+              <li className='sublinkList'>
+                <Link to="/Acumatica">Acumatica</Link>
               </li>
-              <li>
-                <Link to="/sublink2">Sublink 2</Link>
+              <li className='sublinkList'>
+                <Link to="/Palladium">Palladium</Link>
               </li>
             </ul>
           </li>
 
-          <li>
-            <Link to="/Service" className={isActive('/Service') ? 'activeLink' : ''}>
+          <li className='ListLink'>
+            <Link to="/Service" className={isActive('/Service') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Service')}>
               Services
             </Link>
+            <ul className={`sublink ${activeMainLink === 'Service' ? '' : 'visible'}`}>
+              <li className='sublinkList'>
+                <Link to="/Consulting">Consulting</Link>
+              </li>
+              <li className='sublinkList'>
+                <Link to="/Training">Training</Link>
+              </li>
+              <li className='sublinkList'>
+                <Link to="/Support">Support</Link>
+              </li>
+            </ul>
           </li>
-          <li>
-            <Link to="/Pricing" className={isActive('/Pricing') ? 'activeLink' : ''}>
+
+          <li className='ListLink'>
+            <Link to="/Pricing" className={isActive('/Pricing') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Pricing')}>
               Pricing
             </Link>
           </li>
-          <li>
-            <Link to="/Payspace" className={isActive('/Payspace') ? 'activeLink' : ''}>
+
+          <li className='ListLink'>
+            <Link to="/Payspace" className={isActive('/Payspace') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Payspace')}>
               HR & Payroll
             </Link>
           </li>
-          <li>
-            <Link to="/Career" className={isActive('/Career') ? 'activeLink' : ''}>
+
+          <li className='ListLink'>
+            <Link to="/Career" className={isActive('/Career') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Career')}>
               Work at Future Kenya
             </Link>
           </li>
-          <li>
-            <Link to="/Contact" className={isActive('/Contact') ? 'activeLink' : ''}>
+
+          <li className='ListLink'>
+            <Link to="/Contact" className={isActive('/Contact') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Contact')}>
               Contact Us
             </Link>
           </li>
-          <li>
+
+          <li className='ListLink'>
             <a
               href="https://acumatica.futurekenya.com/SelfServicePortal"
               target="_blank"
