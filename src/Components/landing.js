@@ -12,7 +12,7 @@ const Landing = () => {
           custom ERP <br/>
           solutions
         </h1>
-        <p>At Future Kenya we provide tailored technology solutions <br /> that meets your unique business needs</p>
+        <p>At Future Kenya, we provide tailored technology solutions <br /> that meets your unique business needs</p>
         <button>GET A QUOTE</button>
       </div>
     </div>

@@ -233,7 +233,7 @@
     color: gray;
   }
 
-  .portfolioSlider {
+  .portfolioSlider {  
     margin: 0 auto;
     padding-left: 3rem;
   }
@@ -268,6 +268,17 @@
   .desc li:before {
     content: '✓';
     color: #64a953;
+  }
+
+  .next-slick-arrow {
+    position: absolute;
+    top: -60px;
+    left: -25px;
+    cursor: pointer;
+  }
+
+  .rotate-180 {
+    transform: rotate(180deg);
   }
 
   /* contact styles */
