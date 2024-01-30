@@ -320,9 +320,11 @@
     color: blue; 
   }
 
-  .portalLink a {
-    color: #111;
-      text-decoration: none;
+  .portalLink span a {
+    color: #64a953;
+    font-size: 1rem;
+    font-size: 500;
+    text-decoration: none;
   }
 
  /* footer styles */
@@ -349,16 +351,18 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  /* border: 1px solid blue; */
   padding-left: -2rem;
  }
 
- .SocialLink li {
-
+ .SocialLink ul li {
   list-style: none;
   color: #64a953;
   cursor: pointer;
   font-size: 1.5rem;
+ }
+
+ .SocialLink ul li a {
+  color: #64a953;
  }
 
  .copyright {

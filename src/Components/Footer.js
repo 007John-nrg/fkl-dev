@@ -12,7 +12,9 @@ const Footer = () => {
       <div className='SocialLink'>
         <ul>
           <li>
-            <FontAwesomeIcon icon={faLinkedinIn} />
+            <a href="https://www.linkedin.com/company/future-kenya/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
           </li>
           <li>
             <FontAwesomeIcon icon={faXTwitter} />
