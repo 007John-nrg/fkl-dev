@@ -44,6 +44,12 @@ const Menu = () => {
           </li>
 
           <li className='ListLink'>
+            <Link to="/Payspace" className={isActive('/Payspace') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Payspace')}>
+              HR & Payroll
+            </Link>
+          </li>
+
+          <li className='ListLink'>
             <Link to="/Service" className={isActive('/Service') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Service')}>
               Services
             </Link>
@@ -63,12 +69,6 @@ const Menu = () => {
           <li className='ListLink'>
             <Link to="/Pricing" className={isActive('/Pricing') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Pricing')}>
               Pricing
-            </Link>
-          </li>
-
-          <li className='ListLink'>
-            <Link to="/Payspace" className={isActive('/Payspace') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Payspace')}>
-              HR & Payroll
             </Link>
           </li>
 

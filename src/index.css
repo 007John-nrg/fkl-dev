@@ -3,11 +3,8 @@
 body {
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
-.routerLink {
-  /* marginLeft: 20%; */
-  padding: 1.5rem;
-}
 
 

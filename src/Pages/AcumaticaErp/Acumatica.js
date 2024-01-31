@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './Acumatica.css';
 
 const Acumatica = () => {
   return (
-    <div>Acumatica</div>
+    <div className='acumaticaContainer'>Acumatica</div>
   )
 }
 

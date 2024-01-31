@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './Acumatica.css';
 
 const Palladium = () => {
   return (
-    <div>Palladium</div>
+    <div className='acumaticaContainer'>Palladium</div>
   )
 }
 

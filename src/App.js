@@ -9,6 +9,9 @@ import Pricing from './Pages/Pricing/Pricing';
 import Contact from './Pages/Contact/Contact';
 import Work from './Pages/Work/Work';
 
+
+import Delete from './Pages/Work/Delete';
+
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +25,7 @@ function App() {
           <Route path="Payspace" element={<HrPayroll />} />
           <Route path="Career" element={<Work />} />
           <Route path="Contact" element={<Contact />} />  
+          <Route path="deleteTest" element={<Delete />} />
         </Routes>
       </div>
     </BrowserRouter>

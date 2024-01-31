@@ -9,7 +9,7 @@ const IndustryErp = () => {
     <div>
       <div className='container'>
         <div className="sectionTitle">
-          <h5> INDUSTRY ERP </h5>
+          <h5> INDUSTRY LEADING ERP </h5>
         </div>
       
       <div className='content'>

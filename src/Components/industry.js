@@ -1,6 +1,7 @@
 import React from 'react'
 import './components.css'
-import images3 from '../assets/acumatica.jpg'
+import { Link } from 'react-router-dom';
+import images3 from '../assets/aim7.png'
 import images4 from '../assets/palladium.jpg'
 import images5 from '../assets/payspace.jpg'
 
@@ -8,7 +9,7 @@ const Industry = () => {
   return (
     <div className="industryContainer">
         <div className="sectionTitle">
-          <h5> INDUSTRY ERP </h5>
+          <h5> INDUSTRY LEADING ERP </h5>
         </div>
         <div className='industyBox'>
             <div className="erpBox">
@@ -19,9 +20,14 @@ const Industry = () => {
                     <h4>Acumatica</h4>
                 </div>
                 <div>
-                    <p>
-                        Acumatica is the fastest-growing provider of Cloud ERP software for small- and mid-sized businesses. Built on the world’s best cloud and mobile technology, our adaptable and integrated applications deliver modern solutions for ERP and CRM. These can help streamline your processes while gaining visibility over all aspects of your operations to accelerate your business growth. Each application is fully mobile to allow access from anywhere on any device at any time. Acumatica’s unique pricing model offers flexible licensing and deployment options and is easily expanded for a growing organization
+                    <p className='industryText'>
+                    Future Kenya proudly stands as a gold certified partner of Acumatica ERP, a SaaS, modular, cloud-based software system designed to manage various business processes and functions seamlessly across the organization. With Acumatica, businesses have the flexibility to pay based on usage or transaction tiers, with unlimited user options or a pricing structure based on the number of users. Acumatica's cloud ERP provides industry-specific and company-size Editions, including a versatile General Business Edition, making it an ideal choice for comprehensive enterprise resource planning.
                     </p> 
+                </div>
+                <div>
+                    <Link to="/Acumatica">
+                        <button>Explore</button>
+                    </Link>
                 </div>
             </div>
         
@@ -33,9 +39,14 @@ const Industry = () => {
                     <h4>Palladium</h4>
                 </div>
                 <div>
-                    <p>
-                    Palladium Accounting Software offers a range of feature-rich Accounting Solutions to suit all types of organisations. Palladium software features are developed on 3 core business success values of increasing turnover, optomising margins and improving operational efficiency. Palladium unsurpassed stability takes away the business risk associated with data corruption experienced with other software
+                    <p className='industryText'>
+                    As a leading provider, Future Kenya brings you Palladium Accounting Software, a comprehensive suite of feature-rich solutions tailored to meet the diverse needs of organizations. Our commitment aligns with Palladium's core business success values, focusing on enhancing turnover, optimizing margins, and improving operational efficiency. With Palladium, experience unparalleled stability that eliminates the business risks often associated with data corruption found in other software solutions. Elevate your financial management with Future Kenya and Palladium Accounting Software, where stability and functionality converge for business excellence.
                     </p> 
+                </div>
+                <div>
+                    <Link to="/Palladium">
+                        <button>Explore</button>
+                    </Link>
                 </div>
             </div>
 
@@ -47,9 +58,14 @@ const Industry = () => {
                     <h4>Payspace</h4>
                 </div>
                 <div>
-                    <p>
-                    PaySpace is the leaders in true cloud-based Payroll and Human Capital Management software solutions providing new, improved solutions to help businesses operate in the modern era where managers and employees have access to information at the touch of a button
+                    <p className='industryText'>
+                    Future Kenya champions continuous innovation in payroll and human capital management solutions through its partnership with PaySpace. We strive to set and lead global trends in payroll and HR, ensuring a timely response to our clients' evolving needs. Our commitment extends beyond cutting-edge solutions to building enduring client relationships. With Future Kenya and PaySpace, experience a dynamic approach to payroll and human capital management that drives innovation and fosters long-lasting partnerships.
                     </p> 
+                </div>
+                <div>
+                    <Link to="/Payspace">
+                        <button>Explore</button>
+                    </Link>
                 </div>
             </div>
         </div>

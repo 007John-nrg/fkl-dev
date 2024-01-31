@@ -3,14 +3,26 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './components.css'
-import Companies from './Companies';
+import img1 from '../assets/aim1.png';
+import img2 from '../assets/aim2.png';
+import img3 from '../assets/aim3.png';
+import img5 from '../assets/aim5.png';
+import img6 from '../assets/aim6.png';
 
 const Portfolio = () => {
+
+  const Images = [
+    img1,
+    img2,
+    img3,
+    img5,
+    img6
+  ]
 
   const settings = {
     dots: true,
     speed: 1500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
@@ -38,18 +50,10 @@ const Portfolio = () => {
       </div>
       <div className="portfolioSlider">
         <Slider {...settings}>
-          {Companies.map((item) => (
-            <div key={item.id}>
+          {Images.map((image) => (
+            <div key={image.id}>
               <div className="img-body">
-                <img src={item.src} alt={item.alt} />
-              </div>
-              <div> 
-                <p className='sliderTitle'>{item.title}</p>
-                {item.description.map((desc) => (
-                  <ul className="desc" key={desc.id}>
-                    <li>{desc}</li>
-                  </ul>
-                ))}
+                <img src={image} alt="portfolio image" />
               </div>
             </div>
           ))}
