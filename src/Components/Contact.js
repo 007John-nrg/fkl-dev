@@ -5,9 +5,9 @@ import OpenHours from './OpenHours'
 const Contact = () => {
   return (
     <div className="contactBox">
-      <div className="sectionTitle">
+      {/* <div className="sectionTitle">
         <h5>CONTACT US</h5>
-      </div>
+      </div> */}
       <div className='portalLink'>
         <p>Sign up now on our <span>
           <a 

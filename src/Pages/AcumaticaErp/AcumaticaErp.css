@@ -1,4 +1,139 @@
 .acumaticaContainer {
     margin-left: 21%;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+  
+  .acumaticaContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imageContainer img {
+    width: 100%; 
+    height: auto;
+  }
+  
+  .textContainer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .textContainer p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .textContainer a {
+    color: #111;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+
+  .textContainer a:hover {
+    color: #64a953;
+  }
+  
+  .AcumaticaModules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .AcumaticaModules ul {
+    list-style-type: none;
+  }
+
+  .AcumaticaModules ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #111;
+    padding: 1.1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  .containerLink {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.5rem;
+  }
+
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .acumaticaContent {
+      padding: 0 20px;
+    }
+  }
+
+  /* account software */
+
+  .AccountContainer {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+
+  .accountsSoftware {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .software {
+    position: relative;
+    width: 27%;
+    height: 400px;
+    /* background-color: cover; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+  }
+
+  .software a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 1111111;
+  }
+
+  .software a:hover {
+    color: #64a953;
+  }
+  
+  .software::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+
+  
