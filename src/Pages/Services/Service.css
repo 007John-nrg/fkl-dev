@@ -1,4 +1,79 @@
 .serviceContainer {
-    margin-left: 21%;
-    padding: 1.5rem;
+    margin-left: 20%;
+}
+
+.serviceBox {
+    min-height: 36vh;
+    background-image: url('../../assets/serv4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceBox1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.serviceBox1 p {
+    line-height: 1.5;
+}
+
+.serviceBox2 {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center;
+    width: 100%; */
+}
+
+.serviceBox3 {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    flex: 1;
+}
+
+.serviceBox3 img {
+    width: 100%; 
+    height: auto;
+}
+
+.serviceBox4 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.serviceBox5 {
+}
+
+.serviceBox4 h3 {
+    font-size: 24px;
+}
+
+.serviceBox4 p {
+    line-height: 1.5rem;
+    font-size: 16px;
+}
+
+.serviceBox4 a {
+    color: #111;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+
+.serviceBox4 a:hover {
+color: #64a953;
 }

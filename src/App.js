@@ -11,6 +11,8 @@ import Work from './Pages/Work/Work';
 
 
 import Delete from './Pages/Work/Delete';
+import Jobs from './Pages/Work/Jobs';
+import Apply from './Pages/Work/Apply';
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
           <Route path="Payspace" element={<HrPayroll />} />
           <Route path="Career" element={<Work />} />
           <Route path="Contact" element={<Contact />} />  
-          <Route path="deleteTest" element={<Delete />} />
+          <Route path="delete" element={<Delete />} />
+          <Route path="Jobs" element={<Jobs />} />
+          <Route path="Apply" element={<Apply />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -21,12 +21,12 @@ const Portfolio = () => {
 
   const settings = {
     dots: true,
-    speed: 1500,
+    speed: 1300,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2600,
     prevArrow: (
       <div>
         <div className="next-slick-arrow rotate-180">
@@ -36,7 +36,7 @@ const Portfolio = () => {
     ),
     nextArrow: (
       <div>
-        <div className="next-slick-arrow">
+        <div className="next-slick-arrow right-arrow">
             <svg xmlns="http://www.w3.org/2000/svg" stroke="black" height="24" viewBox="0 -960 960 960" width="24"><path d="m242-200 200-280-200-280h98l200 280-200 280h-98Zm238 0 200-280-200-280h98l200 280-200 280h-98Z"/></svg>
         </div>
       </div>
@@ -46,7 +46,7 @@ const Portfolio = () => {
   return (
     <div className="portfolioContainer">
       <div className="sectionTitle">
-        <h5>OUR PORTFOLIO</h5>
+        <h5>CUSTOMER CASE STUDIES</h5>
       </div>
       <div className="portfolioSlider">
         <Slider {...settings}>

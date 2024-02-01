@@ -12,6 +12,7 @@ const AcumaticaErp = () => {
         <div className="imageContainer">
           <img src={image1} alt="acumatica logo" />
         </div>
+
         <div className="textContainer">
           <div>
             <h3>Acumatica</h3>
@@ -21,7 +22,7 @@ const AcumaticaErp = () => {
               deliver modern solutions for ERP and CRM. Streamline your processes while gaining visibility over all
               aspects of your business.
             </p>
-            <a href="#">More about Acumatica ></a>
+            <a href="/Acumatica">More about Acumatica ></a>
           </div>
         </div>
       </div>
@@ -58,6 +59,7 @@ const AcumaticaErp = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   )

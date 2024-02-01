@@ -14,13 +14,13 @@
     width: 100%;
   }
   
-  .imageContainer {
+  .imageContainer { 
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .imageContainer img {
+  .imageContainer img { 
     width: 100%; 
     height: auto;
   }
