@@ -101,7 +101,7 @@
   .dot1 {
     background-color: #94d023;
   }
-  
+
   .dot2 {
     background-color: #69c6ff;
   }
@@ -109,4 +109,20 @@
   .dot3 {
     background-color: #465171;
   }
+  
+  .price-table .lite {
+    background-color: #94d023;
+    color: #fff;
+  }
+
+  .price-table .premier {
+    background-color: #69c6ff;
+    color: #fff;
+  }
+
+  .price-table .master {
+    background-color: #465171;
+    color: #fff;
+  }
+  
   

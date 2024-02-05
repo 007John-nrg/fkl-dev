@@ -15,7 +15,7 @@ const AcumaticaErp = () => {
 
         <div className="textContainer">
           <div>
-            <h3>Acumatica</h3>
+            <h3 className='sectionTitle Erp'>Acumatica</h3>
             <p>
               Acumatica is the fastest-growing provider of cloud ERP software for small- and mid-sized businesses.
               Built on the world's best cloud and mobile technology, our adaptable and integrated applications 

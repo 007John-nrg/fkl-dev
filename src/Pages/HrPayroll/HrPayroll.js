@@ -93,82 +93,274 @@ const HrPayroll = () => {
           <thead>
             <tr>
               <th>Features</th>
-              <th className="">Lite</th>
-              <th className="">Premier</th>
-              <th className="">Master</th>
+              <th className="lite">Lite</th>
+              <th className="premier">Premier</th>
+              <th className="master">Master</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>True cloud single instance multi-tenant </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Comprehensive Payroll </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Comprehensive HR </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Country Specific Tax Legislation for 40 Countries </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Access on any device </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Proactive run-free payroll </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Mock Payslip Facility </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Unlimited interim payslip runs </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Post bulk entries for multiple employees </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Comprehensive Leave Administration </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>On-boarding / Termination Notifications </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>True cloud single instance multi-tenant</td>
+              <td>Security Roles </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Country Specific Statutory Reports </td>
+              <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Localisation e.g. RSA Employment Equity</td>
+              <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Auto medical scheme rate updates (SA only) </td>
+              <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Training & Skills Management </td>
+              <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Advanced General Ledger</td>
+              <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Organisation Structures - 1 Level</td>
+              <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Position Management - Basic</td>
+              <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Robust Configuration Options </td>
+              <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Organisation Structures - Multilevel </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Position Management - Advanced </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Employee Self Service </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Basic Workflow </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Attachments </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Asset Register </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Employee Notes & Reminders </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Advanced Costing </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Multi-Language </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>API Integration (Web Services) </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Third party payment files </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Expense Claims - 1 Level </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Expense Claims - Multilevel </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Employee Request </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Client Defined Dynamic Fields  </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Automated Expatriate Management </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Multi-Currency </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Multi-currency payment file options </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Automated Tax Equalisation </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Advanced Workflow functionality </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Consolidated reporting </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Incident Management </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Timesheet Facility </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Action Types </td>
+              <td><span className=""></span></td>
+              <td><span className=""></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             
@@ -179,9 +371,9 @@ const HrPayroll = () => {
           <thead>
             <tr>
               <th>Add-On Modules</th>
-              <th className="">Lite</th>
-              <th className="">Premier</th>
-              <th className="">Master</th>
+              <th className="lite">Lite</th>
+              <th className="premier">Premier</th>
+              <th className="master">Master</th>
             </tr>
           </thead>
           <tbody>
@@ -192,20 +384,32 @@ const HrPayroll = () => {
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>Recruitment</td>
+              <td>Cloud Analytics </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>Recruitment</td>
+              <td>OrgChart </td>
               <td><span className="dot1"></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>
             <tr>
-              <td>Recruitment</td>
+              <td>Cloud Room </td>
               <td><span className="dot1"></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Performance Management </td>
+              <td><span className=""></span></td>
+              <td><span className="dot2"></span></td>
+              <td><span className="dot3"></span></td>
+            </tr>
+            <tr>
+              <td>Workforce Planning </td>
+              <td><span className=""></span></td>
               <td><span className="dot2"></span></td>
               <td><span className="dot3"></span></td>
             </tr>

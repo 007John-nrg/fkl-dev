@@ -9,10 +9,10 @@ import Pricing from './Pages/Pricing/Pricing';
 import Contact from './Pages/Contact/Contact';
 import Work from './Pages/Work/Work';
 
-
 import Delete from './Pages/Work/Delete';
 import Jobs from './Pages/Work/Jobs';
 import Apply from './Pages/Work/Apply';
+import Acumatica from './Pages/AcumaticaErp/Acumatica';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="AcumaticaErp" element={<AcumaticaErp />} />
+          <Route path="Acumatica" element={<Acumatica />} />
           <Route path="Service" element={<Service />} />
           <Route path="Pricing" element={<Pricing />} />
           <Route path="Payspace" element={<HrPayroll />} />
