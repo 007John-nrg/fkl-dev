@@ -30,7 +30,7 @@ const HrPayroll = () => {
 
       <section class="containerFeatures">
         <div>
-          <h4 style={{ textAlign: 'center', fontSize: '20px', fontWeight: '600', marginBottom: '25px' }}>
+          <h4 style={{ textAlign: 'center', fontSize: '20px', fontWeight: '600', marginBottom: '25px' }} className='sectionTitle'>
               <b>WHAT MAKES PAYSPACE PAYROLL & HR DIFFERENT?</b>
           </h4>
         </div>
@@ -87,7 +87,7 @@ const HrPayroll = () => {
 
       <section className="table">
       <div className="tableContainer">
-        <h4 className="title">PaySpace Product Comparison</h4>
+        <h4 className="title sectionTitle">PaySpace Product Comparison</h4>
         <hr />
         <table className="price-table">
           <thead>

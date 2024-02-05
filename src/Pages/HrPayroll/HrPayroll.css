@@ -7,6 +7,12 @@
     width: 80%;
 }
 
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: gray;
+}
+
 .containerTop {
     display: flex;
     justify-content: center;
