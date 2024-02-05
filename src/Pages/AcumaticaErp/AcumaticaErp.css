@@ -189,6 +189,15 @@
     flex-wrap: wrap;
   }
 
+  /* palladium */
+  .acumaticaContainer .two {
+    margin-top: -1.5rem;
+  }
+
+  .acumaticaContainer .two p {
+    margin-top: -1rem;
+  }
+
 
 
 

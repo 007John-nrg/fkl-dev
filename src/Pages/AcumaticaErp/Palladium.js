@@ -5,15 +5,21 @@ import image7 from '../../assets/aim15.png'
 const Palladium = () => {
   return (
     <div className='acumaticaContainer'>
-      <div className="acumaticaContent1">
+      <div className="acumaticaContent1 two">
         <div className="imageContainer">
           <img src={image7} alt="acumatica logo" />
         </div>
         <p>
-          Acumatica Cloud ERP is a dynamic and flexible business management solutions
-          that empowers organizations with real-time insights, seamless collaboration, and
-          unparalleled scalability for optimal operational efficiency and growth.
+          Palladium Accounting Software offers a range of
+          feature-rich Accounting Solutions to suit all types of
+          organisations. It is developed on 3 core business
+          success values of increasing turnover, optimizing
+          margins and improving operational efficiency.
         </p>
+        <div>
+          <button>Find out more</button>
+          <button>Find out more</button>
+        </div>
       </div>
     </div>
   )
