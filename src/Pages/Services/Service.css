@@ -2,6 +2,12 @@
     margin-left: 20%;
 }
 
+  /* .sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: gray;
+  } */
+
 .serviceBox {
     min-height: 36vh;
     background-image: url('../../assets/serv4.png');
@@ -23,8 +29,13 @@
     width: 50%;
 }
 
+.serviceBox1 h3 {
+    font-size: 2rem;
+}
+
 .serviceBox1 p {
     line-height: 1.5;
+    font-size: 1.2rem;
 }
 
 .serviceBox2 {
