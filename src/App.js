@@ -13,6 +13,7 @@ import Delete from './Pages/Work/Delete';
 import Jobs from './Pages/Work/Jobs';
 import Apply from './Pages/Work/Apply';
 import Acumatica from './Pages/AcumaticaErp/Acumatica';
+import Palladium from './Pages/AcumaticaErp/Palladium';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="AcumaticaErp" element={<AcumaticaErp />} />
           <Route path="Acumatica" element={<Acumatica />} />
+          <Route path="Palladium" element={<Palladium />} />
           <Route path="Service" element={<Service />} />
           <Route path="Pricing" element={<Pricing />} />
           <Route path="Payspace" element={<HrPayroll />} />

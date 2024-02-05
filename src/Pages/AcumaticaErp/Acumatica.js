@@ -6,9 +6,10 @@ import image from '../../assets/aim8.png';
 import image1 from '../../assets/aim9.png';
 import image2 from '../../assets/aim10.png';
 import image3 from '../../assets/aim11.png';
-import image4 from '../../assets/aim12.png'
-import image5 from '../../assets/aim13.png'
-import image6 from '../../assets/aim14.png'
+import image4 from '../../assets/aim12.png';
+import image5 from '../../assets/aim13.png';
+import image6 from '../../assets/aim14.png';
+import image8 from '../../assets/aim16.png';
 import Footer from '../../Components/Footer';
 
 
@@ -17,9 +18,8 @@ const Acumatica = () => {
   return (
     <div className='acumaticaContainer'>
       <div className="acumaticaContent1">
-        {/* <h3 className='sectionTitle'>ACUMATICA CLOUD ERP</h3> */}
         <div className="imageContainer">
-          <img src={image6} alt="acumatica logo" />
+          <img src={image8} alt="acumatica logo" />
         </div>
         <p>
           Acumatica Cloud ERP is a dynamic and flexible business management solutions
