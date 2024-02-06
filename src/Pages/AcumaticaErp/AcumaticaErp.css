@@ -248,6 +248,7 @@
 
   .pallContent {
     margin-top: 2rem;
+    width: 77%;
   }
 
   .pallContent1 {
@@ -257,7 +258,7 @@
   }
 
   .pallImage {
-    flex: 40%;
+    flex: 30%;
   }
 
   .pallImage img {
@@ -266,7 +267,7 @@
 }
   
   .pallDesc {
-    flex: 60%;
+    flex: 70%;
     text-align: center;
   }
 

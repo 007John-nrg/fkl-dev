@@ -4,7 +4,16 @@ import image7 from '../../assets/aim15.png';
 import image8 from '../../assets/aim17.png';
 import image9 from '../../assets/aim18.png';
 import image10 from '../../assets/aim19.png';
-import image11 from '../../assets/serv1.png';
+import image11 from '../../assets/aim20.png';
+import image12 from '../../assets/aim21.png';
+import image13 from '../../assets/aim22.png';
+import image14 from '../../assets/aim23.png';
+import image15 from '../../assets/aim24.png';
+import image17 from '../../assets/aim25.png';
+import image18 from '../../assets/aim26.png';
+import image19 from '../../assets/aim27.png';
+import image20 from '../../assets/aim28.png';
+import image21 from '../../assets/aim29.png';
 import Footer from '../../Components/Footer';
 
 const Palladium = () => {
@@ -76,7 +85,7 @@ const Palladium = () => {
       <div className='pallContent'>
         <div className='pallContent1'>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image12} alt=""/>
           </div>
           <div className='pallDesc'>
             <h3>Accounts Payable</h3>
@@ -97,13 +106,13 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image13} alt=""/>
           </div>
         </div>
 
         <div className='pallContent1'>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image14} alt=""/>
           </div>
           <div className='pallDesc'>
             <h3>General Ledger</h3>
@@ -123,7 +132,7 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image15} alt=""/>
           </div>
         </div>
 
@@ -150,13 +159,13 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image17} alt=""/>
           </div>
         </div>
 
         <div className='pallContent1'>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image18} alt=""/>
           </div>
           <div className='pallDesc'>
             <h3>Inventory</h3>
@@ -175,13 +184,13 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image19} alt=""/>
           </div>
         </div>
 
         <div className='pallContent1'>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image20} alt=""/>
           </div>
           <div className='pallDesc'>
             <h3>Point of sale, RST & SMS</h3>
@@ -201,7 +210,7 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image11} alt=""/>
+            <img src={image21} alt=""/>
           </div>
         </div>
 
