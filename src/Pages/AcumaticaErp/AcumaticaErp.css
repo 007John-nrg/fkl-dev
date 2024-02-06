@@ -198,6 +198,77 @@
     margin-top: -1rem;
   }
 
+  .acumaticaContainer .buttons {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .acumaticaContainer button {
+    border: 1px solid;
+    padding: .5rem 1rem;
+    background-color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .acumaticaContainer button:hover {
+    color: #fff;
+    background-color: #64a953;
+    border: 1px solid #64a953;
+  }
+
+  .palladiumVersions {
+    margin-top: 4rem;
+  }
+
+  .pallSoftware {
+    width: 20%;
+    height: 516px;
+    padding: 0 .6rem;
+    line-height: 1.6;
+    background-size: cover;
+  }
+
+  .pallSoftware::after {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .pallSoftware button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .pallSoftware button:hover {
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+  }
+
+  .pallContent {
+    margin-top: 2rem;
+  }
+
+  .pallContent1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .pallImage {
+    flex: 40%;
+  }
+
+  .pallImage img {
+    width: 100%; 
+    height: auto;
+}
+  
+  .pallDesc {
+    flex: 60%;
+    text-align: center;
+  }
 
 
 
