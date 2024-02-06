@@ -91,7 +91,7 @@ const Palladium = () => {
             <h3>Accounts Payable</h3>
             <p>
               Reduce admin, ensure vendors get paid on time and get an overview of where your business 
-              is spending money with palladium's accounts payable software.
+              is spending money with Palladium's accounts payable software.
             </p>
           </div>
         </div>
