@@ -57,20 +57,20 @@ const Acumatica = () => {
 
       <div className='AccountContainer'>
         <div className='accountsSoftware'>
-          <div className='software' style={{ backgroundImage: `url(${image1})` }}>
-            <a href=''>Construction Edition</a>
+          <div className='software' style={{ backgroundImage: `url(${image5})` }}>
+            <a href='/General'>General Business Edition</a>
           </div>
           <div className='software' style={{ backgroundImage: `url(${image2})` }}>
-            <a href=''>Distribution Edition</a>
+            <a href='/Distribution'>Distribution Edition</a>
           </div>
           <div className='software' style={{ backgroundImage: `url(${image3})` }}>
-            <a href=''>Manufacturing Edition</a>
+            <a href='/Manufacturing'>Manufacturing Edition</a>
           </div>
           <div className='software' style={{ backgroundImage: `url(${image4})` }}>
-            <a href=''>Commerce Edition</a>
+            <a href='/Commerce'>Commerce Edition</a>
           </div>
-          <div className='software' style={{ backgroundImage: `url(${image5})` }}>
-            <a href=''>General Business Edition</a>
+          <div className='software' style={{ backgroundImage: `url(${image1})` }}>
+            <a href='/Construction'>Construction Edition</a>
           </div>
         </div>
       </div>

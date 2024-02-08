@@ -21,7 +21,7 @@ const Industry = () => {
                 </div>
                 <div>
                     <p className='industryText'>
-                    Future Kenya proudly stands as a GOLD certified partner of Acumatica ERP, a SaaS, modular, cloud-based software system designed to manage various business processes and functions seamlessly across the organization. With Acumatica, businesses have the flexibility to pay based on usage or transaction tiers, with unlimited user options or a pricing structure based on the number of users. Acumatica's cloud ERP provides industry-specific and company-size Editions, including a versatile General Business Edition, making it an ideal choice for comprehensive enterprise resource planning.
+                    Future Kenya proudly stands as a Gold certified partner of Acumatica ERP, a SaaS, modular, cloud-based software system designed to manage various business processes and functions seamlessly across the organization. With Acumatica, businesses have the flexibility to pay based on usage or transaction tiers, with unlimited user options or a pricing structure based on the number of users. Acumatica's cloud ERP provides industry-specific and company-size Editions, including a versatile General Business Edition, making it an ideal choice for comprehensive enterprise resource planning.
                     </p> 
                 </div>
                 <div>
