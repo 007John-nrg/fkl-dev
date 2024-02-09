@@ -6,6 +6,8 @@ import image3 from '../../assets/aim36.png';
 import image4 from '../../assets/aim38.png';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
+import MyFlipBook from '../../Components/FlipBook';
+import DemoBook from '../../Components/FlipBook';
 
 const Manufacturing = () => {
   return (
@@ -32,7 +34,7 @@ const Manufacturing = () => {
         </div>
 
         <div className='GeneralContainer'>
-            <h3 className='sectionTitle'>Benefits of Manufacturing Edition for Your Business</h3>
+            
             <div className='GeneralImage'>
                 <div className="imageBox">
                     <img src={image4} alt="gen4"/>
@@ -47,6 +49,10 @@ const Manufacturing = () => {
                     <img src={image3} alt="gen3"/>
                 </div>
             </div>
+        </div>
+
+        <div>
+            <DemoBook />
         </div>
     </div>
   )

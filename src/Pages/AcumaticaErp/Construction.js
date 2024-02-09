@@ -34,7 +34,7 @@ const Construction = () => {
             </div>
         </div>
         <div className='GeneralContainer'>
-            <h3 className='sectionTitle'>Benefits of Construction Edition for Your Business</h3>
+            
             <div className='GeneralImage'>
                 <div className="imageBox">
                     <img src={image1} alt="gen1"/>

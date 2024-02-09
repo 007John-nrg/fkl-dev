@@ -20,8 +20,8 @@ const Palladium = () => {
   return (
     <div className='acumaticaContainer'>
       <div className="acumaticaContent1 two">
-        <div className="imageContainer">
-          <img src={image7} alt="acumatica logo" />
+        <div className="imageContainer imgPall">
+          <img src={image7} alt="palladium logo" />
         </div>
         <p>
           Palladium Accounting Software offers a range of

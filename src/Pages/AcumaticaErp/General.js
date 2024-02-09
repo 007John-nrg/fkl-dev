@@ -6,6 +6,7 @@ import image3 from '../../assets/aim32.png';
 import image4 from '../../assets/aim33.png';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
+import BrochureViewer from '../../Components/Bronchures';
 
 const General = () => {
   return (
@@ -33,7 +34,7 @@ const General = () => {
         </div>
 
         <div className='GeneralContainer'>
-            <h3 className='sectionTitle'>Benefits of General Business Edition for Your Business</h3>
+            
             <div className='GeneralImage'>
                 <div className="imageBox">
                     <img src={image2} alt="gen2"/>
@@ -47,6 +48,25 @@ const General = () => {
                 <div className="imageBox">
                     <img src={image3} alt="gen3"/>
                 </div>
+            </div>
+        </div>
+
+        <div className="bronchureBox">
+            <div>
+                <h4>My Component</h4>
+                <BrochureViewer src="https://example.com/path-to-your-brochure.pdf" />
+            </div>
+            <div>
+                <h4>My Component</h4>
+                <BrochureViewer src="https://example.com/path-to-your-brochure.pdf" />
+            </div>
+            <div>
+                <h4>My Component</h4>
+                <BrochureViewer src="https://example.com/path-to-your-brochure.pdf" />
+            </div>
+            <div>
+                <h4>My Component</h4>
+                <BrochureViewer src="" />
             </div>
         </div>
     </div>

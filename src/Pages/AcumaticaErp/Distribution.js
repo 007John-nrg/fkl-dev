@@ -6,6 +6,8 @@ import image3 from '../../assets/aim41.png';
 import image4 from '../../assets/aim42.png';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
+import FlipBook from '../../Components/PDFViewer';
+import PDFViewer from '../../Components/PDFViewer';
 
 export const Distribution = () => {
   return (
@@ -32,7 +34,6 @@ export const Distribution = () => {
         </div>
 
         <div className='GeneralContainer'>
-            <h3 className='sectionTitle'>Benefits of Distribution Edition for Your Business</h3>
             <div className='GeneralImage'>
                 <div className="imageBox">
                     <img src={image1} alt="gen1"/>
@@ -47,6 +48,10 @@ export const Distribution = () => {
                     <img src={image4} alt="gen4"/>
                 </div>
             </div>
+        </div>
+
+        <div className="bronchureBox">
+            <PDFViewer />
         </div>
     </div>
   )
