@@ -265,15 +265,14 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border: 1px solid red;
   }
 
   .pallImage {
-    flex: 30%;
+    flex: 25%;
   }
 
   .pallImage img {
-    width: 100%; 
+    width: 75%; 
     height: auto;
 }
   
