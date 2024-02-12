@@ -6,8 +6,7 @@ import image3 from '../../assets/aim41.png';
 import image4 from '../../assets/aim42.png';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
-import FlipBook from '../../Components/PDFViewer';
-import PDFViewer from '../../Components/PDFViewer';
+import Footer from '../../Components/Footer';
 
 export const Distribution = () => {
   return (
@@ -17,10 +16,11 @@ export const Distribution = () => {
             <div className="acumaticaContent acumatica2">
                 <div className='acumatica3'>
                     <div className="imageContainer image2">
-                    <video controls width="525" height="360" autoplay poster={imageDemo}>
+                    {/* <video controls width="525" height="360" autoplay poster={imageDemo}>
                         <source src={video} type="video/mp4" />
                         <source src={video} type="video/webm" />
-                    </video>
+                    </video> */}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/aeinLXYbStg?si=2ZnzCrmiZx40qllq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
 
                     <div className="textContainer2">
@@ -51,8 +51,16 @@ export const Distribution = () => {
         </div>
 
         <div className="bronchureBox">
-            <PDFViewer />
+
+            <iframe src="https://publuu.com/flip-book/392887/890540/page/1?embed&transparent" width="100%" height="380" frameborder="0" allowfullscreen="" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/890540/page/1?embed&transparent" width="100%" height="380" frameborder="0" allowfullscreen="" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/890540/page/1?embed&transparent" width="100%" height="380" frameborder="0" allowfullscreen="" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/890540/page/1?embed&transparent" width="100%" height="380" frameborder="0" allowfullscreen="" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/890540/page/2?embed&transparent" width="100%" height="380" frameborder="0" ></iframe>
+        
         </div>
+
+        <Footer />
     </div>
   )
 }

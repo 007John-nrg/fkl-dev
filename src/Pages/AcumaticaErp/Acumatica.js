@@ -67,7 +67,7 @@ const Acumatica = () => {
             <a href='/Manufacturing'>Manufacturing Edition</a>
           </div>
           <div className='software' style={{ backgroundImage: `url(${image4})` }}>
-            <a href='/Commerce'>Commerce Edition</a>
+            <a href='/Commerce'>Retail Edition</a>
           </div>
           <div className='software' style={{ backgroundImage: `url(${image1})` }}>
             <a href='/Construction'>Construction Edition</a>
@@ -76,7 +76,6 @@ const Acumatica = () => {
       </div>
 
       <Footer />
-
   </div>
     
   )

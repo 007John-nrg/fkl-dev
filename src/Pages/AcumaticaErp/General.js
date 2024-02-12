@@ -7,6 +7,7 @@ import image4 from '../../assets/aim33.png';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
 import BrochureViewer from '../../Components/Bronchures';
+import Footer from '../../Components/Footer';
 
 const General = () => {
   return (
@@ -17,10 +18,11 @@ const General = () => {
             <div className="acumaticaContent acumatica2">
                 <div className='acumatica3'>
                     <div className="imageContainer image2">
-                    <video controls width="525" height="360" autoplay poster={imageDemo}>
+                    {/* <video controls width="525" height="360" autoplay poster={imageDemo}>
                         <source src={video} type="video/mp4" />
                         <source src={video} type="video/webm" />
-                    </video>
+                    </video> */}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ljl6EI0EVHs?si=bY-7NYZogCX3O6zI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
 
                     <div className="textContainer2">
@@ -69,6 +71,8 @@ const General = () => {
                 <BrochureViewer src="" />
             </div>
         </div>
+
+        <Footer />
     </div>
   )
 }

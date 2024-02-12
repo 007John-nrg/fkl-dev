@@ -1,7 +1,13 @@
 import React from "react";
 import HTMLFlipBook from "react-pageflip";
-import Aim from '../assets/aim48.png';
-import Aim1 from '../assets/aim49.png'
+
+import Aim from '../assets/name1.pdf';
+import Aim1 from '../assets/name2.pdf'
+
+import { Page, pdfjs } from 'react-pdf';
+import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'; // Import pdfjs worker
+
+pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 const MyFlipBook = () => {
   return (

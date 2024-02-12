@@ -10,6 +10,7 @@ import image7 from '../../assets/aim57.png';
 import image8 from '../../assets/aim58.png';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
+import Footer from '../../Components/Footer';
 
 const Construction = () => {
   return (
@@ -18,23 +19,19 @@ const Construction = () => {
             <div className="acumaticaContent acumatica2">
                 <div className='acumatica3'>
                     <div className="imageContainer image2">
-                    <video controls width="525" height="360" autoplay poster={imageDemo}>
-                        <source src={video} type="video/mp4" />
-                        <source src={video} type="video/webm" />
-                    </video>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DAuTq6trVQ4?si=jJI_mnLkptNdkkpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
 
                     <div className="textContainer2">
                         <h3 className='sectionTitle'>Construction Edition</h3>
                         <p>
-                        Distribution management is Cloud ERP software that helps companies manage their supply chain and logistics activities, including warehouse management, inventory management, and order management (sales and purchase orders), and integrate these activities with the company’s financials and sales. Wholesale distribution software can help companies improve customer satisfaction, reduce order times, and control costs across the entire supply and distribution chain.
+                            Acumatica’s Construction Edition is full-featured construction accounting software that helps you improve margins and project control at all stages of home, multi-family, commercial, mixed-use, land development, and government projects.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div className='GeneralContainer'>
-            
+        <div className='GeneralContainer'>  
             <div className='GeneralImage'>
                 <div className="imageBox">
                     <img src={image1} alt="gen1"/>
@@ -62,6 +59,8 @@ const Construction = () => {
                 </div>
             </div>
         </div>
+
+        <Footer />
     </div>
   )
 }

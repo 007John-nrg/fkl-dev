@@ -8,6 +8,7 @@ import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-g
 import imageDemo from '../../assets/aim7.png';
 import MyFlipBook from '../../Components/FlipBook';
 import DemoBook from '../../Components/FlipBook';
+import Footer from '../../Components/Footer';
 
 const Manufacturing = () => {
   return (
@@ -17,10 +18,11 @@ const Manufacturing = () => {
             <div className="acumaticaContent acumatica2">
                 <div className='acumatica3'>
                     <div className="imageContainer image2">
-                    <video controls width="525" height="360" autoplay poster={imageDemo}>
+                    {/* <video controls width="525" height="360" autoplay poster={imageDemo}>
                         <source src={video} type="video/mp4" />
                         <source src={video} type="video/webm" />
-                    </video>
+                    </video> */}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TA57El8K2aQ?si=-PsfDna0ubQvOQOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
 
                     <div className="textContainer2">
@@ -33,8 +35,7 @@ const Manufacturing = () => {
             </div>
         </div>
 
-        <div className='GeneralContainer'>
-            
+        <div className='GeneralContainer'>  
             <div className='GeneralImage'>
                 <div className="imageBox">
                     <img src={image4} alt="gen4"/>
@@ -54,6 +55,8 @@ const Manufacturing = () => {
         <div>
             <DemoBook />
         </div>
+
+        <Footer />
     </div>
   )
 }
