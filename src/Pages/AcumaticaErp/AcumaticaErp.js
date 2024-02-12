@@ -40,7 +40,7 @@ const AcumaticaErp = () => {
               <a href="" className='containerLink'>MANUFACTURING EDITION</a>
             </li>
             <li>
-              <a href="" className='containerLink'>COMMERCE EDITION</a>
+              <a href="" className='containerLink'>RETAIL EDITION</a>
             </li>
             <li>
               <a href="" className='containerLink'>CONSTRUCTION EDITION</a>

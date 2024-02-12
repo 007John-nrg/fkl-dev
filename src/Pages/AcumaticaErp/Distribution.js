@@ -52,12 +52,13 @@ export const Distribution = () => {
 
         <div className="bronchureBox">
 
-            <iframe src="https://publuu.com/flip-book/392887/890540/page/1?embed&transparent" width="100%" height="380" frameborder="0" allowfullscreen="" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/890540/page/1?embed&transparent" width="100%" height="380" frameborder="0" allowfullscreen="" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/890540/page/1?embed&transparent" width="100%" height="380" frameborder="0" allowfullscreen="" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/890540/page/1?embed&transparent" width="100%" height="380" frameborder="0" allowfullscreen="" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/890540/page/2?embed&transparent" width="100%" height="380" frameborder="0" ></iframe>
-        
+            <iframe src="https://publuu.com/flip-book/392887/896576/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/896746/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/896750/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/896754/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/896890/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
+            <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
+ 
         </div>
 
         <Footer />

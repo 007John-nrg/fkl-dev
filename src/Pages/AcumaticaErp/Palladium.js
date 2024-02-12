@@ -32,7 +32,7 @@ const Palladium = () => {
         </p>
         <div className='buttons'>
           <button classname="btn">Find out more</button>
-          <button classname="btn">pricing</button>
+          <button classname="btn">Pricing</button>
         </div>
       </div>
 

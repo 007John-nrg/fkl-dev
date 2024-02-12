@@ -54,22 +54,9 @@ const General = () => {
         </div>
 
         <div className="bronchureBox">
-            <div>
-                <h4>My Component</h4>
-                <BrochureViewer src="https://example.com/path-to-your-brochure.pdf" />
-            </div>
-            <div>
-                <h4>My Component</h4>
-                <BrochureViewer src="https://example.com/path-to-your-brochure.pdf" />
-            </div>
-            <div>
-                <h4>My Component</h4>
-                <BrochureViewer src="https://example.com/path-to-your-brochure.pdf" />
-            </div>
-            <div>
-                <h4>My Component</h4>
-                <BrochureViewer src="" />
-            </div>
+
+
+
         </div>
 
         <Footer />

@@ -67,12 +67,6 @@ const Menu = () => {
           </li>
 
           <li className='ListLink'>
-            <Link to="/Pricing" className={isActive('/Pricing') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Pricing')}>
-              Pricing
-            </Link>
-          </li>
-
-          <li className='ListLink'>
             <Link to="/Career" className={isActive('/Career') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Career')}>
               Work at Future Kenya
             </Link>
