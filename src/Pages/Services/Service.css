@@ -88,3 +88,168 @@
 .serviceBox4 a:hover {
 color: #64a953;
 }
+
+/* consulting */
+
+.consultingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.consultingContent {
+    margin-top: 3rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.consultingImage {
+    margin-bottom: 1.7rem;
+    width: 75%;
+    height: 75%;
+}
+
+.consultingText {
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin-bottom: 1.7rem;
+}
+
+.consultingHeading img {
+    width: 100%;
+    height:  auto;
+}
+
+
+.consultingIcons {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.consultingIcons .content1 {
+    width: 20%;
+    height: 20%;
+}
+
+.consultingIcons .content2 {
+    width: 23.7%;
+    height: 23.7%;
+}
+
+.consultingIcons .content3 {
+    width: 28%;
+    height: 28%;
+}
+
+.consultingIcons .content4 {
+    width: 27%;
+    height: 27%;
+}
+
+.consultingIcons .content5 {
+    width: 23%;
+    height: 23%;
+}
+
+
+.consultingIcons .content1 img,
+.content2 img,
+.content3 img,
+.content4 img,
+.content5 img {
+    width: 100%;
+    height: auto;
+}
+
+.cycleFlow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imageFlow {
+    width: 75%;
+    height: 75%;
+}
+
+.imageFlow img {
+    width: 100%;
+    height: auto;
+}
+
+.consultingContact {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-size: 1rem;
+    color: #64a953;
+    text-decoration: none;
+}
+
+.consultingContact:hover {
+    text-decoration: underline;
+}
+
+.consultingContact .contactLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactLinkImage {
+    margin-left: .3rem;
+    width: 45px;
+    height: 45px;
+}
+
+.contactLinkImage img {
+    width: 100%;
+    height: auto;
+}
+
+.consultingWhy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.whyFlex {
+    display: flex;
+}
+
+.whyFlex .whyFlexImage {
+    width: 50px;
+}
+
+.contentFooter {
+    display: flex;
+    gap: 1.1rem;
+    margin-top: 1rem;
+}
+
+.contentFooter {
+    width: 90%;
+}
+
+.contentFooter1 {
+    width: 25%;
+    text-align: center;
+}
+
+.contentFooter1 p {
+    line-height: 1.4;
+}
+
+.italic {
+    font-style: italic;
+    color: rgb(8, 150, 238);
+}

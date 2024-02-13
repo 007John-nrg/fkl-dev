@@ -31,21 +31,27 @@ const Menu = () => {
 
           <li className='ListLink'>
             <Link to="/AcumaticaErp" className={isActive('/AcumaticaErp') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('AcumaticaErp')}>
-              Acumatica & ERP
+              Acumatica ERP
             </Link>
-            <ul className={`sublink ${activeMainLink === 'AcumaticaErp' ? '' : 'visible'}`}>
+            {/* <ul className={`sublink ${activeMainLink === 'AcumaticaErp' ? '' : 'visible'}`}>
               <li className='sublinkList'>
                 <Link to="/Acumatica">Acumatica</Link>
               </li>
               <li className='sublinkList'>
                 <Link to="/Palladium">Palladium</Link>
               </li>
-            </ul>
+            </ul> */}
+          </li>
+
+          <li className='ListLink'>
+            <Link to="/Palladium" className={isActive('/Palladium') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('AcumaticaErp')}>
+              Palladium ERP
+            </Link>
           </li>
 
           <li className='ListLink'>
             <Link to="/Payspace" className={isActive('/Payspace') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Payspace')}>
-              HR & Payroll
+              Payspace, HR & Payroll
             </Link>
           </li>
 

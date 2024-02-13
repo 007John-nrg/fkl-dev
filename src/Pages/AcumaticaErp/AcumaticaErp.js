@@ -8,19 +8,16 @@ import payspaceImage from '../../assets/payspace.jpg'
 const AcumaticaErp = () => {
   return (
     <div className='acumaticaContainer'>
-      <div className="acumaticaContent">
-        <div className="imageContainer">
+      <div className="acumaticaContent acumaticaEdit">
+        <div className="imageContainer imageEdit">
           <img src={image1} alt="acumatica logo" />
         </div>
 
-        <div className="textContainer">
+        <div className="textContainer textEdit">
           <div>
             <h3 className='sectionTitle Erp'>Acumatica</h3>
             <p>
-              Acumatica is the fastest-growing provider of cloud ERP software for small- and mid-sized businesses.
-              Built on the world's best cloud and mobile technology, our adaptable and integrated applications 
-              deliver modern solutions for ERP and CRM. Streamline your processes while gaining visibility over all
-              aspects of your business.
+            Acumatica is the fastest-growing provider of cloud ERP software for small- and mid-sized businesses. Built on the world's best cloud and mobile technology, the adaptable and integrated applications deliver modern solutions for ERP and CRM. These can help streamline your processes while gaining visibility over all aspects of your operation to accelerate your business growth. Each application is fully mobile to allow access from Anywhere on any device at any time. Acumatica's unique pricing model offers flexible licensing and deployment options and is easily expanded for a growing organization.
             </p>
             <a href="/Acumatica">More about Acumatica ></a>
           </div>

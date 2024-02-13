@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './Service.css';
 
 const Training = () => {
   return (
-    <div>Training</div>
+    <div className='serviceContainer'>Training</div>
   )
 }
 

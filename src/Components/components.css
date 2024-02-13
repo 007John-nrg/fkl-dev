@@ -103,16 +103,17 @@
     margin-top: -1rem;
   }
   
-  .landingBox button {
+  .landingBox .button {
     border: 1px solid gray;
     background-color: transparent;
     border-radius: .3rem;
     color: white;
     padding: 1rem;
     font-size: .9rem;
+    text-decoration: none;
   }
 
-  .landingBox button:hover {
+  .landingBox .button:hover {
     background-color: #64a953;
     cursor: pointer;
     border: #64a953;

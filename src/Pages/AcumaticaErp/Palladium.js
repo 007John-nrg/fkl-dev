@@ -15,6 +15,7 @@ import image19 from '../../assets/aim27.png';
 import image20 from '../../assets/aim28.png';
 import image21 from '../../assets/aim29.png';
 import Footer from '../../Components/Footer';
+import { Link } from 'react-router-dom';
 
 const Palladium = () => {
   return (
@@ -31,8 +32,7 @@ const Palladium = () => {
           margins and improving operational efficiency.
         </p>
         <div className='buttons'>
-          <button classname="btn">Find out more</button>
-          <button classname="btn">Pricing</button>
+          <Link className="btnPal" to="/Contact">GET A QUOTE</Link>
         </div>
       </div>
 

@@ -4,6 +4,7 @@ import { FaCloudUploadAlt, FaIoxhost, FaCreditCard, FaTablet, FaExchangeAlt, FaH
 import payspace from '../../assets/payspace.jpg'
 import Footer from '../../Components/Footer';
 import { BsSendFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const FeatureColumn = ({ icon, color, title }) => {
   const IconComponent = icon;
@@ -51,6 +52,10 @@ const HrPayroll = () => {
                 Redefine Your Time
             </h4>
           </div>
+        </div>
+
+        <div className='buttons'>
+          <Link className="btnPal" to="/Contact">GET A QUOTE</Link>
         </div>
       </section>
 

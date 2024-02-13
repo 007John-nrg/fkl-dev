@@ -18,6 +18,9 @@ import { Distribution } from './Pages/AcumaticaErp/Distribution';
 import Manufacturing from './Pages/AcumaticaErp/Manufacturing';
 import Commerce from './Pages/AcumaticaErp/Commerce';
 import General from './Pages/AcumaticaErp/General';
+import Consulting from './Pages/Services/Consulting';
+import Training from './Pages/Services/Training';
+import Support from './Pages/Services/Support';
 
 function App() {
   return (
@@ -41,6 +44,9 @@ function App() {
           <Route path="delete" element={<Delete />} />
           <Route path="Jobs" element={<Jobs />} />
           <Route path="Apply" element={<Apply />} />
+          <Route path="Consulting" element={<Consulting />} />
+          <Route path="Training" element={<Training />} />
+          <Route path="Support" element={<Support />} />
         </Routes>
       </div>
     </BrowserRouter>

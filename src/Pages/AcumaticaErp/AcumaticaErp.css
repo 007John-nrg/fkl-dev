@@ -23,11 +23,24 @@
     align-items: center;
     width: 100%;
   }
+
+  .acumaticaEdit {
+    flex-wrap: wrap;
+  }
+
+  .imageEdit {
+    flex: 40%
+  }
+
+  .textEdit {
+    flex: 40%;
+  }
   
   .imageContainer { 
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .imgPall {
@@ -213,15 +226,18 @@
     gap: 3rem;
   }
 
-  .acumaticaContainer button {
+  .btnPal {
     border: 1px solid;
     padding: .5rem 1rem;
     background-color: #fff;
-    font-size: 1rem;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 1.2rem;
     cursor: pointer;
+    text-decoration: none;
   }
 
-  .acumaticaContainer button:hover {
+  .btnPal:hover {
     color: #fff;
     background-color: #64a953;
     border: 1px solid #64a953;
@@ -326,9 +342,24 @@
   /* margin-left: -8rem; */
 }
 
+.Slider {
+  text-align: start;
+  padding: 1.5rem;
+  width: 80%;
+  border-radius: 1px solid red;
+}
 
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: gray;
+}
 
+.portfolioSlider {  
+  margin: 0 auto;
+  padding-left: 3rem;
 
+}
   
 
   

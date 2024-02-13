@@ -44,12 +44,7 @@ const Acumatica = () => {
           <div className="textContainer2">
             <h3 className='sectionTitle'>Acumatica</h3>
             <p>
-              Acumatica is the fastest-growing provider of cloud ERP software for small- and mid-sized businesses.
-              Built on the world's best cloud and mobile technology, our adaptable and integrated applications 
-              deliver modern solutions for ERP and CRM. These can help Streamline your processes while gaining visibility over all
-              aspects of your operation to accelerate your business growth. Each application is fully mobile to allow access from Anywhere
-              on any device at any time. Acumatica's unique pricing model offers flexible licensing and deployment options and is easily 
-              expanded fro a growing organization.
+              Acumatica technology is built on a future-proof platform with open architecture for rapid integrations, scalability, and ease of use. The solution helps you manage accounting, operations, customers, vendors, employees, and many other aspects of running a business efficiently and effectively. We offer you the optimal business management solution to empower your company's transition for success in the modern digital economy. With Acumatica, we provide unparalleled capabilities for transforming your operations and ensuring resilience in today's dynamic business landscape.
             </p>
           </div>
         </div>
