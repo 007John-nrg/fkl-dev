@@ -217,17 +217,35 @@ color: #64a953;
 
 .consultingWhy {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 90%;
     flex-direction: column;
 }
 
 .whyFlex {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.whyFlex .whyFlexImage {
-    width: 50px;
+.whyFlex .whyFlexImage{
+    flex: 1;
+    width: 50%;
+    height: 50%;
+}
+
+.whyFlex .whyFlexImage img {
+    width: 100%;
+    height: auto;
+}
+
+.whyFlex .whyFlexContent {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+.whyFlex .whyFlexContent p span {
+    color: #64a953;
+    font-weight: bold;
 }
 
 .contentFooter {

@@ -65,8 +65,8 @@ const Consulting = () => {
 
       <div className="consultingWhy">
         <h1>Why Future Kenya?</h1>
-        {/* <div className="whyFlex">
-          <div classname="whyFlexImage">
+        <div className="whyFlex">
+          <div className="whyFlexImage">
             <img src={image9} alt="why future kenya image" />
           </div>
           <div className="whyFlexContent">
@@ -80,7 +80,7 @@ const Consulting = () => {
             <p>Onshore Support and Deployment</p>
             <p>Local Support</p>
           </div>
-        </div> */}
+        </div>
       </div>
 
       <div className='contentFooter'>
