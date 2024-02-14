@@ -47,10 +47,14 @@ const Consulting = () => {
         </div>
       </div>
 
-      <div className="cycleFlow">
+      {/* <div className="cycleFlow">
         <div className="imageFlow">
           <img src={image7} alt="implementation cycle image" />
         </div>
+      </div> */}
+
+      <div className="imageFlow">
+        <img src={image7} alt="implementation cycle image" />
       </div>
 
       <Link to="/Contact" className="consultingContact">

@@ -183,14 +183,15 @@
   }
 
   .videoContainer {
-    margin: 2.5rem 0;
+    /* margin: 2.5rem 0;
+    border: 1px solid red; */
+    margin-top: 1rem;
   }
 
   .acumatica3 {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 3rem;
   }
 
   .image2 {
