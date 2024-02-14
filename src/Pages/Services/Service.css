@@ -10,9 +10,9 @@
 
 .serviceBox {
     min-height: 36vh;
-    background-image: url('../../assets/serv4.png');
+    background-image: url('../../assets/aim84.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     color: white;
     width: 100%;
     display: flex;
@@ -294,8 +294,13 @@ color: #64a953;
 } */
 
  .trainingIcons .content1 {
-    width: 24%;
-    height: 24%;
+    width: 17%;
+    height: 17%;
+}
+
+.trainingIcons .content1 p {
+    color: #5e17eb;
+    font-weight: bold;
 }
 
 .trainingIcons .content2{

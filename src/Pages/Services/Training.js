@@ -13,6 +13,9 @@ import image9 from '../../assets/aim78.png';
 import image10 from  '../../assets/aim79.png';
 import image11 from  '../../assets/aim69.PNG';
 import image12 from '../../assets/aim68.png';
+import image01 from '../../assets/aim01.png'
+import image02 from '../../assets/aim02.png'
+import image03 from '../../assets/aim03.png'
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -33,6 +36,38 @@ const Training = () => {
 
         <div className="consultingIcons trainingIcons">
           <div className="content1">
+            <img src={image01} alt="" />
+            <p>Best Practice Training</p>
+          </div>
+          <div className="content1">
+            <img src={image02} alt="" />
+            <p>Policy Based Standardization</p>
+          </div>
+          <div className="content1">
+            <img src={image03} alt="" />
+            <p>Super User Training</p>
+          </div>
+          <div className="content1">
+            <img src={image01} alt="" />
+            <p>Best Practice Training</p>
+          </div>
+          <div className="content1">
+            <img src={image02} alt="" />
+            <p>Policy Based Standardization</p>
+          </div>
+          <div className="content1">
+            <img src={image03} alt="" />
+            <p>Super User Training</p>
+          </div>
+          <div className="content1">
+            <img src={image02} alt="" />
+            <p>Policy Based Standardization</p>
+          </div>
+          <div className="content1">
+            <img src={image03} alt="" />
+            <p>Super User Training</p>
+          </div>
+          {/* <div className="content1">
             <img src={image2} alt="" />
           </div>
           <div className="content2">
@@ -55,7 +90,7 @@ const Training = () => {
           </div>
           <div className="content8">
             <img src={image9} alt="" />
-          </div>
+          </div> */}
         </div>
       </div>
 {/* 
