@@ -11,6 +11,11 @@ import image7 from '../../assets/aim66.png';
 import image8 from '../../assets/aim67.png';
 import image9 from '../../assets/aim68.png';
 import image10 from  '../../assets/aim69.PNG';
+import image09 from '../../assets/aim09.png';
+import image100 from '../../assets/aim100.png';
+import image101 from '../../assets/aim101.png';
+import image102 from '../../assets/aim102.png';
+import image103 from '../../assets/aim103.png';
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 
@@ -30,19 +35,24 @@ const Consulting = () => {
 
         <div className="consultingIcons">
           <div className="content1">
-            <img src={image2} alt="" />
+            <img src={image09} alt="" />
+            <p>Project Management</p>
           </div>
-          <div className="content2">
-            <img src={image3} alt="" />
+          <div className="content1">
+            <img src={image100} alt="" />
+            <p>Process Re-Engineering</p>
           </div>
-          <div className="content3">
-            <img src={image4} alt="" />
+          <div className="content1">
+            <img src={image101} alt="" />
+            <p>Infrastructure Recommendations</p>
           </div>
-          <div className="content4">
-            <img src={image5} alt="" />
+          <div className="content1">
+            <img src={image102} alt="" />
+            <p>Accounting Best Practice</p>
           </div>
-          <div className="content5">
-            <img src={image6} alt="" />
+          <div className="content1">
+            <img src={image103} alt="" />
+            <p>Business Intelligence</p>
           </div>
         </div>
       </div>

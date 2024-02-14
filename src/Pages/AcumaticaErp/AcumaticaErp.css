@@ -182,10 +182,17 @@
     font-weight: 550;
   }
 
+  .vivid {
+    width: 105.5%;
+    background-color: #80a6a3;
+  }
+
   .videoContainer {
     /* margin: 2.5rem 0;
     border: 1px solid red; */
-    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    /* margin-top: 1rem; */
   }
 
   .acumatica3 {

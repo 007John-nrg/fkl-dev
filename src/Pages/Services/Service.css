@@ -11,6 +11,8 @@
 .serviceBox {
     min-height: 36vh;
     background-image: url('../../assets/aim84.png');
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
     background-size: cover;
     /* background-repeat: no-repeat; */
     color: white;
@@ -128,12 +130,20 @@ color: #64a953;
 
 .consultingIcons {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.1rem;
 }
 
 .consultingIcons .content1 {
-    width: 20%;
-    height: 20%;
+    width: 17%;
+    height: 17%;
+}
+
+.consultingIcons .content1 p {
+    color: #00bf63;
+    font-weight: bold;
+    margin-top: -.5rem;
 }
 
 .consultingIcons .content2 {
@@ -301,6 +311,7 @@ color: #64a953;
 .trainingIcons .content1 p {
     color: #5e17eb;
     font-weight: bold;
+    margin-top: -.5rem;
 }
 
 .trainingIcons .content2{

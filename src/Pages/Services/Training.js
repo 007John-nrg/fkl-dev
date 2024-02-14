@@ -16,6 +16,11 @@ import image12 from '../../assets/aim68.png';
 import image01 from '../../assets/aim01.png'
 import image02 from '../../assets/aim02.png'
 import image03 from '../../assets/aim03.png'
+import image04 from '../../assets/aim04.png'
+import image05 from '../../assets/aim05.png'
+import image06 from '../../assets/aim06.png'
+import image07 from '../../assets/aim07.png'
+import image08 from '../../assets/aim08.png'
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -36,61 +41,37 @@ const Training = () => {
 
         <div className="consultingIcons trainingIcons">
           <div className="content1">
-            <img src={image01} alt="" />
-            <p>Best Practice Training</p>
-          </div>
-          <div className="content1">
             <img src={image02} alt="" />
             <p>Policy Based Standardization</p>
-          </div>
-          <div className="content1">
-            <img src={image03} alt="" />
-            <p>Super User Training</p>
           </div>
           <div className="content1">
             <img src={image01} alt="" />
             <p>Best Practice Training</p>
           </div>
           <div className="content1">
-            <img src={image02} alt="" />
-            <p>Policy Based Standardization</p>
-          </div>
-          <div className="content1">
             <img src={image03} alt="" />
             <p>Super User Training</p>
           </div>
           <div className="content1">
-            <img src={image02} alt="" />
-            <p>Policy Based Standardization</p>
+            <img src={image05} alt="" />
+            <p>Departmental leaders training</p>
           </div>
           <div className="content1">
-            <img src={image03} alt="" />
-            <p>Super User Training</p>
+            <img src={image04} alt="" />
+            <p>End User Training</p>
           </div>
-          {/* <div className="content1">
-            <img src={image2} alt="" />
+          <div className="content1">
+            <img src={image07} alt="" />
+            <p>User Assistance Training</p>
           </div>
-          <div className="content2">
-            <img src={image3} alt="" />
+          <div className="content1">
+            <img src={image08} alt="" />
+            <p>Over the Shoulder Training</p>
           </div>
-          <div className="content3">
-            <img src={image4} alt="" />
+          <div className="content1">
+            <img src={image06} alt="" />
+            <p>System Administration Training</p>
           </div>
-          <div className="content4">
-            <img src={image5} alt="" />
-          </div>
-          <div className="content5">
-            <img src={image6} alt="" />
-          </div>
-          <div className="content6">
-            <img src={image7} alt="" />
-          </div>
-          <div className="content7">
-            <img src={image8} alt="" />
-          </div>
-          <div className="content8">
-            <img src={image9} alt="" />
-          </div> */}
         </div>
       </div>
 {/* 
