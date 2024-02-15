@@ -1,10 +1,14 @@
 .acumaticaContainer {
-    margin-left: 21%;
-    padding: 1.5rem;
+    margin-left: 20%;
+    /* padding: 1.5rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.general {
+  padding: 1.5rem;
 }
 
   .sectionTitle {
@@ -44,7 +48,8 @@
   }
 
   .imgPall {
-    /* border: 1px solid red; */
+    margin-top: 2.2rem;
+    border-bottom: 2px solid gray;
   }
 
   .imageContainer img { 
@@ -172,8 +177,32 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 55%;
+    width: 50%;
     text-align: center;
+  }
+
+  .Acum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+  }
+
+  .acumLogo {
+    border-bottom: 2px solid gray;
+  }
+
+  .line {
+    width: 100%;
+    margin-top: -3rem;
+    height: 2px;
+    background-color: gray;
+  }
+
+  .acumLogo img {
+    height: auto;
+    width: 100%;
   }
 
   .acumaticaContent1 p {
@@ -183,7 +212,9 @@
   }
 
   .vivid {
-    width: 105.5%;
+    width: 100%;
+    /* margin-left: -1.5rem;
+    margin-right: -1.5rem; */
     background-color: #d9d9d9;
   }
 
@@ -228,11 +259,20 @@
 
   /* palladium */
   .acumaticaContainer .two {
-    margin-top: -1.5rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: .5rem; */
+    /* margin-top: -1.5rem; */
+    /* display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; */
+    width: 50%;
+    text-align: center;
   }
 
   .acumaticaContainer .two p {
-    margin-top: -1rem;
+    /* margin-top: -1rem; */
   }
 
   .acumaticaContainer .buttons {
@@ -240,12 +280,12 @@
     gap: 3rem;
   }
 
-  .btnPal {
-    border: 1px solid;
+  .buttons .btnPal {
     padding: .5rem 1rem;
     background-color: #fff;
-    border: 1px solid grey;
-    color: grey;
+    border: 1px solid black;
+    color: black;
+    border-radius: .5rem;
     font-size: 1.2rem;
     cursor: pointer;
     text-decoration: none;

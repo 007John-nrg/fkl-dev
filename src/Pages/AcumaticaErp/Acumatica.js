@@ -9,7 +9,7 @@ import image3 from '../../assets/aim11.png';
 import image4 from '../../assets/aim12.png';
 import image5 from '../../assets/aim13.png';
 import image6 from '../../assets/aim14.png';
-import image8 from '../../assets/aim16.png';
+import image8 from '../../assets/aim105.PNG';
 import Footer from '../../Components/Footer';
 
 
@@ -18,7 +18,13 @@ const Acumatica = () => {
   return (
     <div className='acumaticaContainer'>
       <div className="acumaticaContent1">
-        <div className="imageContainer">
+        {/* <div className="Acum">
+          <div className="imageContainer acumLogo">
+            <img src={image8} alt="acumatica logo" />
+          </div>
+          <div className='line'></div>
+        </div> */}
+        <div className="imageContainer acumLogo">
           <img src={image8} alt="acumatica logo" />
         </div>
         <p>
@@ -33,24 +39,6 @@ const Acumatica = () => {
           <iframe width="660" height="400" src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
-      {/* 
-      <div className="acumaticaContent acumatica2">
-        <div className='acumatica3'>
-          <div className="textContainer2">
-            <h3 className='sectionTitle'>Acumatica</h3>
-            <p>
-              Acumatica Cloud ERP is a dynamic and flexible business management solutions
-              that empowers organizations with real-time insights, seamless collaboration, and
-              unparalleled scalability for optimal operational efficiency and growth.
-            </p>
-          </div>
-        </div>
-        <div class='videoContainer'>
-          <div class="videoWrapper">
-            <iframe width="560" height="310" src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div> */}
 
       <div className="acumaticaContent acumatica2">
         <div className='acumatica3'>

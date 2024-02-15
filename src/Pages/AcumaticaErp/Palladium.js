@@ -1,6 +1,6 @@
 import React from 'react';
 import './AcumaticaErp.css';
-import image7 from '../../assets/aim15.png';
+import image7 from '../../assets/aim106.png';
 import image8 from '../../assets/aim17.png';
 import image9 from '../../assets/aim18.png';
 import image10 from '../../assets/aim19.png';
@@ -112,7 +112,7 @@ const Palladium = () => {
 
         <div className='pallContent1'>
           <div className='pallImage'>
-            <img src={image14} alt=""/>
+            <img src={image18} alt=""/>
           </div>
           <div className='pallDesc'>
             <h3>General Ledger</h3>
@@ -132,7 +132,7 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image15} alt=""/>
+            <img src={image21} alt=""/>
           </div>
         </div>
 
@@ -159,13 +159,13 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image17} alt=""/>
+            <img src={image14} alt=""/>
           </div>
         </div>
 
         <div className='pallContent1'>
           <div className='pallImage'>
-            <img src={image18} alt=""/>
+            <img src={image15} alt=""/>
           </div>
           <div className='pallDesc'>
             <h3>Inventory</h3>
@@ -184,13 +184,13 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image19} alt=""/>
+            <img src={image17} alt=""/>
           </div>
         </div>
 
         <div className='pallContent1'>
           <div className='pallImage'>
-            <img src={image20} alt=""/>
+            <img src={image19} alt=""/>
           </div>
           <div className='pallDesc'>
             <h3>Point of sale, RST & SMS</h3>
@@ -210,7 +210,7 @@ const Palladium = () => {
             </p>
           </div>
           <div className='pallImage'>
-            <img src={image21} alt=""/>
+            <img src={image20} alt=""/>
           </div>
         </div>
 

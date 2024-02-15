@@ -11,17 +11,12 @@ import Footer from '../../Components/Footer';
 
 const General = () => {
   return (
-    <div className='acumaticaContainer'>
+    <div className='acumaticaContainer general'>
         <div></div>
-        
         <div>
             <div className="acumaticaContent acumatica2">
                 <div className='acumatica3'>
                     <div className="imageContainer image2">
-                    {/* <video controls width="525" height="360" autoplay poster={imageDemo}>
-                        <source src={video} type="video/mp4" />
-                        <source src={video} type="video/webm" />
-                    </video> */}
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/ljl6EI0EVHs?si=bY-7NYZogCX3O6zI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
 
