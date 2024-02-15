@@ -4,6 +4,11 @@ import image1 from '../../assets/aim107.png';
 import image2 from '../../assets/aim108.png';
 import image3 from '../../assets/aim109.png';
 import image4 from '../../assets/aim110.png';
+import image5 from '../../assets/aim116.png';
+import image6 from '../../assets/aim117.png';
+import image7 from '../../assets/aim118.png';
+import image8 from '../../assets/aim119.png';
+import image9 from '../../assets/aim120.png';
 
 const Support = () => {
   return (
@@ -36,7 +41,19 @@ const Support = () => {
       </div>
 
       <div className="packages">
-        <div className='packagesBox zeroo'>
+        <div className='packagesBox'>
+          <img src={image6} alt="" />
+        </div>
+        <div className='packagesBox'>
+          <img src={image7} alt="" />
+        </div>
+        <div className='packagesBox'>
+          <img src={image8} alt="" />
+        </div>
+        <div className='packagesBox'>
+          <img src={image9} alt="" />
+        </div>
+        {/* <div className='packagesBox zeroo'>
           <div className='packageContent'>
             <h3>Annual license fees only</h3>
             <ul>
@@ -231,8 +248,8 @@ const Support = () => {
           <div>
             <button className='buttonContainer'>Premium</button>
           </div>
-        </div>
-      </div>
+        </div> */}
+      </div> 
 
     </div>
   )

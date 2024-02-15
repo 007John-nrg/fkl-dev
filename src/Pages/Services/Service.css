@@ -419,69 +419,21 @@ color: #64a953;
 
 .packages {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1.3rem;
-    margin: 2rem;
+    gap: 1.2rem;
+    margin: 1.5rem;
 }
 
 .packagesBox {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    /* height: 555px; */
-    width: 23%;
-    font-size: 1rem;
-    /* overflow-y: auto; */
-    border-radius: .7rem;
-}
-
-.packagesBox h3 {
-    text-align: center;
-    border-bottom: 1px solid #ffde59;
-}
-
-.zeroo {
-    border: 2px solid #ffde59;
-}
-
-.onea {
-    border: 2px solid #004aad;
-}
-.twob {
-    border: 2px solid #00bf63;
-}
-
-.threec {
-    border: 2px solid #5e17eb;
-}
-
-.packagesBox::-webkit-scrollbar {
-    width: 2px;
-  }
-  
-  .packagesBox::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-  }
-  
-  .packagesBox::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-.packagesBox button {
-    display: flex;
+ width: 20%
 
 }
 
-.buttonContainer {
-    margin-top: auto; /* Push button to the bottom */
-  }
-
-.packageContent ul {
-    /* text-align: center;
-    border: 1px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; */
+.packagesBox img {
+    width: 100%;
+    height: auto;
 }
+
+

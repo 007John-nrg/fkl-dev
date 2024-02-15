@@ -4,7 +4,7 @@ import Footer from '../../Components/Footer';
 import service1 from '../../assets/serv1.png';
 import service2 from '../../assets/serv2.png';
 import service3 from '../../assets/serv3.png';
-import service from '../../assets/aim115.png';
+import service from '../../assets/aim116.png';
 
 const Service = () => {
   return (
