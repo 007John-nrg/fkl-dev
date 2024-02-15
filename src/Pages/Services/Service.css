@@ -9,19 +9,23 @@
   } */
 
 .serviceBox {
-    min-height: 36vh;
-    background-image: url('../../assets/aim84.png');
-    /* background-size: 100%; */
+    /* background-image: url('../../assets/aim113.png');
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-repeat: no-repeat; */
     color: white;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
+.serv {
+}
+
+.serv img {
+    width: 100%;
+    height: auto;
+}
 .serviceBox1 {
     display: flex;
     align-items: center;
@@ -93,7 +97,8 @@ color: #64a953;
 
 /* consulting */
 
-.consultingContainer {
+.consultingContainer,
+.supportContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -308,6 +313,23 @@ color: #64a953;
     height: 17%;
 }
 
+.supportIcons {
+    flex-wrap: wrap;
+    gap: 2.2rem;
+    justify-content: center;
+}
+
+.supportIcons .content1 {
+    width: 20%;
+    height: 20%;
+}
+
+.supportIcons .content1 p {
+  color: #ec8e55;
+      font-weight: bold;
+    margin-top: -.5rem;
+}
+
 .trainingIcons .content1 p {
     color: #5e17eb;
     font-weight: bold;
@@ -395,3 +417,71 @@ color: #64a953;
     color: rgb(75, 75, 243);
 }
 
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    margin: 2rem;
+}
+
+.packagesBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* height: 555px; */
+    width: 23%;
+    font-size: 1rem;
+    /* overflow-y: auto; */
+    border-radius: .7rem;
+}
+
+.packagesBox h3 {
+    text-align: center;
+    border-bottom: 1px solid #ffde59;
+}
+
+.zeroo {
+    border: 2px solid #ffde59;
+}
+
+.onea {
+    border: 2px solid #004aad;
+}
+.twob {
+    border: 2px solid #00bf63;
+}
+
+.threec {
+    border: 2px solid #5e17eb;
+}
+
+.packagesBox::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  .packagesBox::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+  }
+  
+  .packagesBox::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+.packagesBox button {
+    display: flex;
+
+}
+
+.buttonContainer {
+    margin-top: auto; /* Push button to the bottom */
+  }
+
+.packageContent ul {
+    /* text-align: center;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+}

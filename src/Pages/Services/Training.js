@@ -74,12 +74,6 @@ const Training = () => {
           </div>
         </div>
       </div>
-{/* 
-      <div className="cycleFlow">
-        <div className="imageFlow trainingFlow">
-          <img src={image10} alt="implementation cycle image" />
-        </div>
-      </div> */}
 
       <div className="imageFlow trainingFlow">
         <img src={image10} alt="implementation cycle image" />

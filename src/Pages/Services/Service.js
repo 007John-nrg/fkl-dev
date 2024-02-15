@@ -4,13 +4,16 @@ import Footer from '../../Components/Footer';
 import service1 from '../../assets/serv1.png';
 import service2 from '../../assets/serv2.png';
 import service3 from '../../assets/serv3.png';
-import service from '../../assets/aim84.png';
+import service from '../../assets/aim115.png';
 
 const Service = () => {
   return (
     <div className='serviceContainer'>
       <div className='serviceBox'>
-        <div className='serviceBox1'>
+        <div className='serv'>
+          <img src={service} />
+        </div>
+        {/* <div className='serviceBox1'>
           <h3>Future Kenya IT services</h3>
           <p>
             Our comprehensive suite of services encompasses
@@ -19,7 +22,7 @@ const Service = () => {
             assistance necessary to thrive in a rapidly evolving
             landscape
           </p>
-        </div>
+        </div> */}
       </div>
 
       <div className='serviceBox2'>
