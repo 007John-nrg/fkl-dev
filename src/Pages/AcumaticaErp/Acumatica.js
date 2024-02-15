@@ -30,15 +30,10 @@ const Acumatica = () => {
 
       <div className="vivid">   
        <div className='videoContainer'>
-          {/* <video controls width="640" height="360" autoplay poster={imageDemo}>
-            <source src={video} type="video/mp4" />
-            <source src={video} type="video/webm" />
-          </video> */}
-
           <iframe width="660" height="400" src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
-
+      {/* 
       <div className="acumaticaContent acumatica2">
         <div className='acumatica3'>
           <div className="textContainer2">
@@ -50,15 +45,12 @@ const Acumatica = () => {
             </p>
           </div>
         </div>
-        <div className='videoContainer'>
-            {/* <video controls width="640" height="360" autoplay poster={imageDemo}>
-              <source src={video} type="video/mp4" />
-              <source src={video} type="video/webm" />
-            </video> */}
-
-            <iframe width="660" height="400" src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class='videoContainer'>
+          <div class="videoWrapper">
+            <iframe width="560" height="310" src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-      </div>
+        </div>
+      </div> */}
 
       <div className="acumaticaContent acumatica2">
         <div className='acumatica3'>
