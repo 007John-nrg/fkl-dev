@@ -13,7 +13,7 @@ import image9 from '../../assets/aim120.png';
 const Support = () => {
   return (
     <div className='serviceContainer supportContainer'>
-      <div className="consultingContent">
+      <div className="consultingContent supportContent">
         <div className="imageContainer consultingImage">
           <img src={image1} alt="acumatica consulting logo" />
         </div>

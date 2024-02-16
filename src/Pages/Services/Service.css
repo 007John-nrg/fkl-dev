@@ -417,17 +417,21 @@ color: #64a953;
     color: rgb(75, 75, 243);
 }
 
+.supportContent {
+    margin-bottom: 3rem;
+}
+
 .packages {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.2rem;
-    margin: 1.5rem;
+    margin: 0.5rem;
 }
 
 .packagesBox {
- width: 20%
+ width: 23%
 
 }
 

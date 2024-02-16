@@ -146,7 +146,9 @@ const Training = () => {
       </div>
 
       <div className='course'>
-        <h3>Try a course today for FREE!</h3>
+        <h3>
+          <a href="https://openuni.acumatica.com/">Learn Now at Open University</a>
+        </h3>
       </div>
       <Footer />
     </div>
