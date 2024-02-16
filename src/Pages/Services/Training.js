@@ -126,7 +126,7 @@ const Training = () => {
         </div>
       </div>
 
-      <div className='contentFooter contentFooterTraining'>
+      <div className='contentFooterTraining'>
         <div className='contentFooter2'>
           <h3>Maximizing results</h3>
           <p>

@@ -279,17 +279,25 @@ color: #64a953;
 
 .contentFooter {
     display: flex;
-    gap: 3rem;
+    /* align-items: center;
+    justify-content: center; */
+    /* gap: 1.5rem; */
     margin-top: 1rem;
+    width: 100%;
+    background-color: #d9d9d9;
 }
 
-.contentFooter {
+/* .contentFooter {
     width: 90%;
-}
+} */
 
 .contentFooter1 {
     width: 25%;
     text-align: center;
+    /* background-color: #d9d9d9; */
+    border-radius: .5rem;
+    padding: 1.3rem;
+    /* border: 1px solid red; */
 }
 
 .contentFooter1 p {
@@ -406,7 +414,11 @@ color: #64a953;
 }
 
 .contentFooter2 {
-    width: 33%;
+    border-radius: .5rem;
+    gap: 2rem;
+    background-color: #d9d9d9;
+    padding: 1rem;
+    width: 25%;
     text-align: center;
 }
 
@@ -415,7 +427,10 @@ color: #64a953;
 }
 
 .contentFooterTraining {
-    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    gap: 3rem;
 }
 
 .course a {
