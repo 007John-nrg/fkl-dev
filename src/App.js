@@ -21,6 +21,7 @@ import General from './Pages/AcumaticaErp/General';
 import Consulting from './Pages/Services/Consulting';
 import Training from './Pages/Services/Training';
 import Support from './Pages/Services/Support';
+import Test from './Pages/test';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="Consulting" element={<Consulting />} />
           <Route path="Training" element={<Training />} />
           <Route path="Support" element={<Support />} />
+          <Route path="test" element={<Test />} />
         </Routes>
       </div>
     </BrowserRouter>

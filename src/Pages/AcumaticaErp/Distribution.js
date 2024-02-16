@@ -1,5 +1,6 @@
 import React from 'react'
-import Slider from 'react-slick'
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './AcumaticaErp.css';
@@ -13,21 +14,13 @@ export const Distribution = () => {
 
 
     const iframeUrls = [
-        "https://publuu.com/flip-book/392887/896576/page/1?embed&transparent",
-        "https://publuu.com/flip-book/392887/896746/page/1?embed&transparent",
-        "https://publuu.com/flip-book/392887/896750/page/1?embed&transparent",
-        "https://publuu.com/flip-book/392887/896754/page/1?embed&transparent",
-        "https://publuu.com/flip-book/392887/896890/page/1?embed&transparent",
-        "https://publuu.com/flip-book/392887/896894/page/1?embed&transparent"
+        "https://publuu.com/flip-book/392887/896894/page/1?embed&transparent",
+        "https://publuu.com/flip-book/392887/896894/page/2?embed&transparent",
+        "https://publuu.com/flip-book/392887/896894/page/3?embed&transparent",
+        "https://publuu.com/flip-book/392887/896894/page/4?embed&transparent",
+        "https://publuu.com/flip-book/392887/896894/page/5?embed&transparent"
       ];
     
-      const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1
-      };
 
   return (
     <div className='acumaticaContainer'>
@@ -62,29 +55,21 @@ export const Distribution = () => {
             </div>
         </div>
 
-        <div className="bronchureBox">
-
-            <iframe src="https://publuu.com/flip-book/392887/896576/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/896746/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/896750/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/896754/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/896890/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
-            <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="500" height="750" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>
- 
-        </div>
-        <div style={{ border: '1px solid red', width: '100%' }}>
-        <h2>BROCHURES</h2>
-        </div>
-
-        <div className="Slider">
-            
-            {/* <Slider {...settings}>
-                {iframeUrls.map((url, index) => (
+        <div className='bronchureBox'>
+            <Carousel 
+                autoFocus={true}
+                infiniteLoop={true}
+                interval={2000}
+                showArrows={true}
+                centerMode={true}
+                centerSlidePercentage={33}
+            >
+                {iframeUrls.map((image, index) => (
                 <div key={index}>
-                    <iframe src={url} width="500" height="750" scrolling="no" frameBorder="0" allowFullScreen allow="clipboard-write" className="publuuflip"></iframe>
+                    <iframe src={image} width="520" height="440" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
                 </div>
                 ))}
-            </Slider> */}
+            </Carousel>
         </div>
 
         <Footer />
