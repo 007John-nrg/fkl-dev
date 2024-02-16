@@ -78,10 +78,12 @@ const Consulting = () => {
       </Link>
 
       <div className="consultingWhy">
-        <h1>Why Future Kenya?</h1>
         <div className="whyFlex">
-          <div className="whyFlexImage">
-            <img src={image9} alt="why future kenya image" />
+          <div className='flexHeader'>
+            <h1>Why Future Kenya?</h1>
+            <div className="whyFlexImage">
+              <img src={image9} alt="why future kenya image" />
+            </div>
           </div>
           <div className="whyFlexContent">
             <p>Customized Implementation as per client's exact requiements</p>

@@ -254,10 +254,12 @@ const Support = () => {
       </div> 
 
       <div className="consultingWhy supportWhy">
-        <h1>Why Future Kenya?</h1>
         <div className="whyFlex">
-          <div className="whyFlexImage">
-            <img src={image10} alt="why future kenya image" />
+          <div className='flexHeader'>
+            <h1>Why Future Kenya?</h1>
+            <div className="whyFlexImage">
+              <img src={image10} alt="why future kenya image" />
+            </div>
           </div>
           <div className="whyFlexContent">
             <h3>Our support packages provide you with </h3>

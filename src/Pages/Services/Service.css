@@ -250,9 +250,11 @@ color: #64a953;
     flex-wrap: wrap;
 }
 
-.whyFlex .whyFlexImage{
+.flexHeader {
     flex: 1;
-    width: 50%;
+}
+
+.whyFlex .whyFlexImage{
 }
 
 .whyFlex .whyFlexImage img {
@@ -264,7 +266,6 @@ color: #64a953;
     flex: 1;
     text-align: center;
     padding: 1rem;
-    margin-top: -1rem;
 }
 
 .whyFlex .whyFlexContent p {

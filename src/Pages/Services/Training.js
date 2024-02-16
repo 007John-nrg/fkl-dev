@@ -110,10 +110,12 @@ const Training = () => {
       </Link>
 
       <div className="consultingWhy">
-        <h1>Why Future Kenya?</h1>
         <div className="whyFlex">
-          <div className="whyFlexImage">
-            <img src={image12} alt="why future kenya image" />
+          <div className='flexHeader'>
+            <h1>Why Future Kenya?</h1>
+            <div className="whyFlexImage">
+              <img src={image12} alt="why future kenya image" />
+            </div>
           </div>
           <div className="whyFlexTrain">
             <p><span className='bold'>Leading and Guiding: </span>We don’t just show you how the product works, but we apply teachings to implemented business cases.</p>
