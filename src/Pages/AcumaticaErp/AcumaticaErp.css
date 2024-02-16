@@ -250,6 +250,7 @@
   .textContainer2 {
     flex: 40%;
     align-items: center;
+    padding: 1rem;
 
   }
 
