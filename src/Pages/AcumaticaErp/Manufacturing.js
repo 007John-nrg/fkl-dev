@@ -13,25 +13,17 @@ import Footer from '../../Components/Footer';
 const Manufacturing = () => {
   return (
     <div className='acumaticaContainer'>
-        <div></div>
-        <div>
-            <div className="acumaticaContent acumatica2">
-                <div className='acumatica3'>
-                    <div className="imageContainer image2">
-                    {/* <video controls width="525" height="360" autoplay poster={imageDemo}>
-                        <source src={video} type="video/mp4" />
-                        <source src={video} type="video/webm" />
-                    </video> */}
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TA57El8K2aQ?si=-PsfDna0ubQvOQOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
 
-                    <div className="textContainer2">
-                        <h3 className='sectionTitle'>Manufacturing Edition</h3>
-                        <p>
-                          Integrate production planning and shop floor with customer management, sales orders, inventory, purchasing, accounting, and financial reporting to provide real-time coordination of activities across your entire business.
-                        </p>
-                    </div>
-                </div>
+        <div className="acumaticaContent acumatica3 backdrop">
+            <div className="imageContainer image2">
+                <iframe width="550" height="350" src="https://www.youtube.com/embed/TA57El8K2aQ?si=-PsfDna0ubQvOQOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div className="textContainer2">
+                <h3 className='genTitle'>Manufacturing Edition</h3>
+                <p>
+                    Integrate production planning and shop floor with customer management, sales orders, inventory, purchasing, accounting, and financial reporting to provide real-time coordination of activities across your entire business.
+                </p>
             </div>
         </div>
 

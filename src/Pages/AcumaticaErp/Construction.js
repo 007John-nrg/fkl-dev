@@ -15,21 +15,17 @@ import Footer from '../../Components/Footer';
 const Construction = () => {
   return (
     <div className='acumaticaContainer'>
-        <div>
-            <div className="acumaticaContent acumatica2">
-                <div className='acumatica3'>
-                    <div className="imageContainer image2">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DAuTq6trVQ4?si=jJI_mnLkptNdkkpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-
-                    <div className="textContainer2">
-                        <h3 className='sectionTitle'>Construction Edition</h3>
-                        <p>
-                            Acumatica’s Construction Edition is full-featured construction accounting software that helps you improve margins and project control at all stages of home, multi-family, commercial, mixed-use, land development, and government projects.
-                        </p>
-                    </div>
+        <div className="acumaticaContent acumatica3 backdrop">
+                <div className="imageContainer image2">
+                    <iframe width="550" height="350" src="https://www.youtube.com/embed/DAuTq6trVQ4?si=jJI_mnLkptNdkkpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-            </div>
+
+                <div className="textContainer2">
+                    <h3 className='genTitle'>Construction Edition</h3>
+                    <p>
+                        Acumatica’s Construction Edition is full-featured construction accounting software that helps you improve margins and project control at all stages of home, multi-family, commercial, mixed-use, land development, and government projects.
+                    </p>
+                </div>
         </div>
         <div className='GeneralContainer'>  
             <div className='GeneralImage'>
