@@ -4,14 +4,14 @@ import Footer from '../../Components/Footer';
 import service1 from '../../assets/serv1.png';
 import service2 from '../../assets/serv2.png';
 import service3 from '../../assets/serv3.png';
-import service from '../../assets/aim116.png';
+import service from '../../assets/aim121.png';
 
 const Service = () => {
   return (
     <div className='serviceContainer'>
       <div className='serviceBox'>
         <div className='serv'>
-          <img src={service} />
+          <img src={service} alt=""/>
         </div>
         {/* <div className='serviceBox1'>
           <h3>Future Kenya IT services</h3>
