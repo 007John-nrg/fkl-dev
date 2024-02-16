@@ -413,8 +413,13 @@ color: #64a953;
     margin-top: 1rem;
 }
 
-.course {
+.course a {
+    text-decoration: none;
     color: rgb(75, 75, 243);
+}
+
+.course a:hover {
+    text-decoration: underline;
 }
 
 .supportContent {
