@@ -12,7 +12,7 @@ import Footer from '../../Components/Footer';
 const General = () => {
   return (
     <div className='acumaticaContainer general'>
-        <div className="acumaticaContent acumatica3">
+        <div className="acumaticaContent acumatica3 backdrop">
             <div className="imageContainer image2">
                 <iframe width="460" height="280" src="https://www.youtube.com/embed/ljl6EI0EVHs?si=bY-7NYZogCX3O6zI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
