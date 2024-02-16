@@ -9,6 +9,8 @@ import image6 from '../../assets/aim117.png';
 import image7 from '../../assets/aim118.png';
 import image8 from '../../assets/aim119.png';
 import image9 from '../../assets/aim120.png';
+import image10 from '../../assets/aim68.png';
+import Footer from '../../Components/Footer';
 
 const Support = () => {
   return (
@@ -250,6 +252,48 @@ const Support = () => {
           </div>
         </div> */}
       </div> 
+
+      <div className="consultingWhy supportWhy">
+        <h1>Why Future Kenya?</h1>
+        <div className="whyFlex">
+          <div className="whyFlexImage">
+            <img src={image10} alt="why future kenya image" />
+          </div>
+          <div className="whyFlexContent">
+            <h3>Our support packages provide you with </h3>
+            <div>
+              <p>A dedicated support team consisting of Account Manager, Technical Manager, and Customer Service Manager.</p>
+              <p>One point of Direct contact (Account Manager)</p>
+              <p>One back-up point of contact</p>
+              <p>CRM systems to track and manage all incident</p>
+              <p>We provide technical Support to our customer for all their queries. The expertise and experience of our Technical Support Personnel’s are the best in the industry and in their work domain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className='contentFooter contentFooterTraining'>
+        <div className='contentFooter2'>
+          <h3>Proactive Monitoring and Maintenance</h3>
+          <p>
+            We take a proactive approach to support by implementing advanced monitoring tools and techniques to detect and address potential issues before they impact our clients' operations. Through proactive monitoring and maintenance, we perform regular system health checks, security patching, and performance optimization to ensure the stability, security, and optimal performance of our clients' IT environments. With our proactive support measures in place, clients can rest assured that their systems are in safe hands.
+          </p>
+        </div>
+        <div className='contentFooter2'>
+          <h3>Customized Support Plans</h3>
+          <p>
+            Whether it is the method of support or the support package delivered we recognize that each client has unique support requirements, we offer customized support plans tailored to meet their specific needs and budget constraints. Our collaborative approach involves working closely with clients to assess their individual requirements, develop customized support plans, and provide flexible service options that align with their business objectives. With our personalized support solutions, clients can enjoy peace of mind knowing that their support needs are being met in a way that best suits their organization.
+          </p>
+        </div>
+        <div className='contentFooter2'>
+          <h3>Knowledge Base and Self-Service Resources</h3>
+          <p>
+          As part of our commitment to empowering clients with the knowledge and resources they need, we provide complete transparency and provide content rich resources to enable clients. These resources include data sheets, tutorials, troubleshooting guides, and other informative materials designed to help clients resolve common issues independently and enhance their proficiency with our systems. By offering self-service resources, we aim to promote self-sufficiency among clients and enable them to maximize the value of their ERP investment.
+          </p>
+        </div>
+      </div>
+
+      <Footer />
 
     </div>
   )

@@ -18,12 +18,6 @@ const Acumatica = () => {
   return (
     <div className='acumaticaContainer'>
       <div className="acumaticaContent1">
-        {/* <div className="Acum">
-          <div className="imageContainer acumLogo">
-            <img src={image8} alt="acumatica logo" />
-          </div>
-          <div className='line'></div>
-        </div> */}
         <div className="imageContainer acumLogo">
           <img src={image8} alt="acumatica logo" />
         </div>

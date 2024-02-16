@@ -12,21 +12,16 @@ import Footer from '../../Components/Footer';
 const General = () => {
   return (
     <div className='acumaticaContainer general'>
-        <div></div>
-        <div>
-            <div className="acumaticaContent acumatica2">
-                <div className='acumatica3'>
-                    <div className="imageContainer image2">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ljl6EI0EVHs?si=bY-7NYZogCX3O6zI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
+        <div className="acumaticaContent acumatica3">
+            <div className="imageContainer image2">
+                <iframe width="460" height="280" src="https://www.youtube.com/embed/ljl6EI0EVHs?si=bY-7NYZogCX3O6zI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
 
-                    <div className="textContainer2">
-                        <h3 className='sectionTitle'>General Business Edition</h3>
-                        <p>
-                            Acumatica Cloud ERP General Business Edition puts financials, reporting, and CRM at your fingertips, letting you manage your company from anywhere. Acumatica supports work-from anywhere scenarios for your entire staff, enabling flexibility, efficiency, and business continuity. Acumatica’s General Business Edition brings together all the core elements you need to move your business forward: Core Financials and Project Accounting, Customer Management, and Reporting and Business Intelligence.
-                        </p>
-                    </div>
-                </div>
+            <div className="textContainer2">
+                <h3 className='genTitle'>General Business Edition</h3>
+                <p>
+                    Acumatica Cloud ERP General Business Edition puts financials, reporting, and CRM at your fingertips, letting you manage your company from anywhere. Acumatica supports work-from anywhere scenarios for your entire staff, enabling flexibility, efficiency, and business continuity. Acumatica’s General Business Edition brings together all the core elements you need to move your business forward: Core Financials and Project Accounting, Customer Management, and Reporting and Business Intelligence.
+                </p>
             </div>
         </div>
 

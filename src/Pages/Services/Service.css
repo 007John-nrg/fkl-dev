@@ -241,6 +241,10 @@ color: #64a953;
     flex-direction: column;
 }
 
+.supportWhy {
+    margin: 2.5rem;
+}
+
 .whyFlex {
     display: flex;
     flex-wrap: wrap;
@@ -249,7 +253,6 @@ color: #64a953;
 .whyFlex .whyFlexImage{
     flex: 1;
     width: 50%;
-    height: 50%;
 }
 
 .whyFlex .whyFlexImage img {
@@ -261,6 +264,7 @@ color: #64a953;
     flex: 1;
     text-align: center;
     padding: 1rem;
+    margin-top: -1rem;
 }
 
 .whyFlex .whyFlexContent p {
@@ -415,6 +419,7 @@ color: #64a953;
 
 .course a {
     text-decoration: none;
+    font-style: italic;
     color: rgb(75, 75, 243);
 }
 
