@@ -65,8 +65,8 @@ export const Distribution = () => {
                 centerSlidePercentage={33}
             >
                 {iframeUrls.map((image, index) => (
-                <div key={index}>
-                    <iframe src={image} width="520" height="440" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+                <div className='iframe' key={index}>
+                    <iframe src={image} width="700" height="400" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
                 </div>
                 ))}
             </Carousel>

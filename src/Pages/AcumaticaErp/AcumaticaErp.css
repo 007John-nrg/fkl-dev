@@ -409,11 +409,13 @@
 .bronchureBox {
   display: flex;
   flex-wrap: wrap;
+  /* border: 1px solid red; */
   /* overflow-x: auto;
   border: 1px solid red; */
 }
 
-.bronchureBox iframe {
+.iframe {
+  /* border: 1px solid red; */
   /* margin-left: -8rem; */
 }
 
@@ -438,14 +440,52 @@
 
 /* AcumaticaErp.css */
 /* Custom styles for carousel dots */
+
 .carousel .control-dots .dot {
-  background-color: #bbb; /* Background color of the dots */
+  background-color: #007bff;
+  width: 3rem;
+  border: 1px solid red;
 
 }
 
 .carousel .control-dots .dot.selected {
-  background-color: #333; /* Background color of the selected dot */
+  background-color: #333; 
+  width: 3rem;
+  height: .3rem;
 }
+
+/* Custom styles for the dots */
+.custom-carousel-dot {
+  width: 10px; /* Adjust the width of the dots */
+  height: 10px; /* Adjust the height of the dots */
+  background-color: #007bff; /* Change the background color of the dots */
+  border-radius: 50%; /* Ensure the dots are circular */
+  margin: 0 5px; /* Adjust the spacing between the dots */
+}
+
+/* Custom styles for the active dot */
+.custom-carousel-dot.active {
+  background-color: #ff6347; /* Change the background color of the active dot */
+}
+
+
+/* Custom styles for the Carousel arrows */
+.carousel-arrow {
+  /* Add your custom styles for the arrows */
+  background-color: red;
+  color: green;
+}
+
+/* Custom styles for the previous arrow */
+.carousel-arrow.prev {
+  /* Add your custom styles for the previous arrow */
+}
+
+/* Custom styles for the next arrow */
+.carousel-arrow.next {
+  /* Add your custom styles for the next arrow */
+}
+
 
   
 

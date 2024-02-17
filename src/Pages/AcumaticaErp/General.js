@@ -1,5 +1,9 @@
 import React from 'react';
 import './AcumaticaErp.css';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import image1 from '../../assets/aim30.png';
 import image2 from '../../assets/aim31.png';
 import image3 from '../../assets/aim32.png';
@@ -10,6 +14,15 @@ import BrochureViewer from '../../Components/Bronchures';
 import Footer from '../../Components/Footer';
 
 const General = () => {
+
+    const iframeUrls = [
+        "https://publuu.com/flip-book/392887/910685/page/1?embed&transparent",
+        "https://publuu.com/flip-book/392887/910689/page/1?embed&transparent",
+        "https://publuu.com/flip-book/392887/910694/page/1?embed&transparent",
+        "https://publuu.com/flip-book/392887/896894/page/4?embed&transparent",
+        "https://publuu.com/flip-book/392887/896894/page/5?embed&transparent"
+      ];
+
   return (
     <div className='acumaticaContainer general'>
         <div className="acumaticaContent acumatica3 backdrop">
@@ -43,10 +56,21 @@ const General = () => {
             </div>
         </div>
 
-        <div className="bronchureBox">
-
-
-
+        <div className='bronchureBox'>
+            <Carousel 
+                autoFocus={true}
+                infiniteLoop={true}
+                interval={2000}
+                showArrows={true}
+                centerMode={true}
+                centerSlidePercentage={33}
+            >
+                {iframeUrls.map((image, index) => (
+                <div className='iframe' key={index}>
+                    <iframe src={image} width="700" height="400" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+                </div>
+                ))}
+            </Carousel>
         </div>
 
         <Footer />
