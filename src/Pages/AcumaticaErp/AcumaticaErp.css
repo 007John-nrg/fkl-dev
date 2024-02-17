@@ -11,6 +11,10 @@
   /* padding: 1.5rem; */
 }
 
+.pallCont {
+  width: 63%;
+}
+
   .sectionTitle {
     text-align: center;
     font-size: 2rem;
@@ -442,4 +446,27 @@
 
   
 
-  
+  /* pall datasheet */
+  .aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 17%;
+    /* border: 1px solid red; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .aside::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .aside::-webkit-scrollbar-track {
+      background: transparent;
+  }
+
+  .aside::-webkit-scrollbar-thumb {
+      background: #d9d9d9;
+      border-radius: 4px;
+  }

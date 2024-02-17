@@ -19,7 +19,19 @@ import { Link } from 'react-router-dom';
 
 const Palladium = () => {
   return (
-    <div className='acumaticaContainer'>
+    <div className='acumaticaContainer pallCont'>
+      <div className="aside">
+
+          <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="280" height="280" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+          <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="280" height="280" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+          <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="280" height="280" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+          <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="280" height="280" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+          <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="280" height="280" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+          <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="280" height="280" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+          <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="280" height="280" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+          <iframe src="https://publuu.com/flip-book/392887/896894/page/1?embed&transparent" width="280" height="280" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
+
+      </div>
       <div className="acumaticaContent1 two">
         <div className="imageContainer imgPall">
           <img src={image7} alt="palladium logo" />
