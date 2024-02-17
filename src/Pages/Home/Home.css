@@ -2,3 +2,21 @@
     margin-left: 20%;
     width: 80%;
 }
+
+@media screen and (max-width: 999px) {
+    .homeContainer {
+        width: 75%;
+    }
+  }
+  
+
+@media screen and (max-width: 768px) {
+    .homeContainer {
+        width: 100%
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* CSS rules for screens with a minimum width of 1024px */
+  }
+  

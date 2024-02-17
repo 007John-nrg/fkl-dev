@@ -440,4 +440,16 @@
   align-items: center;
 }
 
+@media screen and (max-width: 999px) {
+  .menuContainer {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuContainer {
+    display: none;
+  }
+}
+
 
