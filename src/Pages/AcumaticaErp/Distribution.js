@@ -1,14 +1,12 @@
 import React from 'react'
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import './AcumaticaErp.css';
 import image1 from '../../assets/aim39.png';
 import image2 from '../../assets/aim40.png';
 import image3 from '../../assets/aim41.png';
 import image4 from '../../assets/aim42.png';
 import Footer from '../../Components/Footer';
+import Test from '../../Test';
 
 export const Distribution = () => {
 

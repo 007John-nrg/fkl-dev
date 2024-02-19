@@ -12,11 +12,14 @@ import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-g
 import imageDemo from '../../assets/aim7.png';
 import BrochureViewer from '../../Components/Bronchures';
 import Footer from '../../Components/Footer';
+import Test from '../../Test';
 
 const General = () => {
 
+    <iframe style="width:550px;height:350px" src="https://online.anyflip.com/phhbx/strv/index.html"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
+
     const iframeUrls = [
-        "https://publuu.com/flip-book/392887/910685/page/1?embed&transparent",
+        "https://online.anyflip.com/phhbx/strv/index.html",
         "https://publuu.com/flip-book/392887/910689/page/1?embed&transparent",
         "https://publuu.com/flip-book/392887/910694/page/1?embed&transparent",
         "https://publuu.com/flip-book/392887/896894/page/4?embed&transparent",
@@ -56,7 +59,7 @@ const General = () => {
             </div>
         </div>
 
-        <div className='bronchureBox'>
+        {/* <div className='bronchureBox'>
             <Carousel 
                 autoFocus={true}
                 infiniteLoop={true}
@@ -71,7 +74,9 @@ const General = () => {
                 </div>
                 ))}
             </Carousel>
-        </div>
+        </div> */}
+
+        <Test />
 
         <Footer />
     </div>
