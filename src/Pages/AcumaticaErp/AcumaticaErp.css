@@ -444,7 +444,7 @@
 .carousel .control-dots .dot {
   background-color: #007bff;
   width: 3rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
 }
 
@@ -465,16 +465,22 @@
 
 /* Custom styles for the active dot */
 .custom-carousel-dot.active {
-  background-color: #ff6347; /* Change the background color of the active dot */
+  /* background-color: #ff6347; */
 }
 
 
 /* Custom styles for the Carousel arrows */
 .carousel-arrow {
   /* Add your custom styles for the arrows */
-  background-color: red;
+  /* background-color: red; */
   color: green;
 }
+
+/* Custom CSS to make arrows always visible */
+.carousel .control-arrow {
+  opacity: 1 !important;
+}
+
 
 /* Custom styles for the previous arrow */
 .carousel-arrow.prev {
@@ -486,9 +492,16 @@
   /* Add your custom styles for the next arrow */
 }
 
+  .page {
+    width: 100%;
+    height: 80%;
+  }
 
+  .page img {
+    height: auto;
+    width: 100%;
+  }
   
-
   /* pall datasheet */
   .aside {
     position: fixed;

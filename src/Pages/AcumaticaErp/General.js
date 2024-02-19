@@ -58,8 +58,8 @@ const General = () => {
                 </div>
             </div>
         </div>
-
-        {/* <div className='bronchureBox'>
+{/* 
+        <div className='bronchureBox'>
             <Carousel 
                 autoFocus={true}
                 infiniteLoop={true}

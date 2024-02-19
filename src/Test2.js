@@ -5,29 +5,36 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HTMLFlipBook from 'react-pageflip';
 import './Test.css';
-import image1 from './assets/Analytics/Analytics & Reporting FKL_page-0001.jpg';
-import image10 from './assets/Analytics/Analytics & Reporting FKL_page-0002.jpg';
-import image2 from './assets/CRM/CRM FKL_page-0001.jpg';
-import image20 from './assets/CRM/CRM FKL_page-0002.jpg';   
-import image3 from './assets/Global/Global Financials FKL_page-0001.jpg';
-import image30 from './assets/Global/Global Financials FKL_page-0002.jpg';
-import image4 from './assets/payroll/Payroll Management FKL_page-0001.jpg';
-import image40 from './assets/payroll/Payroll Management FKL_page-0002.jpg';
-import image5 from './assets/project/Project Managment FKL_page-0001.jpg';
-import image50 from './assets/project/Project Managment FKL_page-0002.jpg';
-import image6 from './assets/Tax/Tax management FKL_page-0001.jpg';
-import image60 from './assets/Tax/Tax management FKL_page-0002.jpg';    
+// import image1 from './assets/Analytics/Analytics & Reporting FKL_page-0001.jpg';
+import image1 from './assets/dist/distribution/Distribution Edition Brochure FKL (2)_page-0001.jpg';
+import image10 from './assets/dist/distribution/Distribution Edition Brochure FKL (2)_page-0002.jpg';
+import image11 from './assets/dist/distribution/Distribution Edition Brochure FKL (2)_page-0003.jpg';
+import image12 from './assets/dist/distribution/Distribution Edition Brochure FKL (2)_page-0004.jpg';
+import image13 from './assets/dist/distribution/Distribution Edition Brochure FKL (2)_page-0005.jpg';
+import image14 from './assets/dist/distribution/Distribution Edition Brochure FKL (2)_page-0006.jpg';
+import image15 from './assets/dist/distribution/Distribution Edition Brochure FKL (2)_page-0007.jpg';
+import image16 from './assets/dist/distribution/Distribution Edition Brochure FKL (2)_page-0008.jpg';
+import image2 from './assets/dist/global/Global Financials FKL (4)_page-0001.jpg';
+import image20 from './assets/dist/global/Global Financials FKL (4)_page-0002.jpg';
+import image3 from './assets/dist/inventory/Inventory Management FKL (1)_page-0001.jpg';
+import image30 from './assets/dist/inventory/Inventory Management FKL (1)_page-0002.jpg';
+import image4 from './assets/dist/order management/Order Management FKL (1)_page-0001.jpg';
+import image40 from './assets/dist/order management/Order Management FKL (1)_page-0002.jpg';
+import image5 from './assets/dist/sales order/Sales Order Management FKL (2)_page-0001.jpg';
+import image50 from './assets/dist/sales order/Sales Order Management FKL (2)_page-0002.jpg';
+import image6 from './assets/dist/warehouse/Warehouse Management FKL (2)_page-0001.jpg';
+import image60 from './assets/dist/warehouse/Warehouse Management FKL (2)_page-0002.jpg';    
 
-function Test() {
+function Test2() {
     const [popupImages, setPopupImages] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
 
-    const Analytics = [image1, image10];
-    const crm = [image2, image20];
-    const global = [image3, image30];
-    const payroll = [image4, image40];
-    const project = [image5, image50];
-    const tax = [image6, image60];
+    const Distribution = [image1, image10, image11, image12, image13, image14, image15, image16];
+    const global = [image2, image20];
+    const inventory = [image3, image30];
+    const order = [image4, image40];
+    const sales = [image5, image50];
+    const warehouse = [image6, image60];
 
     const settings = {
         dots: true,
@@ -56,23 +63,23 @@ function Test() {
     const handleEyeIconClick = (category) => {
         let selectedImages;
         switch (category) {
-            case 'Analytics':
-                selectedImages = Analytics;
-                break;
-            case 'CRM':
-                selectedImages = crm;
+            case 'Distribution':
+                selectedImages = Distribution;
                 break;
             case 'Global':
                 selectedImages = global;
                 break;
-            case 'Payroll':
-                selectedImages = payroll;
+            case 'Inventory':
+                selectedImages = inventory;
                 break;
-            case 'Project':
-                selectedImages = project;
+            case 'Order':
+                selectedImages = order;
                 break;
-            case 'Tax':
-                selectedImages = tax;
+            case 'Warehouse':
+                selectedImages = warehouse;
+                break;
+            case 'Sales':
+                selectedImages = sales;
                 break;
             default:
                 selectedImages = [];
@@ -89,15 +96,15 @@ function Test() {
                 interval={2000}
                 showArrows={true}
                 centerMode={true}
-                centerSlidePercentage={30}
+                centerSlidePercentage={33}
             >
                 {[
-                    { image: Analytics[0], category: 'Analytics' },
-                    { image: crm[0], category: 'CRM' },
+                    { image: Distribution[0], category: 'Distribution' },
                     { image: global[0], category: 'Global' },
-                    { image: payroll[0], category: 'Payroll' },
-                    { image: project[0], category: 'Project' },
-                    { image: tax[0], category: 'Tax' }
+                    { image: inventory[0], category: 'Inventory' },
+                    { image: order[0], category: 'Order' },
+                    { image: warehouse[0], category: 'Warehouse' },
+                    { image: sales[0], category: 'Sales' }
                 ].map((item, index) => (
                     <div key={index}>
                         <div className="img-body">
@@ -133,4 +140,4 @@ function Test() {
     
 }
 
-export default Test;
+export default Test2;

@@ -22,6 +22,7 @@ import Consulting from './Pages/Services/Consulting';
 import Training from './Pages/Services/Training';
 import Support from './Pages/Services/Support';
 import Test from '../src/Test'
+import Test2 from './Test2';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="Training" element={<Training />} />
           <Route path="Support" element={<Support />} />
           <Route path="test" element={<Test />} />
+          <Route path="test2" element={<Test2 />} />
         </Routes>
       </div>
     </BrowserRouter>

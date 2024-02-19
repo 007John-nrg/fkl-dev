@@ -11,6 +11,7 @@ import image8 from '../../assets/aim58.png';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
 import Footer from '../../Components/Footer';
+import Constructions from '../../Construction';
 
 const Construction = () => {
   return (
@@ -55,6 +56,8 @@ const Construction = () => {
                 </div>
             </div>
         </div>
+
+        <Constructions />
 
         <Footer />
     </div>

@@ -7,27 +7,30 @@ import HTMLFlipBook from 'react-pageflip';
 import './Test.css';
 import image1 from './assets/Analytics/Analytics & Reporting FKL_page-0001.jpg';
 import image10 from './assets/Analytics/Analytics & Reporting FKL_page-0002.jpg';
-import image2 from './assets/CRM/CRM FKL_page-0001.jpg';
-import image20 from './assets/CRM/CRM FKL_page-0002.jpg';   
-import image3 from './assets/Global/Global Financials FKL_page-0001.jpg';
-import image30 from './assets/Global/Global Financials FKL_page-0002.jpg';
-import image4 from './assets/payroll/Payroll Management FKL_page-0001.jpg';
-import image40 from './assets/payroll/Payroll Management FKL_page-0002.jpg';
+import image2 from './assets/dist/construction/Construction edition FKL_page-0001.jpg';
+import image20 from './assets/dist/construction/Construction edition FKL_page-0002.jpg';   
+import image3 from './assets/dist/service/Service management FKL_page-0001.jpg';
+import image30 from './assets/dist/service/Service management FKL_page-0002.jpg';
+import image4 from './assets/dist/contract/General Contractor FKL_page-0001.jpg';
+import image40 from './assets/dist/contract/General Contractor FKL_page-0002.jpg';
 import image5 from './assets/project/Project Managment FKL_page-0001.jpg';
 import image50 from './assets/project/Project Managment FKL_page-0002.jpg';
-import image6 from './assets/Tax/Tax management FKL_page-0001.jpg';
-import image60 from './assets/Tax/Tax management FKL_page-0002.jpg';    
+import image6 from './assets/dist/home/Datasheet CON Home Builder FKL _page-0001.jpg';
+import image60 from './assets/dist/home/Datasheet CON Home Builder FKL _page-0002.jpg';   
+import image7 from './assets/dist/land/Datasheet CON Land Developer FKL_page-0001.jpg';
+import image70 from './assets/dist/land/Datasheet CON Land Developer FKL_page-0002.jpg';    
 
-function Test() {
+function Constructions() {
     const [popupImages, setPopupImages] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
 
     const Analytics = [image1, image10];
-    const crm = [image2, image20];
-    const global = [image3, image30];
-    const payroll = [image4, image40];
+    const Construction = [image2, image20];
+    const Service = [image3, image30];
+    const Contract = [image4, image40];
     const project = [image5, image50];
-    const tax = [image6, image60];
+    const land = [image6, image60];
+    const home = [image7, image70];
 
     const settings = {
         dots: true,
@@ -59,20 +62,23 @@ function Test() {
             case 'Analytics':
                 selectedImages = Analytics;
                 break;
-            case 'CRM':
-                selectedImages = crm;
+            case 'Construction':
+                selectedImages = Construction;
                 break;
-            case 'Global':
-                selectedImages = global;
+            case 'Service':
+                selectedImages = Service;
                 break;
-            case 'Payroll':
-                selectedImages = payroll;
+            case 'Contract':
+                selectedImages = Contract;
                 break;
-            case 'Project':
+            case 'project':
                 selectedImages = project;
                 break;
-            case 'Tax':
-                selectedImages = tax;
+            case 'land':
+                selectedImages = land;
+                break;
+            case 'home':
+                selectedImages = home;
                 break;
             default:
                 selectedImages = [];
@@ -93,11 +99,12 @@ function Test() {
             >
                 {[
                     { image: Analytics[0], category: 'Analytics' },
-                    { image: crm[0], category: 'CRM' },
-                    { image: global[0], category: 'Global' },
-                    { image: payroll[0], category: 'Payroll' },
-                    { image: project[0], category: 'Project' },
-                    { image: tax[0], category: 'Tax' }
+                    { image: Service[0], category: 'Service' },
+                    { image: Construction[0], category: 'Construction' },
+                    { image: Service[0], category: 'Service' },
+                    { image: project[0], category: 'project'},
+                    { image: land[0], category: 'land' },
+                    { image: home[0], category: 'home' }
                 ].map((item, index) => (
                     <div key={index}>
                         <div className="img-body">
@@ -133,4 +140,4 @@ function Test() {
     
 }
 
-export default Test;
+export default Constructions;

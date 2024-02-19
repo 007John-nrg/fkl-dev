@@ -7,6 +7,7 @@ import image3 from '../../assets/aim41.png';
 import image4 from '../../assets/aim42.png';
 import Footer from '../../Components/Footer';
 import Test from '../../Test';
+import Test2 from '../../Test2';
 
 export const Distribution = () => {
 
@@ -53,22 +54,7 @@ export const Distribution = () => {
             </div>
         </div>
 
-        <div className='bronchureBox'>
-            <Carousel 
-                autoFocus={true}
-                infiniteLoop={true}
-                interval={2000}
-                showArrows={true}
-                centerMode={true}
-                centerSlidePercentage={33}
-            >
-                {iframeUrls.map((image, index) => (
-                <div className='iframe' key={index}>
-                    <iframe src={image} width="700" height="400" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
-                </div>
-                ))}
-            </Carousel>
-        </div>
+        <Test2 />
 
         <Footer />
     </div>

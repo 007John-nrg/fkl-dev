@@ -4,11 +4,9 @@ import image1 from '../../assets/aim35.png';
 import image2 from '../../assets/aim34.png';
 import image3 from '../../assets/aim36.png';
 import image4 from '../../assets/aim38.png';
-import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
-import MyFlipBook from '../../Components/FlipBook';
-import DemoBook from '../../Components/FlipBook';
 import Footer from '../../Components/Footer';
+import Test3 from '../../Test3';
 
 const Manufacturing = () => {
   return (
@@ -44,9 +42,7 @@ const Manufacturing = () => {
             </div>
         </div>
 
-        <div>
-            <DemoBook />
-        </div>
+        <Test3 />
 
         <Footer />
     </div>

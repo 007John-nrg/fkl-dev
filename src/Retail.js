@@ -7,27 +7,27 @@ import HTMLFlipBook from 'react-pageflip';
 import './Test.css';
 import image1 from './assets/Analytics/Analytics & Reporting FKL_page-0001.jpg';
 import image10 from './assets/Analytics/Analytics & Reporting FKL_page-0002.jpg';
-import image2 from './assets/CRM/CRM FKL_page-0001.jpg';
-import image20 from './assets/CRM/CRM FKL_page-0002.jpg';   
-import image3 from './assets/Global/Global Financials FKL_page-0001.jpg';
-import image30 from './assets/Global/Global Financials FKL_page-0002.jpg';
-import image4 from './assets/payroll/Payroll Management FKL_page-0001.jpg';
-import image40 from './assets/payroll/Payroll Management FKL_page-0002.jpg';
-import image5 from './assets/project/Project Managment FKL_page-0001.jpg';
-import image50 from './assets/project/Project Managment FKL_page-0002.jpg';
-import image6 from './assets/Tax/Tax management FKL_page-0001.jpg';
-import image60 from './assets/Tax/Tax management FKL_page-0002.jpg';    
+import image2 from './assets/dist/retail/Retail edition FKL (1)_page-0001.jpg';
+import image20 from './assets/dist/retail/Retail edition FKL (1)_page-0002.jpg';
+import image3 from './assets/dist/inventory/Inventory Management FKL (1)_page-0001.jpg';
+import image30 from './assets/dist/inventory/Inventory Management FKL (1)_page-0002.jpg';
+import image4 from './assets/dist/order management/Order Management FKL (1)_page-0001.jpg';
+import image40 from './assets/dist/order management/Order Management FKL (1)_page-0002.jpg';
+import image5 from './assets/dist/store/Storable Customization FKL (1)_page-0001.jpg';
+import image50 from './assets/dist/store/Storable Customization FKL (1)_page-0002.jpg'
+import image6 from './assets/dist/product/Product Configurator (1)_page-0001.jpg';
+import image60 from './assets/dist/product/Product Configurator (1)_page-0002.jpg';
 
-function Test() {
+function Retail() {
     const [popupImages, setPopupImages] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
 
     const Analytics = [image1, image10];
-    const crm = [image2, image20];
-    const global = [image3, image30];
-    const payroll = [image4, image40];
-    const project = [image5, image50];
-    const tax = [image6, image60];
+    const Retail = [image2, image20];
+    const Inventory = [image3, image30];
+    const Order = [image4, image40];
+    const Product = [image5, image50];
+    const Storeable = [image6, image60];
 
     const settings = {
         dots: true,
@@ -59,20 +59,20 @@ function Test() {
             case 'Analytics':
                 selectedImages = Analytics;
                 break;
-            case 'CRM':
-                selectedImages = crm;
+            case 'Retail':
+                selectedImages = Retail;
                 break;
-            case 'Global':
-                selectedImages = global;
+            case 'Inventory':
+                selectedImages = Inventory;
                 break;
-            case 'Payroll':
-                selectedImages = payroll;
+            case 'Order':
+                selectedImages = Order;
                 break;
-            case 'Project':
-                selectedImages = project;
+            case 'Storeable':
+                selectedImages = Storeable;
                 break;
-            case 'Tax':
-                selectedImages = tax;
+            case 'Product':
+                selectedImages = Product;
                 break;
             default:
                 selectedImages = [];
@@ -89,15 +89,15 @@ function Test() {
                 interval={2000}
                 showArrows={true}
                 centerMode={true}
-                centerSlidePercentage={30}
+                centerSlidePercentage={33}
             >
                 {[
                     { image: Analytics[0], category: 'Analytics' },
-                    { image: crm[0], category: 'CRM' },
-                    { image: global[0], category: 'Global' },
-                    { image: payroll[0], category: 'Payroll' },
-                    { image: project[0], category: 'Project' },
-                    { image: tax[0], category: 'Tax' }
+                    { image: Retail[0], category: 'Retail' },
+                    { image: Inventory[0], category: 'Inventory' },
+                    { image: Order[0], category: 'Order' },
+                    { image: Storeable[0], category: 'Storeable' },
+                    { image: Product[0], category: 'Product' }
                 ].map((item, index) => (
                     <div key={index}>
                         <div className="img-body">
@@ -133,4 +133,4 @@ function Test() {
     
 }
 
-export default Test;
+export default Retail;
