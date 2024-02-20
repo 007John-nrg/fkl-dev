@@ -517,7 +517,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    height: 110%;
+    height: 100%;
     width: 20%;
     overflow: scroll;
     /* padding-top: 10rem;; */
