@@ -50,6 +50,16 @@ const Pall = () => {
   const [popupImages, setPopupImages] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
 
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const nextButtonClick = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
+  const prevButtonClick = () => {
+    setCurrentPage(currentPage - 1);
+  };
+
   const P11 = [p, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12];
   const P22 = [p13, p14, p15, p16, p160, p17, p18];
   const P33 = [p19, p20, p21, p22];
@@ -185,12 +195,11 @@ const Pall = () => {
             ))}
         </div>
         {showPopup && (
-        <div className="popup-overlay" style={{zIndex: '999999999'}}>
+        <div className="popup-overlay" style={{}}>
             <div className="popup">
                 <button onClick={() => setShowPopup(false)}>X</button>
                 <div className="flipbook-container">
                     <HTMLFlipBook width={575} height={700}>
-                    {/* <HTMLFlipBook width={400} height={400}> */}
                         {popupImages.map((image, index) => (
                             <div className="page" key={index}>
                                 <img src={image} alt={`popup image ${index}`} />

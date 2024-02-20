@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .general {
@@ -138,6 +139,7 @@
   .AccountContainer {
     width: 100%;
     margin-top: 2.5rem;
+    z-index: 1;
   }
 
   .accountsSoftware {
@@ -329,6 +331,7 @@
 
   .palladiumVersions {
     margin-top: 4rem;
+    z-index: 1;
   }
 
   .pallSoftware {

@@ -263,7 +263,7 @@
 
   }
 
-  .img-body {
+  .img-bod {
     /* width: 350px; */
     /* height: 40vh; */
     /* aspect-ratio: 1/1;
@@ -278,7 +278,7 @@
     border: 1px solid red; */
   }
   
-  .img-body img {
+  .img-bod img {
     display: flex;
     margin: 0 auto;
     object-fit: contain;

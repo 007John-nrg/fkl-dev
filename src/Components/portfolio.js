@@ -52,7 +52,7 @@ const Portfolio = () => {
         <Slider {...settings}>
           {Images.map((image) => (
             <div key={image.id}>
-              <div className="img-body">
+              <div className="img-bod">
                 <img src={image} alt="portfolio image" />
               </div>
             </div>
