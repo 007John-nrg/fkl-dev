@@ -176,7 +176,7 @@ function Test() {
                     <div className="popup">
                         <button onClick={() => setShowPopup(false)}>X</button>
                         <div className="flipbook-container">
-                            <HTMLFlipBook width={575} height={675}>
+                            <HTMLFlipBook width={625} height={750}>
                             {/* <HTMLFlipBook width={400} height={400}> */}
                                 {popupImages.map((image, index) => (
                                     <div className="page" key={index}>

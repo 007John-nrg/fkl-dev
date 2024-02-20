@@ -58,23 +58,6 @@ const General = () => {
                 </div>
             </div>
         </div>
-{/* 
-        <div className='bronchureBox'>
-            <Carousel 
-                autoFocus={true}
-                infiniteLoop={true}
-                interval={2000}
-                showArrows={true}
-                centerMode={true}
-                centerSlidePercentage={33}
-            >
-                {iframeUrls.map((image, index) => (
-                <div className='iframe' key={index}>
-                    <iframe src={image} width="700" height="400" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" className="publuuflip"></iframe>
-                </div>
-                ))}
-            </Carousel>
-        </div> */}
 
         <Test />
 

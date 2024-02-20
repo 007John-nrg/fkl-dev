@@ -454,17 +454,51 @@
 /* AcumaticaErp.css */
 /* Custom styles for carousel dots */
 
+.carousel .control-dots {
+  background-color: #64a953;
+}
+
 .carousel .control-dots .dot {
   background-color: #007bff;
-  width: 3rem;
+  /* width: 3rem; */
+  /* margin-top: 5rem; */
+  /* border: 1px solid red; */
   /* border: 1px solid red; */
 
 }
 
 .carousel .control-dots .dot.selected {
+
   background-color: #333; 
   width: 3rem;
   height: .3rem;
+}
+
+.carousel.carousel-slider .control-arrow {
+  color: red;
+  background-color: grey;
+  /* top: 0; */
+  /* color: #fff; */
+  /* font-size: 26px; */
+  /* bottom: 0; */
+  /* margin-top: 0; */
+  /* padding: 5px; */
+}
+.carousel .control-prev.control-arrow {
+  /* left: 0; */
+}
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+  /* transition: all .25s ease-in; */
+  /* opacity: .4; */
+  filter: alpha(opacity=40);
+  /* position: absolute; */
+  /* z-index: 2; */
+  /* top: 20px; */
+  /* background: none; */
+  /* border: 0; */
+  /* font-size: 32px; */
+  /* cursor: pointer; */
 }
 
 /* Custom styles for the dots */
@@ -486,7 +520,7 @@
 .carousel-arrow {
   /* Add your custom styles for the arrows */
   /* background-color: red; */
-  color: green;
+  /* color: green; */
 }
 
 /* Custom CSS to make arrows always visible */
@@ -494,6 +528,19 @@
   opacity: 1 !important;
 }
 
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+  /* transition: all .25s ease-in;
+  opacity: .4;
+  filter: alpha(opacity=40);
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  background: none;
+  border: 0;
+  font-size: 32px;
+  cursor: pointer; */
+  color: 'red';
+}
 
 /* Custom styles for the previous arrow */
 .carousel-arrow.prev {
@@ -564,3 +611,39 @@
     height: auto;
     width: 100%;
   }
+
+  /* Custom styles for Carousel arrows */
+.carousel .control-arrow {
+  color: red; /* Change arrow color */
+  font-size: 24px; /* Change arrow size */
+}
+
+/* Custom styles for Carousel dots */
+.carousel .carousel-slider .control-dots {
+  bottom: 10px; /* Adjust dot position */
+}
+
+.carousel .control-dots .dot {
+  background-color: blue; /* Change dot color */
+  width: 10px; /* Change dot width */
+  height: 10px; /* Change dot height */
+  margin: 0 5px; /* Adjust dot spacing */
+}
+
+/* Custom styles for active dot */
+.carousel .control-dots .dot.selected {
+  background-color: green; /* Change active dot color */
+}
+
+.carousel.carousel-slider .control-arrow{
+  top:0;
+  color:#111;
+  font-size:26px;
+  bottom:0;
+  margin-top:0;
+  padding:5px
+}
+.carousel.carousel-slider .control-arrow:hover{
+  /* background:rgba(0,0,0,0.2) */
+  background-color: #fff;
+}
