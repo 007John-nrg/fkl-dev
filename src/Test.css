@@ -3,10 +3,9 @@
     position: relative;
     overflow: hidden;
     margin: auto;
-    width: 85%;
-    height: 50%;
+    width: 95%;
+    height: 85%;
     border: 1px solid #d9d9d9;
-
   }
   
   .img-body img {

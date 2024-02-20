@@ -55,6 +55,16 @@
     margin-top: 2.2rem;
     border-bottom: 2px solid gray;
   }
+/* 
+  .imgpally {
+    border: 1px solid red;
+    width: 150px;
+  } */
+
+  .imgpally img {
+    height: auto;
+    width: 100%;
+  }
 
   .imageContainer img { 
     width: 100%; 
@@ -507,15 +517,16 @@
     position: fixed;
     top: 0;
     right: 0;
-    /* max-height: 100vh; */
+    height: 110%;
     width: 20%;
-    overflow-y: auto;
+    overflow: scroll;
+    /* padding-top: 10rem;; */
     /* overflow-y: scroll;
     overflow-x: hidden; */
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
     /* border: 1px solid red; */
   }
 
@@ -544,4 +555,9 @@
     .pallCont {
       width: 100%;
     }
+  }
+
+  .img-body img {
+    height: auto;
+    width: 100%;
   }
