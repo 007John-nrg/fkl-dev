@@ -50,6 +50,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-left: .5rem;
   }
 
   .imgPall {
@@ -396,7 +397,8 @@
 
 .GeneralImage {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin-left: 1%;
 }
 
 .imageBox {
@@ -451,32 +453,19 @@
 
 }
 
-/* AcumaticaErp.css */
-/* Custom styles for carousel dots */
-
 .carousel .control-dots {
-  background-color: #64a953;
+  margin-top: -10rem !important
 }
 
 .carousel .control-dots .dot {
-  background-color: #007bff;
-  /* width: 3rem; */
-  /* margin-top: 5rem; */
-  /* border: 1px solid red; */
-  /* border: 1px solid red; */
-
+  background-color: #007bff !important;
 }
 
 .carousel .control-dots .dot.selected {
-
-  background-color: #333; 
-  width: 3rem;
-  height: .3rem;
 }
 
 .carousel.carousel-slider .control-arrow {
-  color: red;
-  background-color: grey;
+  background-color: #d9d9d9 !important;
   /* top: 0; */
   /* color: #fff; */
   /* font-size: 26px; */
@@ -505,7 +494,7 @@
 .custom-carousel-dot {
   width: 10px; /* Adjust the width of the dots */
   height: 10px; /* Adjust the height of the dots */
-  background-color: #007bff; /* Change the background color of the dots */
+  background-color: red; /* Change the background color of the dots */
   border-radius: 50%; /* Ensure the dots are circular */
   margin: 0 5px; /* Adjust the spacing between the dots */
 }
@@ -539,7 +528,7 @@
   border: 0;
   font-size: 32px;
   cursor: pointer; */
-  color: 'red';
+  color: 'red' !important;
 }
 
 /* Custom styles for the previous arrow */
@@ -624,10 +613,7 @@
 }
 
 .carousel .control-dots .dot {
-  background-color: blue; /* Change dot color */
-  width: 10px; /* Change dot width */
-  height: 10px; /* Change dot height */
-  margin: 0 5px; /* Adjust dot spacing */
+
 }
 
 /* Custom styles for active dot */

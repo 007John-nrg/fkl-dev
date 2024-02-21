@@ -93,26 +93,26 @@ const Consulting = () => {
         </div>
       </div>
 
-      <div className='contentFooter'>
-        <div className='contentFooter1'>
+      <div className='contentFooterTraining'>
+        <div className='contentFooter2'>
           <h3>Infrastructure Support</h3>
           <p>
             We specialize in providing comprehensive IT infrastructure support services tailored to meet the evolving needs of businesses. Our dedicated team of experts offers proactive maintenance, troubleshooting, and strategic guidance to ensure optimal performance and reliability of your IT systems. From network infrastructure to server management, we are committed to delivering reliable solutions that empower your organization to thrive in today's digital landscape.
           </p>
         </div>
-        <div className='contentFooter1'>
+        <div className='contentFooter2'>
           <h3>Project management</h3>
           <p>
             We excel in offering top-tier project management support, designed to streamline operations and drive success for our clients. With a focus on efficiency and collaboration, our experienced team orchestrates projects from inception to completion, ensuring adherence to timelines, budgets, and quality standards. Whether it's resource allocation, risk mitigation, or stakeholder communication, we provide the strategic guidance and hands-on expertise needed to navigate complex projects with confidence and achieve outstanding results.
           </p>
         </div>
-        <div className='contentFooter1'>
+        <div className='contentFooter2'>
           <h3>Holistic Services </h3>
           <p>
             Our approach integrates diverse expertise across various domains, including technology, strategy, and human resources, to address the multifaceted challenges businesses face. From initial consultation to ongoing support, we tailor our services to align with your goals, fostering growth, resilience, and sustainable success. With a focus on collaboration and innovation, we are dedicated to crafting holistic solutions that empower organizations to thrive in an ever-changing landscape
           </p>
         </div>
-        <div className='contentFooter1 italic'>
+        <div className='contentFooter2 italic'>
           <h3>Consulting Portfolio</h3>
           <p>
             100% outsourcing Server Software Support Software Support Microsoft consulting Server Installations Mailing Solutions Desktop Software Cloud, SaaS, Hosting Consulting on Internet security Business Intelligence (report customization) High End ERP sourcing and Project management FTP, Cloud, WWW, IIS Accredited

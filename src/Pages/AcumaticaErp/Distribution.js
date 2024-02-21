@@ -11,16 +11,6 @@ import Test2 from '../../Test2';
 
 export const Distribution = () => {
 
-
-    const iframeUrls = [
-        "https://publuu.com/flip-book/392887/896894/page/1?embed&transparent",
-        "https://publuu.com/flip-book/392887/896894/page/2?embed&transparent",
-        "https://publuu.com/flip-book/392887/896894/page/3?embed&transparent",
-        "https://publuu.com/flip-book/392887/896894/page/4?embed&transparent",
-        "https://publuu.com/flip-book/392887/896894/page/5?embed&transparent"
-      ];
-    
-
   return (
     <div className='acumaticaContainer'>
 

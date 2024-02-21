@@ -1,5 +1,5 @@
 /* Test.css */
-.img-body {
+.img-box {
     position: relative;
     overflow: hidden;
     margin: auto;
@@ -8,16 +8,16 @@
     border: 1px solid #d9d9d9;
   }
   
-  .img-body img {
+  .img-box img {
     width: 100%;
     height: auto;
-    transition: filter 0.3s ease; /* Smooth transition for hover effect */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Add transform transition */
+}
+
+  .img-box:hover img {
+      transform: scale(1.1); 
   }
-  
-  .img-body:hover img {
-    filter: grayscale(100%); /* Convert image to grayscale on hover */
-  }
-  
+
   .img-overlay {
     position: absolute;
     top: 0;
@@ -32,7 +32,7 @@
     transition: opacity 0.3s ease; /* Smooth transition for overlay */
   }
   
-  .img-body:hover .img-overlay {
+  .img-box:hover .img-overlay {
     opacity: 1; /* Show overlay on hover */
   }
   

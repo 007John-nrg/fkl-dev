@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
+import { Document, Page } from 'react-pdf';
 import { jsPDF } from 'jspdf';
 import { Carousel } from 'react-responsive-carousel';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import HTMLFlipBook from 'react-pageflip';
+// import HTMLFlipBook from 'react-pageflip';
 import './Test.css';
 import image1 from './assets/Analytics/Analytics & Reporting FKL_page-0001.jpg';
 import image10 from './assets/Analytics/Analytics & Reporting FKL_page-0002.jpg';
@@ -22,6 +20,7 @@ import image60 from './assets/Tax/Tax management FKL_page-0002.jpg';
 function Test() {
     const [popupImages, setPopupImages] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
+    const [pageNumber, setPageNumber] = useState(1);
 
     const Analytics = [image1, image10];
     const crm = [image2, image20];
@@ -30,57 +29,53 @@ function Test() {
     const project = [image5, image50];
     const tax = [image6, image60];
 
-    const settings = {
-        dots: true,
-        speed: 1000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2600,
-        prevArrow: (
-            <div>
-                <div className="next-slick-arrow rotate-180">
-                    <svg xmlns="http://www.w3.org/2000/svg" stroke="black" height="20" viewBox="0 -960 960 960" width="24"><path d="m242-200 200-280-200-280h98l200 280-200 280h-98Zm238 0 200-280-200-280h98l200 280-200 280h-98Z"/></svg>
-                </div>
-            </div>
-        ),
-        nextArrow: (
-            <div>
-                <div className="next-slick-arrow right-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" stroke="black" height="24" viewBox="0 -960 960 960" width="24"><path d="m242-200 200-280-200-280h98l200 280-200 280h-98Zm238 0 200-280-200-280h98l200 280-200 280h-98Z"/></svg>
-                </div>
-            </div>
-        )
-    };
-
-    const handleEyeIconClick = (category) => {
-        let selectedImages;
-        switch (category) {
-            case 'Analytics':
-                selectedImages = Analytics;
-                break;
-            case 'CRM':
-                selectedImages = crm;
-                break;
-            case 'Global':
-                selectedImages = global;
-                break;
-            case 'Payroll':
-                selectedImages = payroll;
-                break;
-            case 'Project':
-                selectedImages = project;
-                break;
-            case 'Tax':
-                selectedImages = tax;
-                break;
-            default:
-                selectedImages = [];
+    const handleEyeIconClick = async (category) => {
+        try {
+            let images;
+            switch (category) {
+                case 'Analytics':
+                    images = Analytics;
+                    break;
+                case 'CRM':
+                    images = crm;
+                    break;
+                case 'Global':
+                    images = global;
+                    break;
+                case 'Payroll':
+                    images = payroll;
+                    break;
+                case 'Project':
+                    images = project;
+                    break;
+                case 'Tax':
+                    images = tax;
+                    break;
+                default:
+                    images = [];
+            }
+    
+            const pdf = new jsPDF();
+            for (let i = 0; i < images.length; i++) {
+                const imgData = await getImageData(images[i]);
+                pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297); // Add image to PDF (A4 size)
+                if (i !== images.length - 1) {
+                    pdf.addPage(); // Add a new page for the next image
+                }
+            }
+    
+            // Save the PDF as data URI string
+            const pdfDataUri = pdf.output('datauristring');
+            
+            // Set the PDF data URI to the state
+            setPopupImages([pdfDataUri]);
+            
+            // Show the popup
+            setShowPopup(true);
+        } catch (error) {
+            console.error('Error converting images to PDF:', error);
         }
-        setPopupImages(selectedImages);
-        setShowPopup(true);
-    };
+    };    
 
     const handleDownloadIcon = async (category) => {
         try {
@@ -140,13 +135,14 @@ function Test() {
                 reject(error);
             };
         });
-    };  
-
+    }; 
+    
     return (
         <div style={{ marginTop: '3rem' }}>
             <Carousel
                 autoFocus={true}
                 infiniteLoop={true}
+                autoPlay={true}
                 interval={2000}
                 showArrows={true}
                 centerMode={true}
@@ -161,7 +157,7 @@ function Test() {
                     { image: tax[0], category: 'Tax' }
                 ].map((item, index) => (
                     <div key={index}>
-                        <div className="img-body">
+                        <div className="img-box">
                             <img src={item.image} alt="portfolio image" />
                             <div className="img-overlay">
                                 <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" onClick={() => handleEyeIconClick(item.category)}><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>
@@ -175,16 +171,9 @@ function Test() {
                 <div className="popup-overlay">
                     <div className="popup">
                         <button onClick={() => setShowPopup(false)}>X</button>
-                        <div className="flipbook-container">
-                            <HTMLFlipBook width={625} height={750}>
-                            {/* <HTMLFlipBook width={400} height={400}> */}
-                                {popupImages.map((image, index) => (
-                                    <div className="page" key={index}>
-                                        <img src={image} alt={`popup image ${index}`} />
-                                    </div>
-                                ))}
-                            </HTMLFlipBook>
-                        </div>
+                        {/* <Document file={popupImages[0]}>
+                            <Page pageNumber={pageNumber} />
+                        </Document> */}
                     </div>
                 </div>
             )}

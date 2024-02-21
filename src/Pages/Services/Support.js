@@ -274,7 +274,7 @@ const Support = () => {
         </div>
       </div>
       
-      <div className='contentFooter contentFooterTraining'>
+      <div className='contentFooterTraining'>
         <div className='contentFooter2'>
           <h3>Proactive Monitoring and Maintenance</h3>
           <p>
