@@ -1,0 +1,469 @@
+.serviceContainer {
+    margin-left: 20%;
+}
+
+  /* .sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: gray;
+  } */
+
+.serviceBox {
+    /* background-image: url('../../assets/aim113.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.serv {
+}
+
+.serv img {
+    width: 100%;
+    height: auto;
+}
+.serviceBox1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.serviceBox1 h3 {
+    font-size: 2rem;
+}
+
+.serviceBox1 p {
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.serviceBox2 {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center;
+    width: 100%; */
+}
+
+.serviceBox3 {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    flex: 1;
+}
+
+.serviceBox3 img {
+    width: 100%; 
+    height: auto;
+}
+
+.serviceBox4 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.serviceBox5 {
+}
+
+.serviceBox4 h3 {
+    font-size: 24px;
+}
+
+.serviceBox4 p {
+    line-height: 1.5rem;
+    font-size: 16px;
+}
+
+.serviceBox4 a {
+    color: #111;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+
+.serviceBox4 a:hover {
+color: #64a953;
+}
+
+/* consulting */
+
+.consultingContainer,
+.supportContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.consultingContent {
+    margin-top: 3rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.consultingImage {
+    margin-bottom: 1.7rem;
+    width: 75%;
+    height: 75%;
+}
+
+.consultingText {
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin-bottom: 1.7rem;
+}
+
+.consultingHeading img {
+    width: 100%;
+    height:  auto;
+}
+
+
+.consultingIcons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.1rem;
+}
+
+.consultingIcons .content1 {
+    width: 17%;
+    height: 17%;
+}
+
+.consultingIcons .content1 p {
+    color: #00bf63;
+    font-weight: bold;
+    margin-top: -.5rem;
+}
+
+.consultingIcons .content2 {
+    width: 23.7%;
+    height: 23.7%;
+}
+
+.consultingIcons .content3 {
+    width: 28%;
+    height: 28%;
+}
+
+.consultingIcons .content4 {
+    width: 27%;
+    height: 27%;
+}
+
+.consultingIcons .content5 {
+    width: 23%;
+    height: 23%;
+}
+
+
+.consultingIcons .content1 img,
+.content2 img,
+.content3 img,
+.content4 img,
+.content5 img,
+.content6 img,
+.content7 img,
+.content8 img
+ {
+    width: 100%;
+    height: auto;
+}
+
+.cycleFlow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imageFlow {
+    margin-top: 5rem;
+    width: 75%;
+    height: 75%;
+}
+
+.imageFlow img {
+    width: 100%;
+    height: auto;
+}
+
+.consultingContact {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #64a953;
+    text-decoration: none;
+}
+
+.consultingContact:hover {
+    text-decoration: underline;
+}
+
+.consultingContact .contactLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactLinkImage {
+    margin-left: .3rem;
+    width: 45px;
+    height: 45px;
+}
+
+.contactLinkImage img {
+    width: 100%;
+    height: auto;
+}
+
+.consultingWhy {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+}
+
+.supportWhy {
+    margin: 2.5rem;
+}
+
+.whyFlex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexHeader {
+    flex: 1;
+}
+
+.whyFlex .whyFlexImage{
+}
+
+.whyFlex .whyFlexImage img {
+    width: 100%;
+    height: auto;
+}
+
+.whyFlex .whyFlexContent {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+}
+
+.whyFlex .whyFlexContent p {
+    margin-bottom: -1rem;
+}
+
+.whyFlex .whyFlexContent p span {
+    color: #64a953;
+    font-weight: bold;
+}
+
+.contentFooter {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    /* gap: 1.5rem; */
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #d9d9d9;
+}
+
+/* .contentFooter {
+    width: 90%;
+} */
+
+.contentFooter1 {
+    width: 25%;
+    text-align: center;
+    /* background-color: #d9d9d9; */
+    border-radius: .5rem;
+    padding: 1.3rem;
+    /* border: 1px solid red; */
+}
+
+.contentFooter1 p {
+    line-height: 1.4;
+}
+
+.italic {
+    font-style: italic;
+    color: rgb(8, 150, 238);
+}
+
+/* training */
+.trainingIcons {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* .trainingIcons div {
+    width: 50px;
+    height: 50px;
+} */
+
+ .trainingIcons .content1 {
+    width: 17%;
+    height: 17%;
+}
+
+.supportIcons {
+    flex-wrap: wrap;
+    gap: 2.2rem;
+    justify-content: center;
+}
+
+.supportIcons .content1 {
+    width: 20%;
+    height: 20%;
+}
+
+.supportIcons .content1 p {
+  color: #ec8e55;
+      font-weight: bold;
+    margin-top: -.5rem;
+}
+
+.trainingIcons .content1 p {
+    color: #5e17eb;
+    font-weight: bold;
+    margin-top: -.5rem;
+}
+
+.trainingIcons .content2{
+    width: 17.5%;
+    height: 17.5%;
+}
+
+.trainingIcons .content3 {
+    width: 16.5%;
+    height: 16.5%;
+}
+
+.trainingIcons .content4 {
+    width: 25.5%;
+    height: 25.5%;
+}
+
+.trainingIcons .content5 {
+    width: 18%;
+    height: 18%;
+}
+
+.trainingIcons .content6 {
+    width: 21.8%;
+    height: 21.8%;
+}
+
+.trainingIcons .content7 {
+    width: 25%;
+    height: 25%;
+}
+
+.trainingIcons .content8 {
+    width: 29.5%;
+    height: 29.5%;
+} 
+
+.trainingFlow {
+    width: 65%;
+    height: 65%;
+    margin-top: 4rem;
+}
+
+.projectCheckbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.checkbox1 {
+    /* border: 1px solid red; */
+}
+
+.whyFlexTrain {
+    flex: 1;
+    padding: 1rem;
+    text-align: start;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.contentFooter2 {
+    border-radius: .5rem;
+    gap: 2rem;
+    background-color: #d9d9d9;
+    padding: 1rem;
+    width: 25%;
+    text-align: center;
+}
+
+.contentFooter2 p {
+    line-height: 1.4;
+}
+
+.contentFooterTraining {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    gap: 3rem;
+}
+
+.course a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(75, 75, 243);
+}
+
+.course a:hover {
+    text-decoration: underline;
+}
+
+.supportContent {
+    margin-bottom: 3rem;
+}
+
+.packages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin: 0.5rem;
+}
+
+.packagesBox {
+ width: 23%
+
+}
+
+.packagesBox img {
+    width: 100%;
+    height: auto;
+}
+
+
