@@ -19,8 +19,10 @@ const Menu = () => {
   return (
     <div className="menuContainer">
       <div className="menuBox">
-        <div className="logoContainer">
-          <img src={logo} alt="logo image" className="menuLogo" />
+        <div >
+          <a href="/" className="logoContainer">
+            <img src={logo} alt="logo image" className="menuLogo" />
+          </a>
         </div>
         <ul className='menuList'>
           <li className='ListLink'>

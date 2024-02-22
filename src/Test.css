@@ -1,110 +1,109 @@
 /* Test.css */
 .img-box {
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    width: 95%;
-    height: 85%;
-    border: 1px solid #d9d9d9;
-  }
-  
-  .img-box img {
-    width: 100%;
-    height: auto;
-    transition: filter 0.3s ease, transform 0.3s ease; /* Add transform transition */
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 95%;
+  height: 85%;
+  border: 1px solid #d9d9d9;
 }
 
-  .img-box:hover img {
-      transform: scale(1.1); 
-  }
+.img-box img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease, transform 0.3s ease; /* Add transform transition */
+}
 
-  .img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth transition for overlay */
-  }
-  
-  .img-box:hover .img-overlay {
-    opacity: 1; /* Show overlay on hover */
-  }
-  
-  .icon {
-    fill: white; /* Icon color */
-    font-size: 28px;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px; /* Adjust icon spacing */
-  }
-  
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Grey overlay */
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img-box:hover img {
+    transform: scale(1.1); 
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.img-box:hover .img-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.icon {
+  fill: white; /* Icon color */
+  font-size: 28px;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px; /* Adjust icon spacing */
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Grey overlay */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup {
-    width: 90%;
-    height: 90%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    overflow: auto;
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .popup::-webkit-scrollbar {
-  width: 3px;
+width: 3px;
 }
 
 .popup::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 .popup::-webkit-scrollbar-thumb {
-    background: #d9d9d9;
-    border-radius: 4px;
+  background: #d9d9d9;
+  border-radius: 4px;
 }
 
 
 .popup button {
-    background-color: transparent;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.7rem;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.7rem;
 }
 
- .flipbook-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
+.flipbook-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .page {
-  border: 1px solid #d9d9d9;
+border: 1px solid #d9d9d9;
 }
 
 .page img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+width: 100%;
+height: auto;
+object-fit: cover;
 }
