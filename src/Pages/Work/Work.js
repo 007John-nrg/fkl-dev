@@ -4,7 +4,7 @@ import './Work.css'
 const Work = () => {
   return (
     <div className='workContainer'>
-      Work
+      Working class
     </div>
   )
 }

@@ -12,7 +12,6 @@ const Home = () => {
   return (
     <div className='homeContainer'>
       <Landing />
-      {/* <IndustryErp /> */}
       <Industry />
       <Portfolio />
       <Contact />
