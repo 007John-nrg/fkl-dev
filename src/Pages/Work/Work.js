@@ -79,7 +79,7 @@ const Work = () => {
                   <div className="popup-overlay">
                       <div className="popup">
                           <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <iframe width="100%" height="100%" src={implement} sandbox="allow-scripts allow-same-origin"/>
+                          <iframe width="100%" height="100%" src={implement} />
                       </div>
                   </div>
               )}
