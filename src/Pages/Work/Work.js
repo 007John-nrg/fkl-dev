@@ -19,7 +19,7 @@ const Work = () => {
     // Define event handlers for each role's popup
     const handleImplementPopup = () => {
       setShowImplementPopup(true);
-      console.log(showImplementPopup)
+      console.log("show", showImplementPopup)
     };
   
     const handleITPopup = () => {
@@ -45,7 +45,7 @@ const Work = () => {
       setShowHRPopup(false);
       setShowAccountsPopup(false);
 
-      console.log(showImplementPopup)
+      console.log(showAccountsPopup, showSalesPopup, showImplementPopup, showITPopup, showHRPopup)
     };
 
   return (
@@ -75,15 +75,15 @@ const Work = () => {
               </button>
               <div className="role" onClick={handleImplementPopup}>
                 The Role
-                {showImplementPopup && (
+              </div>
+              {showImplementPopup && (
                   <div className="popup-overlay">
                       <div className="popup">
                           <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <iframe width="100%" height="100%" src={implement} />
+                          <iframe width="100%" height="100%" src={implement}/>
                       </div>
                   </div>
               )}
-              </div>
             </div>
           </div>
 
@@ -98,15 +98,15 @@ const Work = () => {
               </button>
               <div className="role" onClick={handleITPopup}>
                 The Role
-                {showITPopup && (
+              </div>
+              {showITPopup && (
                   <div className="popup-overlay">
                       <div className="popup">
                           <button className='btnPop' onClick={handleClosePopups}>X</button>
                           <iframe width="100%" height="100%" src={it} />
                       </div>
                   </div>
-              )}
-              </div>
+                )}
             </div>
           </div>
 
@@ -121,15 +121,15 @@ const Work = () => {
               </button>
               <div className="role" onClick={handleAccountsPopup}>
                 The Role
-                {showAccountsPopup && (
-                  <div className="popup-overlay">
-                      <div className="popup">
-                          <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <iframe width="100%" height="100%" src={accounts} />
-                      </div>
-                  </div>
-              )}
               </div>
+              {showAccountsPopup && (
+                <div className="popup-overlay">
+                    <div className="popup">
+                        <button className='btnPop' onClick={handleClosePopups}>X</button>
+                        <iframe width="100%" height="100%" src={accounts} />
+                    </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -144,15 +144,15 @@ const Work = () => {
               </button>
               <div className="role" onClick={handleSalesPopup}>
                 The Role
-                {showSalesPopup && (
-                  <div className="popup-overlay">
-                      <div className="popup">
-                          <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <iframe width="100%" height="100%" src={sales} />
-                      </div>
-                  </div>
-              )}
               </div>
+              {showSalesPopup && (
+                <div className="popup-overlay">
+                    <div className="popup">
+                        <button className='btnPop' onClick={handleClosePopups}>X</button>
+                        <iframe width="100%" height="100%" src={sales} />
+                    </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -167,15 +167,15 @@ const Work = () => {
               </button>
               <div className="role" onClick={handleHRPopup}>
                 The Role
-                {showHRPopup && (
-                  <div className="popup-overlay">
-                      <div className="popup">
-                          <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <iframe width="100%" height="100%" src={hr} />
-                      </div>
-                  </div>
-              )}
               </div>
+              {showHRPopup && (
+                <div className="popup-overlay">
+                    <div className="popup">
+                        <button className='btnPop' onClick={handleClosePopups}>X</button>
+                        <iframe width="100%" height="100%" src={hr} />
+                    </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
