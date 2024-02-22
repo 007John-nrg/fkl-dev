@@ -21,6 +21,7 @@ function Test() {
     const [popupImages, setPopupImages] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
     const [pageNumber, setPageNumber] = useState(1);
+    const [pdfDataUri, setPdfDataUri] = useState('');
 
     console.log(popupImages)
 
@@ -30,8 +31,6 @@ function Test() {
     const payroll = [image4, image40];
     const project = [image5, image50];
     const tax = [image6, image60];
-
-    const [pdfDataUri, setPdfDataUri] = useState('');
 
     const handleEyeIconClick = async (category) => {
         try {
@@ -176,9 +175,6 @@ function Test() {
                 <div className="popup-overlay">
                     <div className="popup">
                         <button onClick={() => setShowPopup(false)}>X</button>
-                        {/* <Document file={popupImages.length > 0 ? popupImages[0] : null}>
-                            <Page pageNumber={pageNumber} />
-                        </Document> */}
                         <iframe width="100%" height="100%" src={pdfDataUri} />
                     </div>
                 </div>

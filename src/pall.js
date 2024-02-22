@@ -50,6 +50,7 @@ const Pall = () => {
   const [popupImages, setPopupImages] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+  const [pdfDataUri, setPdfDataUri] = useState('');
 
   const nextButtonClick = () => {
     setCurrentPage(currentPage + 1);
@@ -134,38 +135,57 @@ const Pall = () => {
     });
 };
 
-  const handleEyeIconClick = (category) => {
-    let selectedImages;
-    switch (category) {
-        case 'P11':
-            selectedImages = P11;
-            break;
-        case 'P22':
-            selectedImages = P22;
-            break;
-        case 'P33':
-            selectedImages = P33;
-            break;
-        case 'P44':
-            selectedImages = P44;
-            break;
-        case 'P55':
-            selectedImages = P55;
-            break;
-        case 'P66':
-            selectedImages = P66;
-            break;
-        case 'P77':
-            selectedImages = P77;
-            break;
-        case 'P88':
-            selectedImages = P88;
-            break;
-        default:
-            selectedImages = [];
+  const handleEyeIconClick = async(category) => {
+    try {
+        let selectedImages;
+        switch (category) {
+            case 'P11':
+                selectedImages = P11;
+                break;
+            case 'P22':
+                selectedImages = P22;
+                break;
+            case 'P33':
+                selectedImages = P33;
+                break;
+            case 'P44':
+                selectedImages = P44;
+                break;
+            case 'P55':
+                selectedImages = P55;
+                break;
+            case 'P66':
+                selectedImages = P66;
+                break;
+            case 'P77':
+                selectedImages = P77;
+                break;
+            case 'P88':
+                selectedImages = P88;
+                break;
+            default:
+                selectedImages = [];
+        }
+        const pdf = new jsPDF();
+        for (let i = 0; i < selectedImages.length; i++) {
+            const imgData = await getImageData(selectedImages[i]);
+            pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297); // Add image to PDF (A4 size)
+            if (i !== selectedImages.length - 1) {
+                pdf.addPage(); // Add a new page for the next image
+            }
+        }
+
+        // Get PDF content as data URI string
+        const dataUri = pdf.output('datauristring');
+
+        // Set PDF data URI to state
+        setPdfDataUri(dataUri);
+
+        // Show the popup
+        setShowPopup(true);
+    } catch (error) {
+        console.error('Error converting images to PDF:', error);
     }
-    setPopupImages(selectedImages);
-    setShowPopup(true);
 };
 
 
@@ -197,15 +217,7 @@ const Pall = () => {
         <div className="popup-overlay" style={{}}>
             <div className="popup">
                 <button onClick={() => setShowPopup(false)}>X</button>
-                <div className="flipbook-container">
-                    <HTMLFlipBook width={575} height={700}>
-                        {popupImages.map((image, index) => (
-                            <div className="page" key={index}>
-                                <img src={image} alt={`popup image ${index}`} />
-                            </div>
-                        ))}
-                    </HTMLFlipBook>
-                </div>
+                <iframe width="100%" height="100%" src={pdfDataUri} />
             </div>
         </div>
         )}

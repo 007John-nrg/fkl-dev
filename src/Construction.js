@@ -22,6 +22,7 @@ function Constructions() {
     const [popupImages, setPopupImages] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
     const [pageNumber, setPageNumber] = useState(1);
+    const [pdfDataUri, setPdfDataUri] = useState('');
 
     const Analytics = [image1, image10];
     const Construction = [image2, image20];
@@ -32,49 +33,53 @@ function Constructions() {
     const home = [image7, image70];
 
     const handleEyeIconClick = async (category) => {
-        let selectedImages;
-        switch (category) {
-            case 'Analytics':
-                selectedImages = Analytics;
-                break;
-            case 'Construction':
-                selectedImages = Construction;
-                break;
-            case 'Service':
-                selectedImages = Service;
-                break;
-            case 'Contract':
-                selectedImages = Contract;
-                break;
-            case 'project':
-                selectedImages = project;
-                break;
-            case 'land':
-                selectedImages = land;
-                break;
-            case 'home':
-                selectedImages = home;
-                break;
-            default:
-                selectedImages = [];
-        }
-        const pdf = new jsPDF();
-        for (let i = 0; i < selectedImages.length; i++) {
-            const imgData = await getImageData(selectedImages[i]);
-            pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297); // Add image to PDF (A4 size)
-            if (i !== selectedImages.length - 1) {
-                pdf.addPage(); // Add a new page for the next image
+        try {
+            let selectedImages;
+            switch (category) {
+                case 'Analytics':
+                    selectedImages = Analytics;
+                    break;
+                case 'Construction':
+                    selectedImages = Construction;
+                    break;
+                case 'Service':
+                    selectedImages = Service;
+                    break;
+                case 'Contract':
+                    selectedImages = Contract;
+                    break;
+                case 'project':
+                    selectedImages = project;
+                    break;
+                case 'land':
+                    selectedImages = land;
+                    break;
+                case 'home':
+                    selectedImages = home;
+                    break;
+                default:
+                    selectedImages = [];
             }
-        }
+            const pdf = new jsPDF();
+            for (let i = 0; i < selectedImages.length; i++) {
+                const imgData = await getImageData(selectedImages[i]);
+                pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297); // Add image to PDF (A4 size)
+                if (i !== selectedImages.length - 1) {
+                    pdf.addPage(); // Add a new page for the next image
+                }
+            }
 
-        // Save the PDF as data URI string
-        const pdfDataUri = pdf.output('datauristring');
-        
-        // Set the PDF data URI to the state
-        setPopupImages([pdfDataUri]);
-        
-        // Show the popup
-        setShowPopup(true);
+            // Get PDF content as data URI string
+            const dataUri = pdf.output('datauristring');
+
+            // Set PDF data URI to state
+            setPdfDataUri(dataUri);
+
+            // Show the popup
+            setShowPopup(true);
+        } catch (error) {
+            console.error('Error converting images to PDF:', error);
+        }
     };
 
     const handleDownloadIcon = async (category) => {
@@ -114,7 +119,7 @@ function Constructions() {
               pdf.addPage(); // Add a new page for the next image
             }
           }
-          pdf.save('download.pdf'); // Save the PDF with a specified name
+          pdf.save('Construction.pdf'); // Save the PDF with a specified name
         } catch (error) {
           console.error('Error converting images to PDF:', error);
         }
@@ -175,9 +180,7 @@ function Constructions() {
                 <div className="popup-overlay">
                     <div className="popup">
                         <button onClick={() => setShowPopup(false)}>X</button>
-                        <Document file={popupImages[0]}>
-                            <Page pageNumber={pageNumber} />
-                        </Document>
+                        <iframe width="100%" height="100%" src={pdfDataUri} />
                     </div>
                 </div>
             )}
