@@ -6,6 +6,7 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
 import contact from '../../assets/cont.png'
+import Footer from '../../Components/Footer';
 
 const Contact = () => {
 
@@ -42,6 +43,7 @@ const Contact = () => {
   };
 
   return (
+    <div style={{marginLeft: '20%', width: '80%'}}>
     <div className='contactContainer'>
       <div className='form'>
         <div className='formLogo'>
@@ -231,7 +233,7 @@ const Contact = () => {
         </div>
         </div>
 
-        <div>
+        {/* <div>
           <div style={{textAlign: 'center'}} className="mailTitle">
             <h5>Connect with us</h5>
           </div>
@@ -259,7 +261,7 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
 
         <div>
           <div style={{textAlign: 'center'}} className="mailTitle">
@@ -278,6 +280,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      </div>
+      <Footer />
     </div>
   )
 }

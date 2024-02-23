@@ -1,8 +1,8 @@
 .contactContainer {
-    margin-left: 20%;
+    /* margin-left: 20%; */
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    /* width: 80%; */
     /* height: 100vh; */
 }
 
@@ -45,15 +45,25 @@
 .formContact .firstRow input,
 select{
     width: 50%;
+    border: 1px solid #fff;
 }
 
-
 .formContact input,
-textarea {
+textarea,
+select {
     background-color: #fff;
     color: black;
     border-radius: .5rem;
     padding: 1rem;
+    border: 1px solid #fff;
+}
+
+input:focus {
+    border: 1px solid yellow;
+  }
+
+.formContact textarea {
+    font-family: 'Raleway', sans-serif;
 }
 
 .info {
