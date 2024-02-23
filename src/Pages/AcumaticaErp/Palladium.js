@@ -125,8 +125,7 @@ const Palladium = () => {
           margins and improving operational efficiency.
         </p>
         <div className='buttons'>
-          <Link className="btnPal" to="/Contact">GET A QUOTE</Link>
-        </div>
+          <Link className="btnPal" to="/Contact"  state={{ product: "Palladium" }}> GET A QUOTE</Link>        </div>
       </div>
 
       <div className="AccountContainer palladiumVersions">

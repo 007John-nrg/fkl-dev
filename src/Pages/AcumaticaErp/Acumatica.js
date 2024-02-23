@@ -2,7 +2,7 @@ import React from 'react';
 import './AcumaticaErp.css';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
-import image from '../../assets/aim8.png';
+import image from '../../assets/aim778.png';
 import image1 from '../../assets/aim9.png';
 import image2 from '../../assets/aim10.png';
 import image3 from '../../assets/aim11.png';

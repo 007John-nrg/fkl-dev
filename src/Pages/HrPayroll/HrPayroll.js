@@ -89,7 +89,7 @@ const HrPayroll = () => {
       </section>
 
       <div className='buttons'>
-        <Link className="btnPal" to="/Contact">GET A QUOTE</Link>
+        <Link className="btnPal" to="/Contact"  state={{ product: "Payspace" }}> GET A QUOTE</Link>
       </div>
 
       <section className="table">
