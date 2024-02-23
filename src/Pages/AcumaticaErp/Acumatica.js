@@ -22,7 +22,7 @@ const Acumatica = () => {
           <img src={image8} alt="acumatica logo" />
         </div>
         <p>
-          Acumatica Cloud ERP is a dynamic and flexible business management solutions
+          Acumatica Cloud ERP is a dynamic and flexible business management solution
           that empowers organizations with real-time insights, seamless collaboration, and
           unparalleled scalability for optimal operational efficiency and growth.
         </p>

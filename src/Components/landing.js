@@ -10,7 +10,7 @@ const Landing = () => {
         <h1>
           Transform your <br/>
           business with our <br/>
-          custom ERP <br/>
+          custom IT <br/>
           solutions
         </h1>
         <p>At Future Kenya, we provide tailored technology solutions <br /> that meets your unique business needs</p>

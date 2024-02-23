@@ -32,17 +32,9 @@ const Menu = () => {
           </li>
 
           <li className='ListLink'>
-            <Link to="/AcumaticaErp" className={isActive('/AcumaticaErp') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('AcumaticaErp')}>
+            <Link to="/Acumatica" className={isActive('/AcumaticaErp') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('AcumaticaErp')}>
               Acumatica ERP
             </Link>
-            {/* <ul className={`sublink ${activeMainLink === 'AcumaticaErp' ? '' : 'visible'}`}>
-              <li className='sublinkList'>
-                <Link to="/Acumatica">Acumatica</Link>
-              </li>
-              <li className='sublinkList'>
-                <Link to="/Palladium">Palladium</Link>
-              </li>
-            </ul> */}
           </li>
 
           <li className='ListLink'>
