@@ -266,7 +266,7 @@ const Contact = () => {
             <h5>Find us</h5>
           </div>
           <div>
-            <iframe
+            {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d127646.14677221661!2d36.802386!3d-1.200823!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3d3fd9ffed9f%3A0x514570cd2a90bacc!2sFuture%20Kenya%20LTD!5e0!3m2!1sen!2sus!4v1706207627637!5m2!1sen!2sus"
             allowfullscreen=""
             loading="lazy"
@@ -274,7 +274,7 @@ const Contact = () => {
             width="100%"
             height="150"
             style={{ border: "0" }}
-            ></iframe>
+            ></iframe> */}
           </div>
         </div>
       </div>
