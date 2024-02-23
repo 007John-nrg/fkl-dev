@@ -193,11 +193,11 @@ const Contact = () => {
             <h5>Call us</h5>
           </div>
           <div style={{paddingLeft: '.3rem', display: 'flex', gap: '.5rem', flexDirection: 'column', marginTop: '-1rem'}}>
-            <div style={{paddingLeft: '1rem', display: 'flex', gap: '.5rem', alignItems: 'center', border: '1px solid', borderRadius: '.6rem', width: '50%', padding: '0'}}>
+            <div style={{paddingLeft: '1.5rem', display: 'flex', gap: '.5rem', alignItems: 'center', border: '1px solid', borderRadius: '.6rem', width: '50%', padding: '0'}}>
               <FontAwesomeIcon icon={faMobileScreenButton} />
               <p>+254 (0)720 130 172 </p>
             </div>
-            <div style={{ paddingLeft: '1rem', display: 'flex', gap: '.5rem', alignItems: 'center', border: '1px solid', borderRadius: '.6rem', width: '50%', padding: '0'}}>
+            <div style={{ paddingLeft: '1.5rem', display: 'flex', gap: '.5rem', alignItems: 'center', border: '1px solid', borderRadius: '.6rem', width: '50%', padding: '0'}}>
               <FontAwesomeIcon icon={faPhone} />
               <p>+254 (0)20 236 1100/11/22</p>
             </div>
