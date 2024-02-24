@@ -86,6 +86,7 @@ const Contact = () => {
       });
 
       const accessToken = response.data.access_token;
+      console.log(accessToken)
       return accessToken;
     } catch (error) {
       console.error('Error generating token:', error);
@@ -93,25 +94,58 @@ const Contact = () => {
     }
   };
 
-  // Function to create lead
-  const createLead = async (accessToken) => {
-    try {
-      const leadData = {
-        // Your lead data object
-      };
-
-      const response = await axios.post('http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead', leadData, {
-        headers: {
-          'Authorization': `Bearer ${accessToken}`,
-          'Content-Type': 'application/json'
+// Function to create lead
+const createLead = async (accessToken) => {
+  try {
+    const leadData = {
+      FirstName: { value: 'test1' },
+      LastName: { value: 'test1' },
+      Email: { value: 'test@test.com' },
+      JobTitle: { value: 'CEO' },
+      Phone2Type: { value: 'cell' },
+      Phone2: { value: '0722222200' },
+      CompanyName: { value: 'KimFoods' },
+      Address: {
+        Country: { value: 'KE' }
+      },
+      Attributes: [
+        {
+          AttributeDescription: { value: 'Number of Employees' },
+          AttributeID: { value: 'COMPSIZE' },
+          Required: {},
+          Value: { value: '100' },
+          ValueDescription: { value: '1-100' }
+        },
+        {
+          AttributeDescription: { value: 'Industry' },
+          AttributeID: { value: 'INDUSTRY' },
+          Required: {},
+          Value: { value: 'CST' },
+          ValueDescription: { value: 'Construction' }
+        },
+        {
+          AttributeDescription: { value: 'Looking for' },
+          AttributeID: { value: 'PRODREQ' },
+          Required: {},
+          Value: { value: 'ENC' },
+          ValueDescription: { value: 'Electronics & Computers' }
         }
-      });
+      ],
+      Description: { value: 'i would like to inquire' }
+    };
 
-      console.log('Lead created:', response.data);
-    } catch (error) {
-      console.error('Error creating lead:', error);
-    }
-  };
+    const response = await axios.post('http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead', leadData, {
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    console.log('Lead created:', response.data);
+  } catch (error) {
+    console.error('Error creating lead:', error);
+  }
+};
 
   // Usage
   const handleCreateLead = async () => {
