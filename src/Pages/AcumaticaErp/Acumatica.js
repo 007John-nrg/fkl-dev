@@ -11,6 +11,7 @@ import image5 from '../../assets/aim13.png';
 import image6 from '../../assets/aim14.png';
 import image8 from '../../assets/aim105.PNG';
 import Footer from '../../Components/Footer';
+import { Link } from 'react-router-dom';
 
 
 const Acumatica = () => {
@@ -47,6 +48,10 @@ const Acumatica = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className='buttons'>
+        <Link className="btnAcum" to="/Contact"  state={{ product: "Acumatica" }}> GET A QUOTE</Link>        
       </div>
 
       <div className='AccountContainer'>

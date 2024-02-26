@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faFacebook, faXTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
-import image from '../../assets/img2.png'
+import image from '../../assets/copy.png'
 import { useLocation } from 'react-router-dom';
 import contact from '../../assets/cont.png'
 import Footer from '../../Components/Footer';
@@ -134,7 +134,7 @@ const createLead = async (accessToken) => {
       Description: { value: 'i would like to inquire' }
     };
 
-    const response = await axios.post('http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead', leadData, {
+    const response = await axios.put('http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead', leadData, {
       headers: {
         'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json'
@@ -156,7 +156,7 @@ const createLead = async (accessToken) => {
   };
 
   return (
-    <div style={{marginLeft: '20%', width: '80%'}}>
+    <div style={{marginLeft: '20%', width: '80%', height: '100%'}}>
     <div className='contactContainer'>
       <div className='form'>
         <div className='formLogo'>
