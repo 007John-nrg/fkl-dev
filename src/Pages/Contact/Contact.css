@@ -97,6 +97,7 @@ input:focus {
 
 .strip {
     width: 80%;
+    padding-left: 1rem;
 }
 
 .strip img {

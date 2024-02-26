@@ -3,11 +3,11 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './components.css'
-import img1 from '../assets/aim1.png';
-import img2 from '../assets/aim2.png';
-import img3 from '../assets/aim3.png';
-import img5 from '../assets/aim5.png';
-import img6 from '../assets/aim6.png';
+import img1 from '../assets/case1.png';
+import img2 from '../assets/case2.png';
+import img3 from '../assets/case3.png';
+import img5 from '../assets/case4.png';
+import img6 from '../assets/case5.png';
 
 const Portfolio = () => {
 

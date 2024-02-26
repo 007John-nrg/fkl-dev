@@ -72,7 +72,7 @@ const Menu = () => {
             </Link>
             <ul className={`sublink ${activeMainLink === 'Career' ? '' : 'visible'}`}>
               <li className='sublinkList'>
-                <Link to="/Jobs">Jobs</Link>
+                <Link to="/Career">Jobs</Link>
               </li>
               <li className='sublinkList'>
                 <Link to="/Apply">Apply Now</Link>
