@@ -12,71 +12,74 @@ import image6 from '../../assets/aim14.png';
 import image8 from '../../assets/aim105.PNG';
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
+import { Navbar } from '../../Components/Navbar';
 
 
 const Acumatica = () => {
 
   return (
-    <div className='acumaticaContainer'>
-      <div className="acumaticaContent1">
-        <div className="imageContainer acumLogo">
-          <img src={image8} alt="acumatica logo" />
-        </div>
-        <p>
-          Acumatica Cloud ERP is a dynamic and flexible business management solution
-          that empowers organizations with real-time insights, seamless collaboration, and
-          unparalleled scalability for optimal operational efficiency and growth.
-        </p>
-      </div>
-
-      <div className="vivid">   
-       <div className='videoContainer'>
-          <iframe width="660" height="400" src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div className="acumaticaContent acumatica2">
-        <div className='acumatica3'>
-          <div className="imageContainer image2">
-            <img src={image} alt="acumatica logo" />
+    <div>
+      <Navbar />
+      <div className='acumaticaContainer'>
+        <div className="acumaticaContent1">
+          <div className="imageContainer acumLogo">
+            <img src={image8} alt="acumatica logo" />
           </div>
+          <p>
+            Acumatica Cloud ERP is a dynamic and flexible business management solution
+            that empowers organizations with real-time insights, seamless collaboration, and
+            unparalleled scalability for optimal operational efficiency and growth.
+          </p>
+        </div>
 
-          <div className="textContainer2">
-            <h3 className='sectionTitle'>Acumatica</h3>
-            <p>
-              Acumatica technology is built on a future-proof platform with open architecture for rapid integrations, scalability, and ease of use. The solution helps you manage accounting, operations, customers, vendors, employees, and many other aspects of running a business efficiently and effectively. We offer you the optimal business management solution to empower your company's transition for success in the modern digital economy. With Acumatica, we provide unparalleled capabilities for transforming your operations and ensuring resilience in today's dynamic business landscape.
-            </p>
+        <div className="vivid">   
+          <div className='videoContainer'>
+            <iframe width="660" height="400" src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
-      </div>
 
-      <div className='buttons'>
-        <Link className="btnAcum" to="/Contact"  state={{ product: "Acumatica" }}> GET A QUOTE</Link>        
-      </div>
+        <div className="acumaticaContent acumatica2">
+          <div className='acumatica3'>
+            <div className="imageContainer image2">
+              <img src={image} alt="acumatica logo" />
+            </div>
 
-      <div className='AccountContainer'>
-        <div className='accountsSoftware'>
-          <div className='software' style={{ backgroundImage: `url(${image5})` }}>
-            <a href='/General'>General Business Edition</a>
-          </div>
-          <div className='software' style={{ backgroundImage: `url(${image2})` }}>
-            <a href='/Distribution'>Distribution Edition</a>
-          </div>
-          <div className='software' style={{ backgroundImage: `url(${image3})` }}>
-            <a href='/Manufacturing'>Manufacturing Edition</a>
-          </div>
-          <div className='software' style={{ backgroundImage: `url(${image4})` }}>
-            <a href='/Commerce'>Retail Edition</a>
-          </div>
-          <div className='software' style={{ backgroundImage: `url(${image1})` }}>
-            <a href='/Construction'>Construction Edition</a>
+            <div className="textContainer2">
+              <h3 className='sectionTitle'>Acumatica</h3>
+              <p>
+                Acumatica technology is built on a future-proof platform with open architecture for rapid integrations, scalability, and ease of use. The solution helps you manage accounting, operations, customers, vendors, employees, and many other aspects of running a business efficiently and effectively. We offer you the optimal business management solution to empower your company's transition for success in the modern digital economy. With Acumatica, we provide unparalleled capabilities for transforming your operations and ensuring resilience in today's dynamic business landscape.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <Footer />
-  </div>
-    
+        <div className='buttons'>
+          <Link className="btnAcum" to="/Contact"  state={{ product: "Acumatica" }}> GET A QUOTE</Link>        
+        </div>
+
+        <div className='AccountContainer'>
+          <div className='accountsSoftware'>
+            <div className='software' style={{ backgroundImage: `url(${image5})` }}>
+              <a href='/General'>General Business Edition</a>
+            </div>
+            <div className='software' style={{ backgroundImage: `url(${image2})` }}>
+              <a href='/Distribution'>Distribution Edition</a>
+            </div>
+            <div className='software' style={{ backgroundImage: `url(${image3})` }}>
+              <a href='/Manufacturing'>Manufacturing Edition</a>
+            </div>
+            <div className='software' style={{ backgroundImage: `url(${image4})` }}>
+              <a href='/Commerce'>Retail Edition</a>
+            </div>
+            <div className='software' style={{ backgroundImage: `url(${image1})` }}>
+              <a href='/Construction'>Construction Edition</a>
+            </div>
+          </div>
+        </div>
+
+        <Footer />
+      </div>
+    </div>
   )
 }
 

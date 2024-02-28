@@ -31,6 +31,7 @@ width: 60%;
   justify-content: center;
   align-items: center;
   width: 100%;
+
 }
 
 .acumaticaEdit {
@@ -130,6 +131,10 @@ width: 60%;
 
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
+  .acumaticaContainer {
+    margin-left: 0;
+    width: 100%
+  }
   .acumaticaContent {
     padding: 0 20px;
   }
@@ -611,6 +616,66 @@ color: 'red' !important;
   .pallCont {
     width: 100%;
   }
+
+  .acumaticaContainer {
+   margin-left: 25%;
+  }
+
+  /* Acumatica */
+  .acumaticaContent1 {
+    width: 68%;
+  }
+
+  .acumaticaContent1 p {
+    line-height: 1.3;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .videoContainer iframe {
+    width: 500px;
+    height: 400px;
+  }
+
+  /* .acumaticaContent {
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  } */
+  .acumatica3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2.5rem;
+  }
+
+  .acumatica3 .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .acumatica3 .textContainer2 {
+    margin-top: -3rem;
+  }
+
+  .acumatica3 .textContainer2 h3 {
+    margin: 0;
+    display: none;
+  }
+
+  .acumatica3 .textContainer2 p {
+    text-align: center;
+  }
+
+  .software {
+    width: 35%;
+    height: 300px;
+  }
 }
 
 .img-body img {
@@ -655,4 +720,74 @@ background-color: #fff;
 
 .carousel .control-prev.control-arrow:before {
   border-right: 8px solid #fff !important;
+}
+
+@media screen and (max-width: 768px) {
+  /* Acumatica */
+  .acumaticaContent1 {
+    width: 68%;
+  }
+
+  .acumaticaContainer {
+    margin-left: 0;
+   }
+  
+  .videoContainer iframe {
+    width: 400px;
+    height: 300px;
+  }
+
+  .accountsSoftware {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .software {
+    width: 80%;
+    height: 400px;
+  }
+
+  .two .buttons .btnPal {
+    margin-top: 0;
+  }
+    
+  .palladiumVersions {
+    margin-top: 2rem;
+  }
+
+  .pallContent {
+    width: 83%;
+  }
+  
+  .pallContent1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .pallImage {
+    flex: 50%;
+  }
+
+  .pallImage img {
+    width: 100%; 
+    height: auto;
+  }
+  .pallDesc {
+    flex: 50%;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 468px) {
+  /* Acumatica */
+  .acumaticaContent1 {
+    width: 68%;
+  }
+
+  .videoContainer iframe {
+    width: 300px;
+    height: 200px;
+  }
 }

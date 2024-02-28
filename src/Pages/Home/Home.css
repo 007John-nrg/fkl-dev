@@ -5,6 +5,7 @@
 
 @media screen and (max-width: 999px) {
     .homeContainer {
+      margin-left: 25%;
         width: 75%;
     }
   }
@@ -12,6 +13,7 @@
 
 @media screen and (max-width: 768px) {
     .homeContainer {
+      margin-left: 0;
         width: 100%
     }
   }

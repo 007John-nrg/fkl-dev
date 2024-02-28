@@ -21,6 +21,7 @@ import image05 from '../../assets/aim05.png'
 import image06 from '../../assets/aim06.png'
 import image07 from '../../assets/aim07.png'
 import image08 from '../../assets/aim08.png'
+import image09 from '../../assets/checkBox.PNG'
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -80,22 +81,25 @@ const Training = () => {
       </div>
 
       <div className="projectCheckbox">
-        <div className='checkbox'>
+        <div style={{display: 'flex', gap: '.2rem', alignItems: 'center', justifyContent: 'center'}} className='checkbox'>
           <p>Product certification training</p>
+          <img src={image09} alt="" />
         </div>
-        <div className='checkbox'>
+        <div style={{display: 'flex', gap: '.2rem', alignItems: 'center', justifyContent: 'center'}} className='checkbox'>
           <p>Online training courses</p>
+          <img src={image09} alt="" />
         </div>
-        <div className='checkbox'>
+        <div style={{display: 'flex', gap: '.2rem', alignItems: 'center', justifyContent: 'center'}} className='checkbox'>
           <p>System Administration</p>
+          <img src={image09} alt="" />
         </div>
-        <div className='checkbox1'>
+        <div style={{display: 'flex', gap: '.2rem', alignItems: 'center', justifyContent: 'center'}} className='checkbox1'>
           <p>Developer Training</p>
-          <FontAwesomeIcon icon="fa-light fa-square-check" />
+          <img src={image09} alt="" />
         </div>
-        <div className='checkbox'>
+        <div style={{display: 'flex', gap: '.2rem', alignItems: 'center', justifyContent: 'center'}} className='checkbox'>
           <p>University assessment</p>
-          <FontAwesomeIcon icon="fa-light fa-square-check" />
+          <img src={image09} alt="" />
         </div>
       </div>
 

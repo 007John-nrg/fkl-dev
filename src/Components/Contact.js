@@ -5,9 +5,6 @@ import OpenHours from './OpenHours'
 const Contact = () => {
   return (
     <div className="contactBox">
-      {/* <div className="sectionTitle">
-        <h5>CONTACT US</h5>
-      </div> */}
       <div className='portalLink'>
         <p>Sign up now on our <span>
           <a 
@@ -27,8 +24,9 @@ const Contact = () => {
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         width="100%"
-        height="500"
+        height="400"
         style={{ border: "0" }}
+        className="map-iframe"
       ></iframe>
     </div>
   )

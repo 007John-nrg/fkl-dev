@@ -59,6 +59,7 @@ import p39 from '../../assets/palladium/pallpay/Palladium Pay_page-0004.jpg';
 import p40 from '../../assets/palladium/palladiumAccount.jpg'
 import { Link } from 'react-router-dom';
 import Pall from '../../pall';
+import { Navbar } from '../../Components/Navbar';
 
 const Palladium = () => {
   const [popupImages, setPopupImages] = useState([]);
@@ -108,6 +109,8 @@ const Palladium = () => {
 };
 
   return (
+    <div>
+    <Navbar />
     <div className='acumaticaContainer pallCont'>
       <div className="aside" style={{overflowY: 'auto' }}>
         <Pall />
@@ -311,6 +314,7 @@ const Palladium = () => {
 
       <Footer />
     </div>
+  </div>
   )
 }
 

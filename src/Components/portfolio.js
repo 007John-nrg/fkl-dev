@@ -2,6 +2,7 @@ import React from 'react'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Carousel } from 'react-responsive-carousel';
 import './components.css'
 import img1 from '../assets/case1.png';
 import img2 from '../assets/case2.png';
@@ -48,7 +49,7 @@ const Portfolio = () => {
       <div className="sectionTitle">
         <h5>CUSTOMER CASE STUDIES</h5>
       </div>
-      <div className="portfolioSlider">
+      {/* <div className="portfolioSlider">
         <Slider {...settings}>
           {Images.map((image) => (
             <div key={image.id}>
@@ -58,6 +59,27 @@ const Portfolio = () => {
             </div>
           ))}
         </Slider>
+      </div> */}
+      <div style={{margin: '0'}}>
+        <Carousel
+            autoFocus={true}
+            infiniteLoop={true}
+            autoPlay={true}
+            interval={2000}
+            showArrows={true}
+            centerMode={true}
+            // centerSlidePercentage={30}
+        >
+            {Images.map((image, index) => (
+                <div key={index}>
+                  <div key={image.id}>
+                    <div className="img-bod">
+                      <img src={image} alt="portfolio image" />
+                    </div>
+                  </div>
+                </div>
+            ))}
+        </Carousel>
       </div>
     </div>
   )

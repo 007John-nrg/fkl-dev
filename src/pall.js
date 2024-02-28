@@ -45,6 +45,14 @@ import p38 from './assets/palladium/pallpay/Palladium Pay_page-0003.jpg';
 import p39 from './assets/palladium/pallpay/Palladium Pay_page-0004.jpg';
 import p40 from './assets/palladium/palladiumAccount.jpg'
 import { Link } from 'react-router-dom';
+import palladium1 from './assets/Palladium Accounting.pdf'
+import palladium2 from './assets/P.pdf'
+import palladium3 from './assets/Palladium Pay.pdf'
+import palladium4 from './assets/P (1).pdf';
+import palladium5 from './assets/P (2).pdf'
+import palladium6 from './assets/Palladium Accounting Summary Brochure.pdf'
+import palladium7 from './assets/Palladium Feature.pdf'
+import palladium8 from './assets/Palladium App Suite Brochure 2022.pdf'
 
 const Pall = () => {
   const [popupImages, setPopupImages] = useState([]);
@@ -68,6 +76,17 @@ const Pall = () => {
   const P66 = [p30, p31, p32, p33, p34, p35];
   const P77 = [p36, p37, p38, p39];
   const P88 = [p40]
+
+  const pdfUrls = {
+    P11: palladium2,
+    P22: palladium4,
+    P33: palladium5,
+    P44: palladium6,
+    P55: palladium8,
+    P66: palladium7,
+    P77: palladium3,
+    P88: palladium1,
+  };
 
   const handleDownloadIcon = async (category) => {
     try {
@@ -135,58 +154,64 @@ const Pall = () => {
     });
 };
 
-  const handleEyeIconClick = async(category) => {
-    try {
-        let selectedImages;
-        switch (category) {
-            case 'P11':
-                selectedImages = P11;
-                break;
-            case 'P22':
-                selectedImages = P22;
-                break;
-            case 'P33':
-                selectedImages = P33;
-                break;
-            case 'P44':
-                selectedImages = P44;
-                break;
-            case 'P55':
-                selectedImages = P55;
-                break;
-            case 'P66':
-                selectedImages = P66;
-                break;
-            case 'P77':
-                selectedImages = P77;
-                break;
-            case 'P88':
-                selectedImages = P88;
-                break;
-            default:
-                selectedImages = [];
-        }
-        const pdf = new jsPDF();
-        for (let i = 0; i < selectedImages.length; i++) {
-            const imgData = await getImageData(selectedImages[i]);
-            pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297); // Add image to PDF (A4 size)
-            if (i !== selectedImages.length - 1) {
-                pdf.addPage(); // Add a new page for the next image
-            }
-        }
+  const handleEyeIconClick = (category) => {
+    const pdfUrl = pdfUrls[category];
+    setPdfDataUri(pdfUrl);
+    setShowPopup(true);
+  }
 
-        // Get PDF content as data URI string
-        const dataUri = pdf.output('datauristring');
+//   const handleEyeIconClick = async(category) => {
+//     try {
+//         let selectedImages;
+//         switch (category) {
+//             case 'P11':
+//                 selectedImages = P11;
+//                 break;
+//             case 'P22':
+//                 selectedImages = P22;
+//                 break;
+//             case 'P33':
+//                 selectedImages = P33;
+//                 break;
+//             case 'P44':
+//                 selectedImages = P44;
+//                 break;
+//             case 'P55':
+//                 selectedImages = P55;
+//                 break;
+//             case 'P66':
+//                 selectedImages = P66;
+//                 break;
+//             case 'P77':
+//                 selectedImages = P77;
+//                 break;
+//             case 'P88':
+//                 selectedImages = P88;
+//                 break;
+//             default:
+//                 selectedImages = [];
+//         }
+//         const pdf = new jsPDF();
+//         for (let i = 0; i < selectedImages.length; i++) {
+//             const imgData = await getImageData(selectedImages[i]);
+//             pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297); // Add image to PDF (A4 size)
+//             if (i !== selectedImages.length - 1) {
+//                 pdf.addPage(); // Add a new page for the next image
+//             }
+//         }
 
-        // Set PDF data URI to state
-        setPdfDataUri(dataUri);
+//         // Get PDF content as data URI string
+//         const dataUri = pdf.output('datauristring');
 
-        // Show the popup
-        setShowPopup(true);
-    } catch (error) {
-        console.error('Error converting images to PDF:', error);
-    }
-};
+//         // Set PDF data URI to state
+//         setPdfDataUri(dataUri);
+
+//         // Show the popup
+//         setShowPopup(true);
+//     } catch (error) {
+//         console.error('Error converting images to PDF:', error);
+//     }
+// };
 
 
   return (

@@ -85,11 +85,10 @@ const HrPayroll = () => {
           <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={FaCloudUploadAlt} color="#64a953" title="No traditional payroll cycle & backup processes required" />
         </div>
-
       </section>
 
       <div className='buttons'>
-        <Link className="btnPal" to="/Contact"  state={{ product: "Payspace" }}> GET A QUOTE</Link>
+        <Link className="palbtn" to="/Contact"  state={{ product: "Payspace" }}> GET A QUOTE</Link>
       </div>
 
       <section className="table">

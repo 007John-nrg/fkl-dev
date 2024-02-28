@@ -76,84 +76,186 @@ const Contact = () => {
   // Function to generate token
   const generateToken = async () => {
     try {
-      const response = await axios.post('http://localhost/AcumaticaSelf1/identity/connect/token', {
-        grant_type: 'password',
-        username: 'Admin',
-        password: 'Future123',
-        scope: 'api',
-        client_id: '7C731575-B89F-1AA7-5AC3-A50BFA60E210@Company',
-        client_secret: 'JUVls27LYkWxUlswiBbr2g'
+      const response = await axios.post('http://localhost:4000/post-data', {
+        //url: 'https://acumatica.futurekenya.com/AcumaticaERP/identity/connect/token',
+        url: 'http://localhost/AcumaticaSelf1/identity/connect/token',
+        data: {
+          // grant_type: 'password',
+          // username: 'development',
+          // password: 'D3v3l0p@Fkl',
+          // scope: 'api',
+          // client_id: '87D73C8E-BFC0-D9EF-5E2A-DF9341A0D3D0@Future Kenya',
+          // client_secret: 'hanBCN6rDihEEm47B0ZsFg'
+          grant_type: 'password',
+          username: 'Admin',
+          password: 'Future123',
+          scope: 'api',
+          client_id: '7C731575-B89F-1AA7-5AC3-A50BFA60E210@Company',
+          client_secret: 'JUVls27LYkWxUlswiBbr2g'
+        }
       });
-
+  
       const accessToken = response.data.access_token;
-      console.log(accessToken)
+      console.log(accessToken);
       return accessToken;
     } catch (error) {
       console.error('Error generating token:', error);
       return null;
     }
   };
+  
+  
 
 // Function to create lead
-const createLead = async (accessToken) => {
-  try {
-    const leadData = {
-      FirstName: { value: 'test1' },
-      LastName: { value: 'test1' },
-      Email: { value: 'test@test.com' },
-      JobTitle: { value: 'CEO' },
-      Phone2Type: { value: 'cell' },
-      Phone2: { value: '0722222200' },
-      CompanyName: { value: 'KimFoods' },
-      Address: {
-        Country: { value: 'KE' }
-      },
-      Attributes: [
-        {
-          AttributeDescription: { value: 'Number of Employees' },
-          AttributeID: { value: 'COMPSIZE' },
-          Required: {},
-          Value: { value: '100' },
-          ValueDescription: { value: '1-100' }
-        },
-        {
-          AttributeDescription: { value: 'Industry' },
-          AttributeID: { value: 'INDUSTRY' },
-          Required: {},
-          Value: { value: 'CST' },
-          ValueDescription: { value: 'Construction' }
-        },
-        {
-          AttributeDescription: { value: 'Looking for' },
-          AttributeID: { value: 'PRODREQ' },
-          Required: {},
-          Value: { value: 'ENC' },
-          ValueDescription: { value: 'Electronics & Computers' }
-        }
-      ],
-      Description: { value: 'i would like to inquire' }
-    };
+// Function to create lead
+// const createLead = async (accessToken) => {
+//   try {
+//     const leadData = {
+//       FirstName: { value: formData.firstName },
+//       LastName: { value: formData.lastName },
+//       Email: { value: formData.workEmail },
+//       JobTitle: { value: formData.position },
+//       Phone2Type: { value: 'cell' },
+//       Phone2: { value: formData.mobileNumber },
+//       CompanyName: { value: formData.companyName },
+//       Address: {
+//         Country: { value: formData.country }
+//       },
+//       Attributes: [
+//         {
+//           AttributeDescription: { value: 'Number of Employees' },
+//           AttributeID: { value: 'COMPSIZE' },
+//           Required: {},
+//           Value: { value: formData.companySize },
+//           ValueDescription: { value: '1-100' } // Update as needed
+//         },
+//         {
+//           AttributeDescription: { value: 'Industry' },
+//           AttributeID: { value: 'INDUSTRY' },
+//           Required: {},
+//           Value: { value: formData.industry },
+//           ValueDescription: { value: 'Construction' } // Update as needed
+//         },
+//         {
+//           AttributeDescription: { value: 'Looking for' },
+//           AttributeID: { value: 'PRODREQ' },
+//           Required: {},
+//           Value: { value: formData.enquiringAbout },
+//           ValueDescription: { value: 'Electronics & Computers' } // Update as needed
+//         }
+//       ],
+//       Description: { value: formData.message }
+//     };
 
-    const response = await axios.put('http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead', leadData, {
-      headers: {
-        'Authorization': `Bearer ${accessToken}`,
-        'Content-Type': 'application/json'
-      }
-    });
+//     const response = await axios.put('http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead', leadData, {
+//       headers: {
+//         'Authorization': `Bearer ${accessToken}`,
+//         'Content-Type': 'application/json'
+//       }
+//     });
 
-    console.log('Lead created:', response.data);
-  } catch (error) {
-    console.error('Error creating lead:', error);
-  }
-};
+//     console.log('Lead created:', response.data);
+//   } catch (error) {
+//     console.error('Error creating lead:', error);
+//   }
+// };
 
   // Usage
-  const handleCreateLead = async () => {
-    const accessToken = await generateToken();
-    if (accessToken) {
-      await createLead(accessToken);
+
+  const createLead = async (accessToken) => {
+    try {
+      const apiUrl = 'http://localhost:4000/create-lead';
+      const requestData = {
+        url: 'http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead?$select=FirstName,LastName,Email,JobTitle,Phone2Type,CompanyName,Description,Phone2,Address/Country,Attributes/AttributeID,Attributes/Value&$expand=Address,Attributes',
+        data: {
+          FirstName: "john",
+          LastName: "john",
+          Email: "john",
+          JobTitle: "john",
+          Phone2Type: { value: 'cell' },
+          Phone2: "john",
+          CompanyName: "john",
+          Address: {
+            Country: "john"
+          },
+          Description: { value: "together" }
+        }
+      };
+  
+      const response = await fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`
+        },
+        body: JSON.stringify(requestData)
+      });
+  
+      const responseData = await response.json();
+      console.log('Lead created:', responseData);
+    } catch (error) {
+      console.error('Error creating lead:', error);
     }
   };
+  
+
+
+  // Function to create lead
+// const createLead = async (accessToken) => {
+//   try {
+//     const response = await axios.post('http://localhost:4000/create-lead', {
+//       url: 'http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead?$select=FirstName,LastName,Email,JobTitle,Phone2Type,CompanyName,Description,Phone2, Address/Country, Attributes/AttributeID, Attributes/Value&$expand=Address, Attributes',
+//       data: {
+//         FirstName: "john",
+//         LastName: "john",
+//         Email: "john",
+//         JobTitle: "john",
+//         Phone2Type: { value: 'cell' },
+//         Phone2: "john",
+//         CompanyName: "john",
+//         Address: {
+//           Country: "john"
+//         },
+//         // Attributes: [
+//         //   {
+//         //     AttributeDescription: { value: 'Number of Employees' },
+//         //     AttributeID: { value: 'COMPSIZE' },
+//         //     Required: {},
+//         //     Value: { value: formData.companySize },
+//         //     ValueDescription: { value: '1-100' } // Update as needed
+//         //   },
+//         //   {
+//         //     AttributeDescription: { value: 'Industry' },
+//         //     AttributeID: { value: 'INDUSTRY' },
+//         //     Required: {},
+//         //     Value: { value: formData.industry },
+//         //     ValueDescription: { value: 'Construction' } // Update as needed
+//         //   },
+//         //   {
+//         //     AttributeDescription: { value: 'Looking for' },
+//         //     AttributeID: { value: 'PRODREQ' },
+//         //     Required: {},
+//         //     Value: { value: formData.enquiringAbout },
+//         //     ValueDescription: { value: 'Electronics & Computers' } // Update as needed
+//         //   }
+//         // ],
+//         Description: { value: formData.message }
+//         },
+//         Authorization: `Bearer ${accessToken}`, 
+//     })
+//     console.log('Lead created:', response.data);
+//   } catch (error) {
+//     console.error('Error creating lead:', error);
+//   }
+// };
+
+const handleFormSubmit = async (e) => {
+  e.preventDefault();
+
+  const accessToken = await generateToken();
+  if (accessToken) {
+    await createLead(accessToken);
+  }
+};
 
   return (
     <div style={{marginLeft: '20%', width: '80%', height: '100%'}}>
@@ -164,7 +266,7 @@ const createLead = async (accessToken) => {
         </div>
         <div style={{}}>
         <div className='formContact'>
-          <form>
+          <form onSubmit={handleFormSubmit}>
             <div className='firstRow'>
               <input
                 type='text'
@@ -316,7 +418,7 @@ const createLead = async (accessToken) => {
               rows={4}
               style={{ resize: 'vertical', borderRadius: '2rem 0 2rem 0' }}
             ></textarea>
-            <button onSubmit={handleCreateLead} className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>Submit</button>
+            <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>Submit</button>
           </form>
         </div>
         </div>
@@ -378,6 +480,8 @@ const createLead = async (accessToken) => {
         </div> */}
       </div>
       </div>
+      <button onClick={generateToken}>tokenTest</button>
+      <button onClick={handleFormSubmit}>createLead</button>
       <Footer />
     </div>
   )

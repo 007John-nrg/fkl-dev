@@ -86,7 +86,7 @@ const Menu = () => {
             </Link>
           </li>
 
-          <li className='ListLink'>
+          <li className='ListLink' style={{fontWeight: 'bold'}}>
             <a
               href="https://acumatica.futurekenya.com/SelfServicePortal"
               target="_blank"
