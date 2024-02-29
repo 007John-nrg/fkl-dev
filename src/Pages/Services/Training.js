@@ -25,9 +25,12 @@ import image09 from '../../assets/checkBox.PNG'
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Navbar } from '../../Components/Navbar';
 
 const Training = () => {
   return (
+    <div>
+      <Navbar />
     <div className="serviceContainer consultingContainer">
       <div className="consultingContent">
         <div className="imageContainer consultingImage">
@@ -93,7 +96,7 @@ const Training = () => {
           <p>System Administration</p>
           <img src={image09} alt="" />
         </div>
-        <div style={{display: 'flex', gap: '.2rem', alignItems: 'center', justifyContent: 'center'}} className='checkbox1'>
+        <div style={{display: 'flex', gap: '.2rem', alignItems: 'center', justifyContent: 'center'}} className='checkbox'>
           <p>Developer Training</p>
           <img src={image09} alt="" />
         </div>
@@ -157,6 +160,7 @@ const Training = () => {
         </h3>
       </div>
       <Footer />
+    </div>
     </div>
   )
 }

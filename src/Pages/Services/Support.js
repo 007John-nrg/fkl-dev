@@ -11,9 +11,12 @@ import image8 from '../../assets/aim119.png';
 import image9 from '../../assets/aim120.png';
 import image10 from '../../assets/aim68.png';
 import Footer from '../../Components/Footer';
+import { Navbar } from '../../Components/Navbar';
 
 const Support = () => {
   return (
+    <div>
+      <Navbar />
     <div className='serviceContainer supportContainer'>
       <div className="consultingContent supportContent">
         <div className="imageContainer consultingImage">
@@ -297,6 +300,7 @@ const Support = () => {
 
       <Footer />
 
+    </div>
     </div>
   )
 }

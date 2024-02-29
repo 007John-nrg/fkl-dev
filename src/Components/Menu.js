@@ -70,14 +70,14 @@ const Menu = () => {
             <Link to="/Career" className={isActive('/Career') ? 'activeLink' : ''} onClick={() => handleMainLinkClick('Career')}>
               Work at Future Kenya
             </Link>
-            <ul className={`sublink ${activeMainLink === 'Career' ? '' : 'visible'}`}>
+            {/* <ul className={`sublink ${activeMainLink === 'Career' ? '' : 'visible'}`}>
               <li className='sublinkList'>
                 <Link to="/Career">Jobs</Link>
               </li>
               <li className='sublinkList'>
                 <Link to="/Apply">Apply Now</Link>
               </li>
-            </ul>
+            </ul> */}
           </li>
 
           <li className='ListLink'>

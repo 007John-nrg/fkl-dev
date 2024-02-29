@@ -86,6 +86,7 @@ const handleBarsClick = () => {
                 </li>
                 </ul>
             </div>
+            <div style={{borderRadius: "50%"}}>X</div>
         </div>
         )}
         <div className='navbarLogo'>

@@ -18,9 +18,12 @@ import image102 from '../../assets/aim102.png';
 import image103 from '../../assets/aim103.png';
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
+import { Navbar } from '../../Components/Navbar';
 
 const Consulting = () => {
   return (
+    <div>
+    <Navbar />
     <div className="serviceContainer consultingContainer">
       <div className="consultingContent">
         <div className="imageContainer consultingImage">
@@ -120,6 +123,7 @@ const Consulting = () => {
         </div>
       </div>
       <Footer />
+    </div>
     </div>
   )
 }

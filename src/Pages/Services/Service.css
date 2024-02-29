@@ -467,3 +467,152 @@ color: #64a953;
 }
 
 
+@media screen and (max-width: 999px) {
+    .serviceContainer {
+      margin-left:25%;
+    }
+    .serviceBox2 {
+        display: flex;
+    }
+    .serviceBox3 {
+        display: flex;
+        align-items: center;
+    }
+
+    .packages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+    
+    .packagesBox {
+     width: 90%;
+    
+    }
+    
+    .packagesBox img {
+        width: 100%;
+        height: auto;
+    }
+
+  }
+  
+  @media screen and (max-width: 768px) {
+    .serviceContainer {
+      margin-left: 0;
+      width: 100%;
+    }
+    .serviceBox2 {
+        display: flex;
+        flex-direction: column;
+        margin: 0 2.5rem;
+    }
+    .serviceBox3 {
+        display: flex;
+        align-items: center;
+    }
+    .consultingContainer,
+    .supportContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .consultingContent {
+        width: 100%;
+    }
+
+    .consultingImage {
+        width: 90%;
+    }
+
+    .consultingImage img {
+        width: 100%;
+        height: auto;
+    }
+    .consultingIcons {
+        display: flex;
+    }
+
+    .imageFlow {
+    margin-top: 2rem;
+    width: 85%;
+    height: 85%;
+}
+    
+    .consultingIcons .content1 {
+        width: 40%;
+        height: 40%;
+    }
+
+    .whyFlex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentFooterTraining {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 1rem;
+        gap: 1rem;
+    }
+    .contentFooter2 {
+        border-radius: .5rem;
+        gap: 2rem;
+        background-color: #d9d9d9;
+        padding: 1rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    .consultingText {
+        padding: 0 1rem;
+    }
+    
+    .contentFooter2 p {
+        line-height: 1.4;
+    }
+
+    .projectCheckbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .projectCheckbox .checkbox {
+        padding: 0;
+        margin: 0;
+    }
+    .projectCheckbox .checkbox p {
+        padding: 0;
+        margin: 0;
+    }
+    .consultingIcons .content1 {
+        width: 20%;
+        height: 20%;
+    }
+    
+  }
+
+  @media screen and (max-width: 515px) {
+    .consultingIcons .content1 {
+        width: 25%;
+        height: 25%;
+    }
+    .consultingContact {
+        font-size: .9rem;
+    }
+    .imageFlow {
+        width: 55%;
+        height: 95%;
+    }
+  }

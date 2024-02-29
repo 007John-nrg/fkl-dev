@@ -742,9 +742,9 @@ background-color: #fff;
     flex-direction: column;
   }
 
-  .software {
+  .soft {
     width: 80%;
-    height: 400px;
+    height: 200px;
   }
 
   .two .buttons .btnPal {
@@ -789,5 +789,9 @@ background-color: #fff;
   .videoContainer iframe {
     width: 300px;
     height: 200px;
+  }
+
+  .soft {
+    height: 130px;
   }
 }

@@ -5,6 +5,7 @@ import payspace from '../../assets/payspace.jpg'
 import Footer from '../../Components/Footer';
 import { BsSendFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import { Navbar } from '../../Components/Navbar';
 
 const FeatureColumn = ({ icon, color, title }) => {
   const IconComponent = icon;
@@ -21,17 +22,18 @@ const FeatureColumn = ({ icon, color, title }) => {
 
 const HrPayroll = () => {
   return (
-    <section className='payrollContainer'>
-
-      <section className="containerTop">
+    
+    <div className='payrollContainer'>
+      <Navbar />
+      <div className="containerTop">
         <div className="containerImage">
           <img src={payspace} alt="PaySpace Logo" width="270px" />
         </div>
-      </section>
+      </div>
 
-      <section class="containerFeatures">
+      <div class="containerFeatures">
         <div>
-          <h4 style={{ textAlign: 'center', fontSize: '20px', fontWeight: '600', marginBottom: '25px' }} className='sectionTitle'>
+          <h4 style={{ textAlign: 'center', fontSize: '20px', fontWeight: '600', marginBottom: '25px' }} className='divTitle'>
               <b>WHAT MAKES PAYSPACE PAYROLL & HR DIFFERENT?</b>
           </h4>
         </div>
@@ -54,46 +56,46 @@ const HrPayroll = () => {
           </div>
         </div>
 
-      </section>
+      </div>
 
-      <section className="featBox">
+      <div className="featBox">
         <div className="row">
           <FeatureColumn icon={FaCloudUploadAlt} color="#64a953" title="100% Cloud-Based Payroll Software" />
-          <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
+          <div className='none' style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={BsSendFill} color="#79c032" title="Multi-Country, Multi-Currency, Multi-Language Solution" />
-          <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
+          <div className='none' style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={FaCreditCard} color="#64a953" title="Pay-As-You-Go Payments" />
         </div>
         <div className="row">
           <FeatureColumn icon={FaTablet} color="#64a953" title="Employee & Manager Self Service on Any Device" />
-          <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
+          <div className='none' style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={FaExchangeAlt} color="#79c032" title="Configuration Replaces Customisation" />
-          <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
+          <div className='none' style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={FaHeart} color="#64a953" title="Easy to Deploy and Maintain" />
         </div>
         <div className="row">
           <FeatureColumn icon={FaGlobe} color="#64a953" title="Anywhere, Anytime & Any Device Access" />
-          <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
+          <div className='none' style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={FaSyncAlt} color="#79c032" title="Automatic built-in legislative & feature updates for 40+ African countries" />
-          <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
+          <div className='none' style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={FaConnectdevelop} color="#64a953" title="Intelligent Workflow and Guidance" />
         </div>
         <div className="row">
           <FeatureColumn icon={FaIoxhost} color="#64a953" title="API Integration" />
-          <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
+          <div className='none' style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={FaLock} color="#79c032" title="ISO 27001 Certified" />
-          <div style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
+          <div className='none' style={{width: '2px', height: "3rem", backgroundColor: '#0099FF'}}></div>
           <FeatureColumn icon={FaCloudUploadAlt} color="#64a953" title="No traditional payroll cycle & backup processes required" />
         </div>
-      </section>
+      </div>
 
       <div className='buttons'>
         <Link className="palbtn" to="/Contact"  state={{ product: "Payspace" }}> GET A QUOTE</Link>
       </div>
 
-      <section className="table">
+      <div className="table">
       <div className="tableContainer">
-        <h4 className="title sectionTitle">PaySpace Product Comparison</h4>
+        <h4 className="title divTitle">PaySpace Product Comparison</h4>
         <hr />
         <table className="price-table">
           <thead>
@@ -423,10 +425,10 @@ const HrPayroll = () => {
         </table>
         
       </div>
-    </section>
+    </div>
 
       <Footer />
-    </section>
+    </div>
 );
 }
 

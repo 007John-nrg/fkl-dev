@@ -5,9 +5,12 @@ import service1 from '../../assets/serv1.png';
 import service2 from '../../assets/serv2.png';
 import service3 from '../../assets/serv3.png';
 import service from '../../assets/aim121.png';
+import { Navbar } from '../../Components/Navbar';
 
 const Service = () => {
   return (
+    <div>
+      <Navbar />
     <div className='serviceContainer'>
       <div className='serviceBox'>
         <div className='serv'>
@@ -74,6 +77,7 @@ const Service = () => {
       </div>
 
       <Footer />
+    </div>
     </div>
   )
 }

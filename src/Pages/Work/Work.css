@@ -145,4 +145,38 @@
     right: 10px;
     font-size: 1.7rem;
   }
+
+  @media screen and (max-width: 1330px) {
+    .workApply {
+        width: 100%
+    }
+    .workBox {
+        width: 42%;
+    }
+  }
+
+  
+  @media screen and (max-width: 999px) {
+    .workContainer {
+      margin-left:25%;
+    }
+
+    .workBox {
+        width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .workContainer {
+      margin-left: 0;
+      width: 95%;
+    }
+    .popup {
+        width: 50%;
+        height: 50%;
+      }
+
+  
+    
+  }
   

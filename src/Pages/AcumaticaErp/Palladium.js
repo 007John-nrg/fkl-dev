@@ -60,6 +60,7 @@ import p40 from '../../assets/palladium/palladiumAccount.jpg'
 import { Link } from 'react-router-dom';
 import Pall from '../../pall';
 import { Navbar } from '../../Components/Navbar';
+import FloatingActionButtons from '../../Components/float';
 
 const Palladium = () => {
   const [popupImages, setPopupImages] = useState([]);
@@ -311,6 +312,8 @@ const Palladium = () => {
         </div>
 
       </div>
+
+      <FloatingActionButtons />
 
       <Footer />
     </div>

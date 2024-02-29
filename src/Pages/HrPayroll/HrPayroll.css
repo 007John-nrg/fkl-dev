@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 }
 
 .sectionTitle {
@@ -161,10 +161,77 @@
     background-color: #465171;
     color: #fff;
   }
+
+  @media screen and (max-width: 999px) {
+    .payrollContainer {
+      margin-left:25%;
+    }
+
+    .containerFeatures {
+      width: 90%;
+    }
+
+    .features {
+      padding: 0 1rem;
+    }
+
+    .iconBox {
+      width: 33%;
+    }
+
+
+    .featBox .row {
+      width: 100%;
+    }
+  }
   
   @media screen and (max-width: 768px) {
     .payrollContainer {
       margin-left: 0;
-      width: 100%
+      width: 100%;
     }
+
+    .containerFeatures {
+      width: 90%;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .featurecontainer h4 {
+      margin: .5rem;
+    }
+
+    .iconBox {
+      width: 80%;
+    }
+
+    .iconComponent {
+      display: flex;
+      justify-content: flex-start;
+      padding: .5rem;
+  }
+
+    .featBox {
+      width: 100%;
+    }
+
+    .featBox .row {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .featBox .row .none {
+      display: none;
+    }
+
+    .table {
+      width: 90%;
+      margin-top: .9rem;
+    }
+    
   }

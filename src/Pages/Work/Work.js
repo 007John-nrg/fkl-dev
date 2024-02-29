@@ -7,6 +7,7 @@ import it from '../../assets/IT Programmer and Web Developer.pdf';
 import sales from '../../assets/Sales and Marketing Specialist .pdf';
 import hr from  '../../assets/Human Resources (HR), HelpDesk and Operations Officer.pdf';
 import accounts from '../../assets/Accounting Software Implementations and support Trainee .pdf';
+import { Navbar } from '../../Components/Navbar';
 
 const Work = () => {
 
@@ -49,6 +50,8 @@ const Work = () => {
     };
 
   return (
+    <div>
+      <Navbar />
     <div className='workContainer'>
       <div className="workContent">
         <div className="imageContainer workImage">
@@ -182,6 +185,7 @@ const Work = () => {
       </div>
 
       <Footer />
+    </div>
     </div>
   )
 }
