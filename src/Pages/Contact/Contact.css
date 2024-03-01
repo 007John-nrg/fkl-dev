@@ -1,3 +1,9 @@
+.contactContainerBox {
+    margin-left: 20%;
+    width: 80%;
+    height: 100%;
+}
+
 .contactContainer {
     /* margin-left: 20%; */
     display: flex;
@@ -104,3 +110,19 @@ input:focus {
     width: 100%;
     height: auto;
 }
+
+@media screen and (max-width: 999px) {
+    .contactContainerBox {
+      margin-left:25%;
+    }
+
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contactContainerBox {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    
+  }

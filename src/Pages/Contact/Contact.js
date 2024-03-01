@@ -9,6 +9,7 @@ import { useLocation } from 'react-router-dom';
 import contact from '../../assets/cont.png'
 import Footer from '../../Components/Footer';
 import axios from 'axios';
+import { Navbar } from '../../Components/Navbar';
 
 const Contact = () => {
 
@@ -258,7 +259,9 @@ const handleFormSubmit = async (e) => {
 };
 
   return (
-    <div style={{marginLeft: '20%', width: '80%', height: '100%'}}>
+    <div>
+      <Navbar />
+    <div className='contactContainerBox'>
     <div className='contactContainer'>
       <div className='form'>
         <div className='formLogo'>
@@ -483,6 +486,7 @@ const handleFormSubmit = async (e) => {
       <button onClick={generateToken}>tokenTest</button>
       <button onClick={handleFormSubmit}>createLead</button>
       <Footer />
+    </div>
     </div>
   )
 }

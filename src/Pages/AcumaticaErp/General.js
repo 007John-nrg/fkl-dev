@@ -13,6 +13,7 @@ import imageDemo from '../../assets/aim7.png';
 import BrochureViewer from '../../Components/Bronchures';
 import Footer from '../../Components/Footer';
 import Test from '../../Test';
+import { Navbar } from '../../Components/Navbar';
 
 const General = () => {
 
@@ -27,8 +28,10 @@ const General = () => {
       ];
 
   return (
+    <div>
+        <Navbar />
     <div className='acumaticaContainer general'>
-        <div className="acumaticaContent acumatica3 backdrop">
+        <div className="acumaticaContent backdrop">
             <div className="imageContainer image2">
                 <iframe width="550" height="350" src="https://www.youtube.com/embed/ljl6EI0EVHs?si=bY-7NYZogCX3O6zI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -62,6 +65,7 @@ const General = () => {
         <Test />
 
         <Footer />
+    </div>
     </div>
   )
 }

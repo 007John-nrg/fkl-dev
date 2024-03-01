@@ -7,12 +7,15 @@ import image4 from '../../assets/aim38.png';
 import imageDemo from '../../assets/aim7.png';
 import Footer from '../../Components/Footer';
 import Test3 from '../../Test3';
+import { Navbar } from '../../Components/Navbar';
 
 const Manufacturing = () => {
   return (
+    <div>
+        <Navbar />
     <div className='acumaticaContainer'>
 
-        <div className="acumaticaContent acumatica3 backdrop">
+        <div className="acumaticaContent backdrop">
             <div className="imageContainer image2">
                 <iframe width="550" height="350" src="https://www.youtube.com/embed/TA57El8K2aQ?si=-PsfDna0ubQvOQOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -45,6 +48,7 @@ const Manufacturing = () => {
         <Test3 />
 
         <Footer />
+    </div>
     </div>
   )
 }

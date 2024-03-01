@@ -264,6 +264,7 @@ width: 60%;
 
 .backdrop {
   background-color: #d9d9d9;
+  margin-top: 2.5rem;
 }
 
 .image2 {
@@ -419,22 +420,28 @@ flex-direction: column;
 
 .GeneralImage {
 display: flex;
+justify-content: center;
+align-items: flex-end;
 flex-wrap: wrap;
 margin-left: 1%;
 }
 
 .imageBox {
 display: flex;
-align-items: center;
-justify-content: center;
-width: 25%;
+align-items: flex-start;
+justify-content: flex-start;
+width: 17%;
+
+@media screen and (max-width: 999px) {
+  width: 33%; 
+}
 
 @media screen and (max-width: 768px) {
-  width: 50%; 
+  width: 40%; 
 }
 
 @media screen and (max-width: 480px) {
-  width: 100%; 
+  width: 65%; 
 }
 }
 
@@ -676,6 +683,22 @@ color: 'red' !important;
     width: 35%;
     height: 300px;
   }
+  .backdrop {
+    display: flex;
+    flex-direction: column;
+  }
+  .backdrop .imageContainer {
+  }
+  .backdrop .imageContainer iframe {
+    /* width: 350px;
+    height: 150px; */
+  }
+  .backdrop .textContainer2 {
+  }
+  .textContainer2 {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 .img-body img {
@@ -728,6 +751,20 @@ background-color: #fff;
     width: 68%;
   }
 
+  .backdrop .imageContainer {
+    padding-top: 1.2rem;
+  }
+
+
+  .backdrop .imageContainer iframe {
+    width: 350px;
+    height: 250px;
+  }
+
+  .genTitle {
+    text-align: center;
+  }
+
   .acumaticaContainer {
     margin-left: 0;
    }
@@ -750,6 +787,10 @@ background-color: #fff;
   .soft {
     width: 80%;
     height: 200px;
+  }
+
+  .backdrop {
+    margin-top: 0;
   }
 
   .two .buttons .btnPal {
@@ -796,7 +837,13 @@ background-color: #fff;
     height: 200px;
   }
 
+  .backdrop .imageContainer iframe {
+    width: 300px;
+    height: 225px;
+  }
+
   .soft {
     height: 130px;
   }
+
 }

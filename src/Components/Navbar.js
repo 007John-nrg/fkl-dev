@@ -61,14 +61,14 @@ const handleBarsClick = () => {
                     <Link to="/Career">
                     Work at Future Kenya
                     </Link>
-                    <ul>
+                    {/* <ul>
                         <li className='sublinkList'>
                             <Link to="/Career">Jobs</Link>
                         </li>
                         <li className='sublinkList'>
                             <Link to="/Apply">Apply Now</Link>
                         </li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li className='ListLink'>
                     <Link to="/Contact">

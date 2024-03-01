@@ -107,3 +107,46 @@ width: 100%;
 height: auto;
 object-fit: cover;
 }
+
+.lg {
+  display: none;
+}
+.sm {
+  display: none;
+}
+
+/* For screens with max-width 999px (desktop) */
+@media (max-width: 999px) {
+  .xl {
+    display: none;
+  }
+  .lg {
+    display: block;
+  }
+  .sm {
+    display: none;
+  }
+  .carousel-wrapper .carousel .slider .slide {
+      width: 45% !important;
+  }
+}
+
+/* For screens with max-width 768px (tablet) */
+@media (max-width: 768px) {
+  .carousel-wrapper .carousel .slider .slide {
+      width: 90% !important;
+  }
+  .lg {
+    display: none;
+  }
+  .sm {
+    display: block;
+  }
+  
+}
+
+@media (max-width: 468px) {
+  .img-xs {
+    width: 80%;
+  }
+}

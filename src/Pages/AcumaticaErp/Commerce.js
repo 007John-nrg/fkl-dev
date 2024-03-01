@@ -12,11 +12,14 @@ import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-g
 import imageDemo from '../../assets/aim7.png';
 import Footer from '../../Components/Footer';
 import Retail from '../../Retail';
+import { Navbar } from '../../Components/Navbar';
 
 const Commerce = () => {
   return (
+    <div>
+        <Navbar />
     <div className='acumaticaContainer'>
-        <div className="acumaticaContent acumatica3 backdrop">
+        <div className="acumaticaContent backdrop">
             <div className="imageContainer image2">
                 <iframe width="550" height="350" src="https://www.youtube.com/embed/RDS2PqjCf80?si=LEo3tY_hiHudP1ou" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -64,6 +67,7 @@ const Commerce = () => {
         <Retail />
 
         <Footer />
+    </div>
     </div>
   )
 }
