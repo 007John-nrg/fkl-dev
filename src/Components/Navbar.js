@@ -9,7 +9,11 @@ export const Navbar = () => {
 const [showPopup, setShowPopup] = useState(false);
 
 const handleBarsClick = () => {
-    setShowPopup(!showPopup);
+    setShowPopup(true);
+};
+
+const handleCloseClick = () => {
+    setShowPopup(false);
 };
 
   return (
@@ -20,29 +24,29 @@ const handleBarsClick = () => {
         {showPopup && (
         <div className='popup-overlay'>
             <div className='popup'>
-                <ul className='menuList'>
+                <ul className='menupop'>
                 <li className='ListLink'>
-                    <Link to="/">
+                    <Link to="/" className='link'>
                     Home
                     </Link>
                 </li>
                 <li className='ListLink'>
-                    <Link to="/Acumatica">
+                    <Link to="/Acumatica" className='link'>
                         Acumatica ERP
                     </Link>
                 </li>
                 <li className='ListLink'>
-                    <Link to="/Palladium">
+                    <Link to="/Palladium" className='link'>
                         Palladium ERP
                     </Link>
                 </li>
                 <li className='ListLink'>
-                    <Link to="/Payspace">
+                    <Link to="/Payspace" className='link'>
                         Payspace, HR & Payroll
                     </Link>
                 </li>
                 <li className='ListLink'>
-                    <Link to="/Service">
+                    <Link to="/Service" className='link'>
                     Services
                     </Link>
                     <ul>
@@ -58,7 +62,7 @@ const handleBarsClick = () => {
                     </ul>
                 </li>
                 <li className='ListLink'>
-                    <Link to="/Career">
+                    <Link to="/Career" className='link'>
                     Work at Future Kenya
                     </Link>
                     {/* <ul>
@@ -71,12 +75,13 @@ const handleBarsClick = () => {
                     </ul> */}
                 </li>
                 <li className='ListLink'>
-                    <Link to="/Contact">
+                    <Link to="/Contact" className='link'>
                         Contact Us
                     </Link>
                 </li>
                 <li className='ListLink' style={{fontWeight: 'bold'}}>
                     <a
+                    className='link'
                     href="https://acumatica.futurekenya.com/SelfServicePortal"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -85,8 +90,9 @@ const handleBarsClick = () => {
                     </a>
                 </li>
                 </ul>
+                <div onClick={handleCloseClick} className='xbtn'>X</div>
             </div>
-            <div style={{borderRadius: "50%"}}>X</div>
+            
         </div>
         )}
         <div className='navbarLogo'>
