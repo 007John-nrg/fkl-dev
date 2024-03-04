@@ -13,10 +13,10 @@ const Service = () => {
       <Navbar />
     <div className='serviceContainer'>
       <div className='serviceBox'>
-        <div className='serv'>
+        {/* <div className='serv'>
           <img src={service} alt=""/>
-        </div>
-        {/* <div className='serviceBox1'>
+        </div> */}
+        <div className='serviceBox1'>
           <h3>Future Kenya IT services</h3>
           <p>
             Our comprehensive suite of services encompasses
@@ -25,11 +25,11 @@ const Service = () => {
             assistance necessary to thrive in a rapidly evolving
             landscape
           </p>
-        </div> */}
+        </div>
       </div>
 
       <div className='serviceBox2'>
-        <div className='serviceBox3'>
+        <div className='serviceBox3 first'>
           <img src={service1} alt="consulting"/>
         </div>
 
@@ -39,7 +39,7 @@ const Service = () => {
             <p>
               Unleash the full potential of your business with our expert consulting services. Future Kenya's consultants bring a wealth of experience and industry insights to the table, guiding you through strategic decision-making, process optimization, and innovation. We collaborate closely with you to develop tailored solutions that drive growth and success. Complimented with our full understanding of software Implementation and development, we deliver a dynamic and robust solution meeting your business requirements. 
             </p>
-            <a href="/Consulting">FIND OUT MORE ></a>
+            <a href="/Consulting">FIND OUT MORE &gt;</a>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ const Service = () => {
             <p>
               Stay ahead of the curve with our dynamic training programs. Future Kenya offers a diverse range of training modules designed to enhance your team's skills and knowledge. With specialized industry training, our programs are crafted to meet the demands of the modern workforce. Elevate your capabilities and foster a culture of continuous learning with Future Kenya's training solutions.
             </p>
-            <a href="/Training">FIND OUT MORE ></a>
+            <a href="/Training">FIND OUT MORE &gt;</a>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const Service = () => {
             <p>
               Your success is our priority, and our support services are here to ensure a smooth journey. Whether you need technical assistance, project support, or ongoing maintenance, Future Kenya provides dedicated support tailored to your specific requirements. Count on us to be your reliable partner, offering timely and effective solutions whenever you need them.
             </p>
-            <a href="/Support">FIND OUT MORE ></a>
+            <a href="/Support">FIND OUT MORE &gt;</a>
           </div>
         </div>
       </div>

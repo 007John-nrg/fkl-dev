@@ -615,13 +615,33 @@ color: 'red' !important;
     border-radius: 4px;
 }
 
+.fab {
+  display: none
+}
+
+.pallMobile {
+  padding: 1rem;
+  background-color: #d9d9d9;
+}
+
 @media screen and (max-width: 999px) {
+  .fab {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+  }
   .aside {
     display: none;
   }
 
   .pallCont {
-    width: 100%;
+    width: 75%;
   }
 
   .acumaticaContainer {
@@ -679,10 +699,23 @@ color: 'red' !important;
     text-align: center;
   }
 
+  .accountsSoftware {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .accountsSoftware .pallSoftware {
+    width: 50%;
+    height: auto;
+  }
+
   .software {
     width: 35%;
     height: 300px;
   }
+
   .backdrop {
     display: flex;
     flex-direction: column;
@@ -755,10 +788,18 @@ background-color: #fff;
     padding-top: 1.2rem;
   }
 
+  .pallCont {
+    width: 100%;
+  }
 
   .backdrop .imageContainer iframe {
     width: 350px;
     height: 250px;
+  }
+
+  .accountsSoftware .pallSoftware {
+    width: 80%;
+    height: auto;
   }
 
   .genTitle {

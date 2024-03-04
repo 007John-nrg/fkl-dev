@@ -9,14 +9,14 @@
   } */
 
 .serviceBox {
-    /* background-image: url('../../assets/aim113.png');
+    background-image: url('../../assets/service2.png');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 
 .serv {
@@ -471,6 +471,9 @@ color: #64a953;
     .serviceContainer {
       margin-left:25%;
     }
+    .serviceBox1 {
+        width: 75%;
+    }
     .serviceBox2 {
         display: flex;
     }
@@ -504,11 +507,17 @@ color: #64a953;
       margin-left: 0;
       width: 100%;
     }
+    .serviceBox1 {
+        width: 85%;
+    }
     .serviceBox2 {
         display: flex;
         flex-direction: column;
         margin: 0 2.5rem;
     }
+    .serviceBox2 .first {
+    } 
+
     .serviceBox3 {
         display: flex;
         align-items: center;

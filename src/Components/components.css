@@ -72,7 +72,17 @@
   
   
   /* LANDING CSS */
-   
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.005); /* Adjust the alpha value for transparency */
+    z-index: 1; /* Set a higher z-index to ensure it appears above other elements */
+  }
+  
   .landingContainer {
     min-height: 100vh;
     background-image: url('../assets/fkl2.png');
@@ -83,7 +93,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Ensure overlay is positioned relative to this container */
   }
+
+  .landingBox {
+    z-index: 999999;
+  }
+  
+   
+  /* .landingContainer {
+    min-height: 100vh;
+    background-image: url('../assets/fkl2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
 
   .navbar {
     display: none;

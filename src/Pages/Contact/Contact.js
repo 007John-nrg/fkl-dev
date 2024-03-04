@@ -104,6 +104,38 @@ const Contact = () => {
       return null;
     }
   };
+
+  const sendDataWithToken = async () => {
+    try {
+      // const token = await generateToken();
+      // console.log("token", token)
+      // if (!token) return;
+  
+      const dataToSend = {
+        FirstName: "john",
+        LastName: "john",
+        Email: "john@example.com", // Replace with actual email
+        JobTitle: "CEO", // Replace with actual job title
+        Phone2Type: { value: 'Cell' }, // Assuming Cell is one of the options
+        Phone2: "1234567890", // Replace with actual phone number
+        CompanyName: "Company X", // Replace with actual company name
+        Address: {
+          Country: "Kenya" // Replace with actual country
+        },
+        Description: { value: "Lead description" } // Replace with actual description
+      };
+  
+      const response = await axios.put('http://localhost:4000/create-lead', {
+        url: 'http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead?$select=FirstName,LastName,Email,JobTitle,Phone2Type,CompanyName,Description,Phone2, Address/Country, Attributes/AttributeID, Attributes/Value&$expand=Address, Attributes', // Replace with actual endpoint URL
+        data: dataToSend
+      });
+  
+      console.log('Response:', response.data);
+    } catch (error) {
+      console.error('Error sending data:', error);
+    }
+  };
+  
   
   
 
@@ -484,7 +516,7 @@ const handleFormSubmit = async (e) => {
       </div>
       </div>
       <button onClick={generateToken}>tokenTest</button>
-      <button onClick={handleFormSubmit}>createLead</button>
+      <button onClick={sendDataWithToken}>createLead</button>
       <Footer />
     </div>
     </div>

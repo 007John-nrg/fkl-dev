@@ -313,8 +313,9 @@ const Palladium = () => {
 
       </div>
 
-      <FloatingActionButtons />
-
+      <div className="fab">
+        <FloatingActionButtons />
+      </div>
       <Footer />
     </div>
   </div>

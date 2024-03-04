@@ -124,5 +124,8 @@ input:focus {
       width: 100%;
     }
 
-    
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+    }
   }
