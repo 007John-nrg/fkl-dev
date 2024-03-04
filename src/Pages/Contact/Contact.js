@@ -74,25 +74,60 @@ const Contact = () => {
     window.location.href = 'tel:+1234567890';
   };
 
+    // Function to get the value for the industry
+    const getIndustryValue = (industry) => {
+      // Define mappings for industry values
+      const industryMappings = {
+        'Construction': 'CONSTRUCT',
+        'Distribution': 'DISTRIBUTE',
+        'Manufacturing': 'MANUFACTUR',
+        'Non Profit': 'NONPROFIT',
+        'Other': 'OTHER',
+        'Retail': 'RETAIL'
+      };
+      // Return the mapped value for the industry, or the industry itself if not found in mappings
+      return industryMappings[industry] || industry;
+    };
+
+    const getValue = () => {
+      if (formData.enquiringAbout === 'Acumatica') {
+        return formData.enquiringAbout + ', ' + formData.acumaticaEdition;
+      } else if (formData.enquiringAbout === 'Palladium') {
+        return formData.enquiringAbout + ', ' + formData.palladiumEdition;
+      } else {
+        return formData.enquiringAbout;
+      }
+    };
+  
+    const getDescription = () => {
+      if (formData.enquiringAbout === 'Acumatica') {
+        return formData.enquiringAbout + ', ' + formData.acumaticaEdition;
+      } else if (formData.enquiringAbout === 'Palladium') {
+        return formData.enquiringAbout + ', ' + formData.palladiumEdition;
+      } else {
+        return formData.enquiringAbout;
+      }
+    };
+
   // Function to generate token
   const generateToken = async () => {
     try {
       const response = await axios.post('http://localhost:4000/post-data', {
-        //url: 'https://acumatica.futurekenya.com/AcumaticaERP/identity/connect/token',
-        url: 'http://localhost/AcumaticaSelf1/identity/connect/token',
+        url: 'https://acumatica.futurekenya.com/AcumaticaERP/identity/connect/token',
+        // url: 'http://localhost/AcumaticaSelf1/identity/connect/token',
         data: {
-          // grant_type: 'password',
-          // username: 'development',
-          // password: 'D3v3l0p@Fkl',
-          // scope: 'api',
-          // client_id: '87D73C8E-BFC0-D9EF-5E2A-DF9341A0D3D0@Future Kenya',
-          // client_secret: 'hanBCN6rDihEEm47B0ZsFg'
           grant_type: 'password',
-          username: 'Admin',
-          password: 'Future123',
+          username: 'development',
+          password: 'D3v3l0p@Fkl',
           scope: 'api',
-          client_id: '7C731575-B89F-1AA7-5AC3-A50BFA60E210@Company',
-          client_secret: 'JUVls27LYkWxUlswiBbr2g'
+          client_id: '87D73C8E-BFC0-D9EF-5E2A-DF9341A0D3D0@Future Kenya',
+          client_secret: 'hanBCN6rDihEEm47B0ZsFg'
+          // grant_type: 'password',
+          // username: 'Admin',
+          // password: 'Future123',
+          // scope: 'api',
+          // client_id: '7C731575-B89F-1AA7-5AC3-A50BFA60E210@Company',
+          // client_secret: 'JUVls27LYkWxUlswiBbr2g'
         }
       });
   
@@ -107,27 +142,96 @@ const Contact = () => {
 
   const sendDataWithToken = async () => {
     try {
-      // const token = await generateToken();
-      // console.log("token", token)
-      // if (!token) return;
-  
+      const token = await generateToken();
+      console.log("token", token)
+      if (!token) return;
+
+      const companySizeValue = formData.companySize === '+200' ? '200' : formData.companySize; // Adjust value for '+200'
+
+      // Update the dataToSend object to use values from the formData state
       const dataToSend = {
-        FirstName: "john",
-        LastName: "john",
-        Email: "john@example.com", // Replace with actual email
-        JobTitle: "CEO", // Replace with actual job title
-        Phone2Type: { value: 'Cell' }, // Assuming Cell is one of the options
-        Phone2: "1234567890", // Replace with actual phone number
-        CompanyName: "Company X", // Replace with actual company name
-        Address: {
-          Country: "Kenya" // Replace with actual country
+      FirstName: { value: formData.firstName },
+      LastName: { value: formData.lastName },
+      Email: { value: formData.workEmail },
+      JobTitle: { value: formData.position },
+      Phone2Type: { value: 'cell' }, // Assuming it's a fixed value
+      Phone2: { value: formData.mobileNumber },
+      CompanyName: { value: formData.companyName },
+      Address: {
+        Country: { value: formData.countryCode } // Assuming it's countryCode
+      },
+      Attributes: [
+        {
+          AttributeDescription: { value: "Number of Employees" },
+          AttributeID: { value: "LEADEMPLOY" },
+          Required: {},
+          Value: { value: companySizeValue },
+          ValueDescription: { value: formData.companySize }
         },
-        Description: { value: "Lead description" } // Replace with actual description
+       {
+           AttributeDescription: { value: "Industry" },
+           AttributeID: { value: "LEADINDUST" },
+           Required: {},
+           Value: { value: getIndustryValue(formData.industry) },
+           ValueDescription: { value: formData.industry }
+       },
+          {
+            AttributeDescription: { value: "Purpose of Call" },
+            AttributeID: { value: "LEADPURPOS" },
+            Required: {},
+            Value: { value: getValue() },
+            ValueDescription: { value: getDescription() }
+          }
+      ],
+      Country: { value: formData.countryCode }, // Assuming it's countryCode
+      Description: { value: formData.message }
       };
+
+// Now you can use the updated dataToSend object for fetching data or sending POST requests.
+
+  
+      // const dataToSend = {
+      //   FirstName: { value: "Francis" },
+      //   LastName: { value: "MonoEye" },
+      //   Email: { value: "monoEye@test.com" },
+      //   JobTitle: { value: "CEO" },
+      //   Phone2Type: { value: "cell" },
+      //   Phone2: { value: "0722222200" },
+      //   CompanyName: { value: "KimFoods" },
+      //   Address: {
+      //     Country: { value: "KE" }
+      //   },
+      //   Attributes: [
+      //     {
+      //       AttributeDescription: { value: "Number of Employees" },
+      //       AttributeID: { value: "COMPSIZE" },
+      //       Required: {},
+      //       Value: { value: "100" },
+      //       ValueDescription: { value: "1-100" }
+      //     },
+      //     {
+      //       AttributeDescription: { value: "Industry" },
+      //       AttributeID: { value: "INDUSTRY" },
+      //       Required: {},
+      //       Value: { value: "CST" },
+      //       ValueDescription: { value: "Construction" }
+      //     },
+      //     {
+      //       AttributeDescription: { value: "Looking for" },
+      //       AttributeID: { value: "PRODREQ" },
+      //       Required: {},
+      //       Value: { value: "ENC" },
+      //       ValueDescription: { value: "Electronics & Computers" }
+      //     }
+      //   ],
+      //   Country: { value: "KE" },
+      //   Description: { value: "i would like to enquire" }
+      // };
   
       const response = await axios.put('http://localhost:4000/create-lead', {
-        url: 'http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead?$select=FirstName,LastName,Email,JobTitle,Phone2Type,CompanyName,Description,Phone2, Address/Country, Attributes/AttributeID, Attributes/Value&$expand=Address, Attributes', // Replace with actual endpoint URL
-        data: dataToSend
+        url: 'https://acumatica.futurekenya.com/AcumaticaERP/entity/Default/22.200.001/Lead?$select=FirstName,LastName,Email,JobTitle,Phone2Type,CompanyName,Description,Phone2, Address/Country, Attributes/AttributeID, Attributes/Value&$expand=Address, Attributes', // Replace with actual endpoint URL
+        data: dataToSend,
+        token: token
       });
   
       console.log('Response:', response.data);
@@ -157,23 +261,23 @@ const Contact = () => {
 //       Attributes: [
 //         {
 //           AttributeDescription: { value: 'Number of Employees' },
-//           AttributeID: { value: 'COMPSIZE' },
+//           AttributeID: { value: 'LEADEMPLOY' },
 //           Required: {},
-//           Value: { value: formData.companySize },
-//           ValueDescription: { value: '1-100' } // Update as needed
+//           Value: { value: '0-50' },
+//           ValueDescription: { value: formData.companySize } // Update as needed
 //         },
 //         {
 //           AttributeDescription: { value: 'Industry' },
-//           AttributeID: { value: 'INDUSTRY' },
+//           AttributeID: { value: 'LEADINDUST' },
 //           Required: {},
-//           Value: { value: formData.industry },
-//           ValueDescription: { value: 'Construction' } // Update as needed
+//           Value: { value: 'Construct' },
+//           ValueDescription: { value: formData.industry } // Update as needed
 //         },
 //         {
-//           AttributeDescription: { value: 'Looking for' },
-//           AttributeID: { value: 'PRODREQ' },
+//           AttributeDescription: { value: 'Purpose of Call' },
+//           AttributeID: { value: 'LEADPURPOS' },
 //           Required: {},
-//           Value: { value: formData.enquiringAbout },
+//           Value: { value: formData.enquiringAbout, formData.A },
 //           ValueDescription: { value: 'Electronics & Computers' } // Update as needed
 //         }
 //       ],
@@ -251,10 +355,10 @@ const Contact = () => {
 //         // Attributes: [
 //         //   {
 //         //     AttributeDescription: { value: 'Number of Employees' },
-//         //     AttributeID: { value: 'COMPSIZE' },
+//         //     AttributeID: { value: 'LEADEMPLOY' },
 //         //     Required: {},
-//         //     Value: { value: formData.companySize },
-//         //     ValueDescription: { value: '1-100' } // Update as needed
+//         //     Value: { value: '0-50' },
+//         //     ValueDescription: { value: formData.companySize } // Update as needed
 //         //   },
 //         //   {
 //         //     AttributeDescription: { value: 'Industry' },
@@ -284,10 +388,12 @@ const Contact = () => {
 const handleFormSubmit = async (e) => {
   e.preventDefault();
 
-  const accessToken = await generateToken();
-  if (accessToken) {
-    await createLead(accessToken);
-  }
+  sendDataWithToken()
+
+  // const accessToken = await generateToken();
+  // if (accessToken) {
+  //   await createLead(accessToken);
+  // }
 };
 
   return (
@@ -408,11 +514,11 @@ const handleFormSubmit = async (e) => {
                 onChange={handleInputChange}
               >
                 <option value="" disabled selected hidden>Select Acumatica edition</option>
-                <option value="General">General</option>
-                <option value="Distribution">Distribution</option>
-                <option value="Manufacturing">Manufacturing</option>
-                <option value="Retail">Retail</option>
-                <option value="Construction">Construction</option>
+                <option value="General">General Edition</option>
+                <option value="Distribution">Distribution Edition</option>
+                <option value="Manufacturing">Manufacturing Edition</option>
+                <option value="Retail">Retail Edition</option>
+                <option value="Construction">Construction Edition</option>
               </select>
              )}
               {formData.enquiringAbout === 'Palladium' && (
