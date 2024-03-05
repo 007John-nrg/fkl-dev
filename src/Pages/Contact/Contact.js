@@ -1,21 +1,58 @@
 import React, {useState, useEffect} from 'react'
 import './Contact.css'
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+import Stack from '@mui/material/Stack';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faFacebook, faXTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
-import image from '../../assets/copy.png'
+import image from '../../assets/contactUs.png'
 import { useLocation } from 'react-router-dom';
 import contact from '../../assets/cont.png'
 import Footer from '../../Components/Footer';
 import axios from 'axios';
 import { Navbar } from '../../Components/Navbar';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 const Contact = () => {
 
   const [countryCodes, setCountryCodes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCountryCode, setSelectedCountryCode] = useState('');
+  const [successMessageVisible, setSuccessMessageVisible] = useState(false); // State to manage success message visibility
+  
+  const [open, setOpen] = React.useState(false);
+  const [openError, setOpenError] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpenError = () => {
+    setOpenError(true);
+  };
+
+  const handleCloseError = () => {
+    setOpenError(false);
+  };
+  const success = () => {
+    setSuccessMessageVisible(true);
+  }
 
   const { state } = useLocation();
   console.log(state)
@@ -114,7 +151,6 @@ const Contact = () => {
     try {
       const response = await axios.post('https://api-j8jt.onrender.com/post-data', {
         url: 'https://acumatica.futurekenya.com/AcumaticaERP/identity/connect/token',
-        // url: 'http://localhost/AcumaticaSelf1/identity/connect/token',
         data: {
           grant_type: 'password',
           username: 'development',
@@ -122,12 +158,6 @@ const Contact = () => {
           scope: 'api',
           client_id: '87D73C8E-BFC0-D9EF-5E2A-DF9341A0D3D0@Future Kenya',
           client_secret: 'hanBCN6rDihEEm47B0ZsFg'
-          // grant_type: 'password',
-          // username: 'Admin',
-          // password: 'Future123',
-          // scope: 'api',
-          // client_id: '7C731575-B89F-1AA7-5AC3-A50BFA60E210@Company',
-          // client_secret: 'JUVls27LYkWxUlswiBbr2g'
         }
       });
   
@@ -198,107 +228,35 @@ const Contact = () => {
       console.error('Error sending data:', error);
     }
   };
-  
-  
-  
 
-// Function to create lead
-// Function to create lead
-// const createLead = async (accessToken) => {
-//   try {
-//     const leadData = {
-//       FirstName: { value: formData.firstName },
-//       LastName: { value: formData.lastName },
-//       Email: { value: formData.workEmail },
-//       JobTitle: { value: formData.position },
-//       Phone2Type: { value: 'cell' },
-//       Phone2: { value: formData.mobileNumber },
-//       CompanyName: { value: formData.companyName },
-//       Address: {
-//         Country: { value: formData.country }
-//       },
-//       Attributes: [
-//         {
-//           AttributeDescription: { value: 'Number of Employees' },
-//           AttributeID: { value: 'LEADEMPLOY' },
-//           Required: {},
-//           Value: { value: '0-50' },
-//           ValueDescription: { value: formData.companySize } // Update as needed
-//         },
-//         {
-//           AttributeDescription: { value: 'Industry' },
-//           AttributeID: { value: 'LEADINDUST' },
-//           Required: {},
-//           Value: { value: 'Construct' },
-//           ValueDescription: { value: formData.industry } // Update as needed
-//         },
-//         {
-//           AttributeDescription: { value: 'Purpose of Call' },
-//           AttributeID: { value: 'LEADPURPOS' },
-//           Required: {},
-//           Value: { value: formData.enquiringAbout, formData.A },
-//           ValueDescription: { value: 'Electronics & Computers' } // Update as needed
-//         }
-//       ],
-//       Description: { value: formData.message }
-//     };
-
-//     const response = await axios.put('http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead', leadData, {
-//       headers: {
-//         'Authorization': `Bearer ${accessToken}`,
-//         'Content-Type': 'application/json'
-//       }
-//     });
-
-//     console.log('Lead created:', response.data);
-//   } catch (error) {
-//     console.error('Error creating lead:', error);
-//   }
-// };
-
-  // Usage
-
-  const createLead = async (accessToken) => {
-    try {
-      const apiUrl = 'http://localhost:4000/create-lead';
-      const requestData = {
-        url: 'http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead?$select=FirstName,LastName,Email,JobTitle,Phone2Type,CompanyName,Description,Phone2,Address/Country,Attributes/AttributeID,Attributes/Value&$expand=Address,Attributes',
-        data: {
-          FirstName: "john",
-          LastName: "john",
-          Email: "john",
-          JobTitle: "john",
-          Phone2Type: { value: 'cell' },
-          Phone2: "john",
-          CompanyName: "john",
-          Address: {
-            Country: "john"
-          },
-          Description: { value: "together" }
-        }
-      };
-  
-      const response = await fetch(apiUrl, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${accessToken}`
-        },
-        body: JSON.stringify(requestData)
-      });
-  
-      const responseData = await response.json();
-      console.log('Lead created:', responseData);
-    } catch (error) {
-      console.error('Error creating lead:', error);
+    const handleFormSubmit = async (e) => {
+      e.preventDefault();
+    
+      try {
+        await sendDataWithToken();
+        // Data sent successfully, show success alert and reset form data
+        setSuccessMessageVisible(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          workEmail: '',
+          position: '',
+          mobileNumber: '',
+          companyName: '',
+          companySize: '',
+          industry: '',
+          enquiringAbout: state && state.product ? state.product : '',
+          acumaticaEdition: '',
+          palladiumEdition: '',
+          countryCode: '',
+          message: ''
+        });
+        setOpen(true); // Show success alert dialog
+      } catch (error) {
+        // Error sending data, show warning alert
+        setOpenError(true);
+      }
     }
-  };
-
-const handleFormSubmit = async (e) => {
-  e.preventDefault();
-
-  sendDataWithToken()
-
-};
 
   return (
     <div>
@@ -319,6 +277,7 @@ const handleFormSubmit = async (e) => {
                 value={formData.firstName}
                 placeholder='First Name'
                 onChange={handleInputChange}
+                required
               />
               <input
                 type='text'
@@ -326,6 +285,7 @@ const handleFormSubmit = async (e) => {
                 value={formData.lastName}
                 placeholder='Last Name'
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div className='firstRow'>
@@ -335,6 +295,7 @@ const handleFormSubmit = async (e) => {
                 value={formData.workEmail}
                 placeholder='Work Email'
                 onChange={handleInputChange}
+                required
               />
               <input
                 type='text'
@@ -342,6 +303,7 @@ const handleFormSubmit = async (e) => {
                 value={formData.position}
                 placeholder='Position'
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div className='firstRow'>
@@ -351,6 +313,7 @@ const handleFormSubmit = async (e) => {
                 value={formData.mobileNumber}
                 placeholder='Mobile Number'
                 onChange={handleInputChange}
+                required
               />
               <input
                 type='text'
@@ -358,6 +321,7 @@ const handleFormSubmit = async (e) => {
                 value={formData.companyName}
                 placeholder='Company Name'
                 onChange={handleInputChange}
+                required
               />
             </div>
             <div className='firstRow'>
@@ -365,6 +329,7 @@ const handleFormSubmit = async (e) => {
               name='companySize'
               value={formData.companySize}
               onChange={handleInputChange}
+              required
             >
               <option value="" disabled selected hidden>Select Company Size</option>
               <option value="0-15">0-15</option>
@@ -379,6 +344,7 @@ const handleFormSubmit = async (e) => {
               name='industry'
               value={formData.industry}
               onChange={handleInputChange}
+              required
             >
               <option value="" disabled selected hidden>Industry</option>
               <option value="Construction">Construction</option>
@@ -388,25 +354,20 @@ const handleFormSubmit = async (e) => {
               <option value="Other">Other</option>
               <option value="Retail">Retail</option>
             </select>
-              {/* <input
-                type='text'
-                name='industry'
-                value={formData.industry}
-                placeholder='Industry'
-                onChange={handleInputChange}
-              /> */}
             </div>
             <div className='firstRow'>
             <select
               name='enquiringAbout'
               value={formData.enquiringAbout}
               onChange={handleInputChange}
+              required
             >
               <option value="" disabled selected hidden>I am enquiring about</option>
               <option value="Acumatica">Acumatica</option>
               <option value="Palladium">Palladium</option>
               <option value="Payspace">Payspace</option>
-              <option value="Recommedation">Our Recommedation</option>
+              <option value="Sage">Sage Evolution</option>
+              <option value="Recommedation">Our recommendation</option>
               <option value="Consulting">Consulting</option>
               <option value="Training">Training</option>
               <option value="Support">Support</option>
@@ -437,17 +398,11 @@ const handleFormSubmit = async (e) => {
                 <option value="Enterprise">Enterprise</option>
               </select>
              )}
-              {/* <input
-                type='text'
-                name='country'
-                value={formData.country}
-                placeholder='Country'
-                onChange={handleInputChange}
-              /> */}
               <select
                 name="countryCode"
                 value={formData.countryCode}
                 onChange={handleInputChange}
+                required
               >
                 <option value="">Select Country Code</option>
                 {countryCodes.filter(country => country.name.toLowerCase().includes(searchTerm.toLowerCase())).map(country => (
@@ -461,6 +416,7 @@ const handleFormSubmit = async (e) => {
               placeholder="Enter your message here..."
               onChange={handleInputChange}
               rows={4}
+              required
               style={{ resize: 'vertical', borderRadius: '2rem 0 2rem 0' }}
             ></textarea>
             <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>Submit</button>
@@ -473,61 +429,44 @@ const handleFormSubmit = async (e) => {
         <div className='strip'>
           <img src={image} alt="" />
         </div>
-        {/* <h1 style={{ fontSize: '3rem', marginBottom: '0'}}>Future Kenya</h1>
-        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignContent: 'center', marginBottom: '-1rem'}}>
-        <div className='mail' style={{width: '80%'}}>
-          <div className="mailTitle">
-            <h5>Call us</h5>
-          </div>
-          <div style={{paddingLeft: '.3rem', display: 'flex', gap: '.5rem', flexDirection: 'column', marginTop: '-1rem'}}>
-            <div style={{paddingLeft: '1.5rem', display: 'flex', gap: '.5rem', alignItems: 'center', border: '1px solid', borderRadius: '.6rem', width: '50%', padding: '0'}}>
-              <FontAwesomeIcon icon={faMobileScreenButton} />
-              <p>+254 (0)720 130 172 </p>
-            </div>
-            <div style={{ paddingLeft: '1.5rem', display: 'flex', gap: '.5rem', alignItems: 'center', border: '1px solid', borderRadius: '.6rem', width: '50%', padding: '0'}}>
-              <FontAwesomeIcon icon={faPhone} />
-              <p>+254 (0)20 236 1100/11/22</p>
-            </div>
-          </div>
-        </div>
-        </div>
-        
-        <div style={{width: '100%', display: 'flex', justifyContent: 'center', alignContent: 'center', marginBottom: '-1.5rem'}}>
-        <div className='mail' style={{width: '80%'}}>
-          <div className="mailTitle">
-            <h5>Drop us a mail</h5>
-          </div>
-          <div style={{display: 'flex', flexDirection: 'column', marginTop: '-.7rem'}}>
-            <div style={{marginTop: '-1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-              <p>General</p>
-              <p>info@futurekenya.com</p>
-            </div>
-            <div style={{marginTop: '-1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-              <p>Sales</p>
-              <p>sales@futurekenya.com</p>
-            </div>
-            <div style={{marginTop: '-1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-              <p>Support</p>
-              <p>support@futurekenya.com</p>
-            </div>
-            <div style={{marginTop: '-1.2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-              <p>HR</p>
-              <p>hr@futurekenya.com</p>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <div>
-          <div style={{textAlign: 'center'}} className="mailTitle">
-            <h5>Find us</h5>
-          </div>
-        </div> */}
       </div>
       </div>
-      <button onClick={generateToken}>
-        token
-      </button>
+      <Dialog
+          open={open}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleClose}
+          aria-describedby="alert-dialog-slide-description"
+        >
+          <DialogContent>
+            <Stack sx={{ width: '100%' }}>
+              <Alert severity="success">
+                <AlertTitle>Success</AlertTitle>
+                We have received your enquiry and we will be in touch shortly
+              </Alert>
+            </Stack>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>Ok</Button>
+          </DialogActions>
+        </Dialog>
+        {/* Error alert dialog */}
+        <Dialog
+          open={openError}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleCloseError}
+          aria-describedby="alert-dialog-slide-description"
+        >
+          <DialogContent>
+            <Stack sx={{ width: '100%' }} spacing={2}>
+              <Alert severity="warning">An Error occurred while sending the Enquiry. Please try again.</Alert>
+            </Stack>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseError}>Ok</Button>
+          </DialogActions>
+        </Dialog>
       <Footer />
     </div>
     </div>

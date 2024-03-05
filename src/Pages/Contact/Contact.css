@@ -7,7 +7,7 @@
 .contactContainer {
     /* margin-left: 20%; */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* width: 80%; */
     /* height: 100vh; */
 }
@@ -115,6 +115,15 @@ input:focus {
     .contactContainerBox {
       margin-left:25%;
     }
+    
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info {
+        padding: 1.5rem 0;
+    }
 
   }
   
@@ -122,10 +131,5 @@ input:focus {
     .contactContainerBox {
       margin-left: 0;
       width: 100%;
-    }
-
-    .contactContainer {
-        display: flex;
-        flex-direction: column;
     }
   }
