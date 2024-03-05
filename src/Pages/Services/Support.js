@@ -25,7 +25,7 @@ const Support = () => {
         
         <div className="consultingText">
           <p>
-            At Future Kenya, we understand that seamless operation of your IT infrastructure is paramount to your business success. That's why we offer comprehensive support services designed to keep your systems running smoothly and efficiently. Our team of experienced IT professionals is dedicated to providing timely assistance and resolving any issues that may arise, ensuring minimal downtime and maximum productivity for your organization. Whether you need help troubleshooting technical issues, implementing software updates, or optimizing system performance, we're here to help.
+          At Future Kenya, we understand that the seamless operation of your IT infrastructure is paramount to your business success. That's why we offer comprehensive support services designed to keep your systems running smoothly and efficiently. Our team of experienced IT professionals are dedicated to providing timely assistance and resolving any issues that may arise, ensuring minimal downtime and maximum productivity for your organization. Whether you need help troubleshooting technical issues, implementing software updates, or optimizing system performance, we're here to help.
           </p>
         </div>
 

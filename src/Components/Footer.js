@@ -7,11 +7,11 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:your.email@example.com';
+    window.location.href = 'mailto:sales@futurekenya.com';
   };
 
   const handlePhoneClick = () => {
-    window.location.href = 'tel:+1234567890';
+    window.location.href = 'tel:+254720130172';
   };
 
 
@@ -34,7 +34,9 @@ const Footer = () => {
             <FontAwesomeIcon icon={faFacebook} />
           </li>
           <li>
-            <FontAwesomeIcon icon={faWhatsapp} />
+            <a href="https://wa.me/254720130172">
+              <FontAwesomeIcon icon={faWhatsapp} />
+            </a>
           </li>
           <li>
             <FontAwesomeIcon icon={faEnvelope} onClick={handleEmailClick}/>

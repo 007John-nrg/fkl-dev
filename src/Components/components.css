@@ -97,7 +97,7 @@
   }
 
   .landingBox {
-    z-index: 999999;
+    z-index: 999;
   }
   
    
@@ -495,25 +495,29 @@
   align-items: center;
 }
 
+.popup-overlay {
+  z-index: 99999999999;
+}
+
 .popup {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 99999999;
 }
 
-.popup .menupop {
+.menupop {
   list-style: none;
   text-align: center;
   padding: 0;
-  width: 70%;
 }
 
-.popup .menupop .ListLink .sublinkList{
+.menupop .ListLink .sublinkList{
   list-style-type: none;
 }
 
-.popup .menupop .ListLink .link{
+.menupop .ListLink .link{
   text-decoration: none;
   font-size: 1.1rem;
   color: grey;
@@ -523,9 +527,9 @@
 .xbtn {
   border: 1px solid grey;
   color: grey;
-  padding: .7rem 1rem;
+  /* padding: .7rem 1rem;
   font-size: 1.2rem;
-  border-radius: 50%;
+  border-radius: 50%; */
 }
 
 @media screen and (max-width: 999px) {
