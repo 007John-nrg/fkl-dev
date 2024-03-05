@@ -112,7 +112,7 @@ const Contact = () => {
   // Function to generate token
   const generateToken = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/post-data', {
+      const response = await axios.post('https://api-j8jt.onrender.com/post-data', {
         url: 'https://acumatica.futurekenya.com/AcumaticaERP/identity/connect/token',
         // url: 'http://localhost/AcumaticaSelf1/identity/connect/token',
         data: {
@@ -187,48 +187,7 @@ const Contact = () => {
       Description: { value: formData.message }
       };
 
-// Now you can use the updated dataToSend object for fetching data or sending POST requests.
-
-  
-      // const dataToSend = {
-      //   FirstName: { value: "Francis" },
-      //   LastName: { value: "MonoEye" },
-      //   Email: { value: "monoEye@test.com" },
-      //   JobTitle: { value: "CEO" },
-      //   Phone2Type: { value: "cell" },
-      //   Phone2: { value: "0722222200" },
-      //   CompanyName: { value: "KimFoods" },
-      //   Address: {
-      //     Country: { value: "KE" }
-      //   },
-      //   Attributes: [
-      //     {
-      //       AttributeDescription: { value: "Number of Employees" },
-      //       AttributeID: { value: "COMPSIZE" },
-      //       Required: {},
-      //       Value: { value: "100" },
-      //       ValueDescription: { value: "1-100" }
-      //     },
-      //     {
-      //       AttributeDescription: { value: "Industry" },
-      //       AttributeID: { value: "INDUSTRY" },
-      //       Required: {},
-      //       Value: { value: "CST" },
-      //       ValueDescription: { value: "Construction" }
-      //     },
-      //     {
-      //       AttributeDescription: { value: "Looking for" },
-      //       AttributeID: { value: "PRODREQ" },
-      //       Required: {},
-      //       Value: { value: "ENC" },
-      //       ValueDescription: { value: "Electronics & Computers" }
-      //     }
-      //   ],
-      //   Country: { value: "KE" },
-      //   Description: { value: "i would like to enquire" }
-      // };
-  
-      const response = await axios.put('http://localhost:4000/create-lead', {
+      const response = await axios.put('https://api-j8jt.onrender.com/create-lead', {
         url: 'https://acumatica.futurekenya.com/AcumaticaERP/entity/Default/22.200.001/Lead?$select=FirstName,LastName,Email,JobTitle,Phone2Type,CompanyName,Description,Phone2, Address/Country, Attributes/AttributeID, Attributes/Value&$expand=Address, Attributes', // Replace with actual endpoint URL
         data: dataToSend,
         token: token
@@ -333,67 +292,12 @@ const Contact = () => {
       console.error('Error creating lead:', error);
     }
   };
-  
-
-
-  // Function to create lead
-// const createLead = async (accessToken) => {
-//   try {
-//     const response = await axios.post('http://localhost:4000/create-lead', {
-//       url: 'http://localhost/AcumaticaSelf1/entity/Default/22.200.001/Lead?$select=FirstName,LastName,Email,JobTitle,Phone2Type,CompanyName,Description,Phone2, Address/Country, Attributes/AttributeID, Attributes/Value&$expand=Address, Attributes',
-//       data: {
-//         FirstName: "john",
-//         LastName: "john",
-//         Email: "john",
-//         JobTitle: "john",
-//         Phone2Type: { value: 'cell' },
-//         Phone2: "john",
-//         CompanyName: "john",
-//         Address: {
-//           Country: "john"
-//         },
-//         // Attributes: [
-//         //   {
-//         //     AttributeDescription: { value: 'Number of Employees' },
-//         //     AttributeID: { value: 'LEADEMPLOY' },
-//         //     Required: {},
-//         //     Value: { value: '0-50' },
-//         //     ValueDescription: { value: formData.companySize } // Update as needed
-//         //   },
-//         //   {
-//         //     AttributeDescription: { value: 'Industry' },
-//         //     AttributeID: { value: 'INDUSTRY' },
-//         //     Required: {},
-//         //     Value: { value: formData.industry },
-//         //     ValueDescription: { value: 'Construction' } // Update as needed
-//         //   },
-//         //   {
-//         //     AttributeDescription: { value: 'Looking for' },
-//         //     AttributeID: { value: 'PRODREQ' },
-//         //     Required: {},
-//         //     Value: { value: formData.enquiringAbout },
-//         //     ValueDescription: { value: 'Electronics & Computers' } // Update as needed
-//         //   }
-//         // ],
-//         Description: { value: formData.message }
-//         },
-//         Authorization: `Bearer ${accessToken}`, 
-//     })
-//     console.log('Lead created:', response.data);
-//   } catch (error) {
-//     console.error('Error creating lead:', error);
-//   }
-// };
 
 const handleFormSubmit = async (e) => {
   e.preventDefault();
 
   sendDataWithToken()
 
-  // const accessToken = await generateToken();
-  // if (accessToken) {
-  //   await createLead(accessToken);
-  // }
 };
 
   return (
@@ -621,8 +525,9 @@ const handleFormSubmit = async (e) => {
         </div> */}
       </div>
       </div>
-      <button onClick={generateToken}>tokenTest</button>
-      <button onClick={sendDataWithToken}>createLead</button>
+      <button onClick={generateToken}>
+        token
+      </button>
       <Footer />
     </div>
     </div>
