@@ -53,12 +53,41 @@ import palladium5 from './assets/P (2).pdf'
 import palladium6 from './assets/Palladium Accounting Summary Brochure.pdf'
 import palladium7 from './assets/Palladium Feature.pdf'
 import palladium8 from './assets/Palladium App Suite Brochure 2022.pdf'
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 const Pall = () => {
   const [popupImages, setPopupImages] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [pdfDataUri, setPdfDataUri] = useState('');
+  const [maxWidth, setMaxWidth] = React.useState('xl');
+  const [open, setOpen] = React.useState(false);
+
+const handleClickOpen = () => {
+  setOpen(true);
+};
+
+const handleClose = () => {
+  setOpen(false);
+};
+
+const handleBarsClick = () => {
+    setShowPopup(true);
+};
+
+const handleCloseClick = () => {
+    setShowPopup(false);
+};
 
   const nextButtonClick = () => {
     setCurrentPage(currentPage + 1);
@@ -245,6 +274,18 @@ const Pall = () => {
                 <iframe width="100%" height="100%" src={pdfDataUri} />
             </div>
         </div>
+        // <Dialog
+        //   open={open}
+        //   maxWidth="md"
+        //   TransitionComponent={Transition}
+        //   keepMounted
+        //   onClose={handleClose}
+        //   aria-describedby="alert-dialog-slide-description"
+        // >
+        //   <DialogContent>
+        //     <iframe width="100%" height="100%" src={pdfDataUri} />
+        //   </DialogContent>
+        // </Dialog>
         )}
     </div>
   )

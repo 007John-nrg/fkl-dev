@@ -489,6 +489,11 @@ color: #64a953;
         flex-direction: column;
         margin: 0.5rem;
     }
+
+    .consultingText {
+        font-size: 1.1rem;
+        line-height: 1.2;
+    }
     
     .packagesBox {
      width: 90%;

@@ -19,6 +19,7 @@ export const Navbar = () => {
 
 const [showPopup, setShowPopup] = useState(false);
 const [open, setOpen] = React.useState(false);
+const [maxWidth, setMaxWidth] = React.useState('xl');
 
 const handleClickOpen = () => {
   setOpen(true);
@@ -41,17 +42,14 @@ const handleCloseClick = () => {
         <div onClick={handleClickOpen} className='bars'>
             <HiMiniBars3 />
         </div>
-        <React.Fragment>
-            {/* <Button variant="outlined" onClick={handleClickOpen}>
-                Slide in alert dialog
-            </Button> */}
+        <div className="dialogPop">
             <Dialog
                 open={open}
+                maxWidth="md"
                 TransitionComponent={Transition}
                 keepMounted
                 onClose={handleClose}
                 aria-describedby="alert-dialog-slide-description"
-                sx={{width: '100%'}}
             >
                 <DialogContent >
                 <ul className='menupop'>
@@ -135,14 +133,26 @@ const handleCloseClick = () => {
                     </a>
                 </li>
                 </ul>
-                <div onClick={handleCloseClick} className='xbtn'>X</div>
+                <div onClick={handleClose} className='xbtn'>
+                    <div style={{
+                        border: '1px solid grey',
+                        borderRadius: '50%',
+                        width: '30px', // Adjust size as needed
+                        height: '30px', // Adjust size as needed
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}>
+                        X
+                    </div>
+                </div>
+
                 </DialogContent>
                 {/* <DialogActions>
-                    <Button onClick={handleClose}>Disagree</Button>
-                    <Button onClick={handleClose}>Agree</Button>
+                    <Button onClick={handleClose}>X</Button>
                 </DialogActions> */}
             </Dialog>
-        </React.Fragment>
+        </div>
         {showPopup && (
         <div className='popup-overlay'>
             <div className='popup'>
@@ -233,7 +243,9 @@ const handleCloseClick = () => {
         </div>
         )}
         <div className='navbarLogo'>
-            <img src={logo} alt="" />
+            <a href="/" style={{ marginLeft: '-2rem'}}>
+                <img src={logo} alt="Future Kenya Logo" />
+            </a>
         </div>
     </div>
   )
