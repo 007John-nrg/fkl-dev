@@ -146,6 +146,22 @@
     font-size: 1.7rem;
   }
 
+  .iframe-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    padding-top: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
+  }
+  
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   @media screen and (max-width: 1330px) {
     .workApply {
         width: 100%
@@ -162,7 +178,7 @@
     }
 
     .workBox {
-        width: 100%;
+        width: 90%;
     }
   }
   
@@ -176,7 +192,42 @@
         height: 50%;
       }
 
-  
-    
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Grey overlay */
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .popup {
+        width: 90%;
+        height: 90%;
+      }
+      
+      .popup .btnPop {
+        background-color: transparent;
+        color: #111;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        font-size: 1.2rem;
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    .popup {
+      width: 70%;
+      height: 70%;
+    }
+
   }
   

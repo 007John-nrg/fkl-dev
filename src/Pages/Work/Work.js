@@ -110,7 +110,7 @@ const Work = () => {
                   <div className="popup-overlay">
                       <div className="popup">
                           <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <iframe width="100%" height="100%" src={implement}/>
+                          <embed width="100%" height="100%" src={implement}></embed>
                       </div>
                   </div>
               )}
@@ -139,7 +139,7 @@ const Work = () => {
                   <div className="popup-overlay">
                       <div className="popup">
                           <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <iframe width="100%" height="100%" src={it} />
+                          <embed width="100%" height="100%" src={it}></embed>
                       </div>
                   </div>
               )}
@@ -166,10 +166,12 @@ const Work = () => {
               </div>
               {showAccountsPopup && (
                 <div className="popup-overlay">
-                    <div className="popup">
-                        <button className='btnPop' onClick={handleClosePopups}>X</button>
-                        <iframe width="100%" height="100%" src={accounts} />
+                  <div className="popup">
+                    <button className='btnPop' onClick={handleClosePopups}>X</button>
+                    <div className="iframe-container">
+                      <iframe className="responsive-iframe" src={accounts} title="Accounts" />
                     </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -197,7 +199,7 @@ const Work = () => {
                 <div className="popup-overlay">
                     <div className="popup">
                         <button className='btnPop' onClick={handleClosePopups}>X</button>
-                        <iframe width="100%" height="100%" src={sales} />
+                        <embed width="100%" height="100%" src={sales}></embed>
                     </div>
                 </div>
               )}
@@ -226,7 +228,8 @@ const Work = () => {
                 <div className="popup-overlay">
                     <div className="popup">
                         <button className='btnPop' onClick={handleClosePopups}>X</button>
-                        <iframe width="100%" height="100%" src={hr} />
+                        {/* <iframe width="100%" height="100%" src={hr} /> */}
+                        <embed width="100%" height="100%" src={hr}></embed>
                     </div>
                 </div>
               )}
