@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     margin: 1.5rem;
+    border: 1px solid red;
 }
 
 .form .formLogo {
@@ -111,6 +112,7 @@ input:focus {
     height: auto;
 }
 
+
 @media screen and (max-width: 999px) {
     .contactContainerBox {
       margin-left:25%;
@@ -137,8 +139,19 @@ input:focus {
   @media screen and (max-width: 500px) {
 
     .form .formLogo {
-        width: 225px;
+        width: 250px;
     }
+
+    .formContact {
+    }
+    
+  }
+
+  
+  @media screen and (max-width: 450px) {
+
+
+    
   }
 
   
