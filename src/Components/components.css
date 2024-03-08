@@ -535,11 +535,11 @@
   dispaly: none;
 }
 
-.css-12rl710-MuiPaper-root-MuiDialog-paper {
-  justify-content: center;
+.MuiPaper-root-MuiDialog-paper {
+  /* justify-content: center;
   align-items: center;
-  height: calc(100% - 64px);
-  width: 700px;
+  height: calc(100% - 64px);*/
+  width: 700px; 
 }
 
 @media screen and (max-width: 999px) {

@@ -51,7 +51,7 @@ const handleCloseClick = () => {
                 onClose={handleClose}
                 aria-describedby="alert-dialog-slide-description"
             >
-                <DialogContent >
+                <DialogContent>
                 <ul className='menupop'>
                 <li className='ListLink'>
                     <Link to="/" className='link'>
