@@ -66,6 +66,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.pallpopup {
+  z-index: 999999999;
+}
+
 .popup::-webkit-scrollbar {
 width: 3px;
 }
@@ -113,6 +117,10 @@ object-fit: cover;
 }
 .sm {
   display: none;
+}
+
+.css-10ghrmp-MuiPaper-root-MuiAppBar-root {
+  background-color: #64a953 !important;
 }
 
 /* For screens with max-width 999px (desktop) */

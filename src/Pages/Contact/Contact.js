@@ -351,8 +351,8 @@ const Contact = () => {
               <option value="Distribution">Distribution</option>
               <option value="Manufacturing">Manufacturing</option>
               <option value="Non Profit">Non Profit</option>
-              <option value="Other">Other</option>
               <option value="Retail">Retail</option>
+              <option value="Other">Other</option>
             </select>
             </div>
             <div className='firstRow'>

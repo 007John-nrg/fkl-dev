@@ -8,10 +8,24 @@ import sales from '../../assets/Sales and Marketing Specialist .pdf';
 import hr from  '../../assets/Human Resources (HR), HelpDesk and Operations Officer.pdf';
 import accounts from '../../assets/Accounting Software Implementations and support Trainee .pdf';
 import { Navbar } from '../../Components/Navbar';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import Divider from '@mui/material/Divider';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import CloseIcon from '@mui/icons-material/Close';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 const Work = () => {
 
-  const [showImplementPopup, setShowImplementPopup] = useState(false);
+  const [showImplementPopup, setShowImplementPopup] = useState(true);
   const [showITPopup, setShowITPopup] = useState(false);
   const [showSalesPopup, setShowSalesPopup] = useState(false);
   const [showHRPopup, setShowHRPopup] = useState(false);
@@ -21,6 +35,16 @@ const Work = () => {
   const [showSoftwareMessage, setShowSoftwareMessage] = useState(false);
   const [showSalesMessage, setShowSaleMessage] = useState(false);
   const [showHrMessage, setShowHrMessage] = useState(false);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  
+  const handleClose = () => {
+    setOpen(false);
+  };
+  
 
   const emailAddress = 'hr@futurekenya.com';
 
@@ -47,23 +71,27 @@ const Work = () => {
     // Define event handlers for each role's popup
     const handleImplementPopup = () => {
       setShowImplementPopup(true);
-      console.log("show", showImplementPopup)
+      setOpen(true)
     };
   
     const handleITPopup = () => {
       setShowITPopup(true);
+      setOpen(true)
     };
   
     const handleSalesPopup = () => {
       setShowSalesPopup(true);
+      setOpen(true)
     };
   
     const handleHRPopup = () => {
       setShowHRPopup(true);
+      setOpen(true)
     };
   
     const handleAccountsPopup = () => {
       setShowAccountsPopup(true);
+      setOpen(true);
     };
 
     const handleClosePopups = () => {
@@ -107,12 +135,31 @@ const Work = () => {
                 The Role
               </div>
               {showImplementPopup && (
-                  <div className="popup-overlay">
-                      <div className="popup">
-                          <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <embed width="100%" height="100%" src={implement}></embed>
-                      </div>
-                  </div>
+              <Dialog
+                fullScreen
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+              >
+                <AppBar sx={{ position: 'relative' }}>
+                  <Toolbar>
+                    <IconButton
+                      edge="start"
+                      color="inherit"
+                      onClick={handleClose}
+                      aria-label="close"
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                    <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                      Sound
+                    </Typography>
+                  </Toolbar>
+                </AppBar>
+                <DialogContent>
+                  <embed width="100%" height="100%" src={implement}></embed>
+                </DialogContent>
+              </Dialog>
               )}
             </div>
             {showImplementMessage && (
@@ -136,12 +183,31 @@ const Work = () => {
                 The Role
               </div>
               {showITPopup && (
-                  <div className="popup-overlay">
-                      <div className="popup">
-                          <button className='btnPop' onClick={handleClosePopups}>X</button>
-                          <embed width="100%" height="100%" src={it}></embed>
-                      </div>
-                  </div>
+              <Dialog
+                fullScreen
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+              >
+                <AppBar sx={{ position: 'relative' }}>
+                  <Toolbar>
+                    <IconButton
+                      edge="start"
+                      color="inherit"
+                      onClick={handleClose}
+                      aria-label="close"
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                    <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                      Sound
+                    </Typography>
+                  </Toolbar>
+                </AppBar>
+                <DialogContent>
+                  <embed width="100%" height="100%" src={it}></embed>
+                </DialogContent>
+              </Dialog>
               )}
             </div>
             {showItMessage && (
@@ -165,14 +231,31 @@ const Work = () => {
                 The Role
               </div>
               {showAccountsPopup && (
-                <div className="popup-overlay">
-                  <div className="popup">
-                    <button className='btnPop' onClick={handleClosePopups}>X</button>
-                    <div className="iframe-container">
-                      <iframe className="responsive-iframe" src={accounts} title="Accounts" />
-                    </div>
-                  </div>
-                </div>
+              <Dialog
+                fullScreen
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+              >
+                <AppBar sx={{ position: 'relative' }}>
+                  <Toolbar>
+                    <IconButton
+                      edge="start"
+                      color="inherit"
+                      onClick={handleClose}
+                      aria-label="close"
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                    <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                      Sound
+                    </Typography>
+                  </Toolbar>
+                </AppBar>
+                <DialogContent>
+                  <embed width="100%" height="100%" src={accounts}></embed>
+                </DialogContent>
+              </Dialog>
               )}
             </div>
             {showSoftwareMessage && (
@@ -196,12 +279,31 @@ const Work = () => {
                 The Role
               </div>
               {showSalesPopup && (
-                <div className="popup-overlay">
-                    <div className="popup">
-                        <button className='btnPop' onClick={handleClosePopups}>X</button>
-                        <embed width="100%" height="100%" src={sales}></embed>
-                    </div>
-                </div>
+              <Dialog
+                fullScreen
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+              >
+                <AppBar sx={{ position: 'relative' }}>
+                  <Toolbar>
+                    <IconButton
+                      edge="start"
+                      color="inherit"
+                      onClick={handleClose}
+                      aria-label="close"
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                    <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                      {/* Sound */}
+                    </Typography>
+                  </Toolbar>
+                </AppBar>
+                <DialogContent>
+                  <embed width="100%" height="100%" src={sales}></embed>
+                </DialogContent>
+              </Dialog>
               )}
             </div>
             {showSalesMessage && (
@@ -225,13 +327,31 @@ const Work = () => {
                 The Role
               </div>
               {showHRPopup && (
-                <div className="popup-overlay">
-                    <div className="popup">
-                        <button className='btnPop' onClick={handleClosePopups}>X</button>
-                        {/* <iframe width="100%" height="100%" src={hr} /> */}
-                        <embed width="100%" height="100%" src={hr}></embed>
-                    </div>
-                </div>
+                <Dialog
+                  fullScreen
+                  open={open}
+                  onClose={handleClose}
+                  TransitionComponent={Transition}
+                >
+                  <AppBar sx={{ position: 'relative' }}>
+                    <Toolbar>
+                      <IconButton
+                        edge="start"
+                        color="inherit"
+                        onClick={handleClose}
+                        aria-label="close"
+                      >
+                        <CloseIcon />
+                      </IconButton>
+                      <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                        {/* Sound */}
+                      </Typography>
+                    </Toolbar>
+                  </AppBar>
+                  <DialogContent>
+                    <embed width="100%" height="100%" src={hr}></embed>
+                  </DialogContent>
+                </Dialog>
               )}
             </div>
             {showHrMessage && (

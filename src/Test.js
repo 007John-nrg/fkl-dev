@@ -16,12 +16,36 @@ import image5 from './assets/project/Project Managment FKL_page-0001.jpg';
 import image50 from './assets/project/Project Managment FKL_page-0002.jpg';
 import image6 from './assets/Tax/Tax management FKL_page-0001.jpg';
 import image60 from './assets/Tax/Tax management FKL_page-0002.jpg';    
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import Divider from '@mui/material/Divider';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import CloseIcon from '@mui/icons-material/Close';
+import Slide from '@mui/material/Slide';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
 
 function Test() {
     const [popupImages, setPopupImages] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
     const [pageNumber, setPageNumber] = useState(1);
     const [pdfDataUri, setPdfDataUri] = useState('');
+    const [loading, setLoading] = useState(false); // Add loading state
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+    
+    const handleClose = () => {
+      setOpen(false);
+    };
 
     console.log(popupImages)
 
@@ -75,6 +99,7 @@ function Test() {
 
             // Show the popup
             setShowPopup(true);
+            setOpen(true);
 
         } catch (error) {
             console.error('Error converting images to PDF:', error);
@@ -234,12 +259,37 @@ function Test() {
                 </Carousel>
             </div>
             {showPopup && (
-                <div className="popup-overlay">
-                    <div className="popup">
-                        <button onClick={() => setShowPopup(false)}>X</button>
-                        <iframe width="100%" height="100%" src={pdfDataUri} />
-                    </div>
-                </div>
+                // <div className="popup-overlay">
+                //     <div className="popup">
+                //         <button onClick={() => setShowPopup(false)}>X</button>
+                //         <iframe width="100%" height="100%" src={pdfDataUri} />
+                //     </div>
+                // </div>
+             <Dialog
+                fullScreen
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+              >
+                <AppBar sx={{ position: 'relative' }}>
+                  <Toolbar>
+                    <IconButton
+                      edge="start"
+                      color="inherit"
+                      onClick={handleClose}
+                      aria-label="close"
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                    <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                      {/* Sound */}
+                    </Typography>
+                  </Toolbar>
+                </AppBar>
+               <DialogContent>
+                 <iframe width="100%" height="100%" src={pdfDataUri} />
+               </DialogContent>
+              </Dialog>
             )}
 
         </div>

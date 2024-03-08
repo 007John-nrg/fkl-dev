@@ -55,10 +55,13 @@ import palladium7 from './assets/Palladium Feature.pdf'
 import palladium8 from './assets/Palladium App Suite Brochure 2022.pdf'
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import Divider from '@mui/material/Divider';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -187,6 +190,7 @@ const handleCloseClick = () => {
     const pdfUrl = pdfUrls[category];
     setPdfDataUri(pdfUrl);
     setShowPopup(true);
+    setOpen(true);
   }
 
 //   const handleEyeIconClick = async(category) => {
@@ -268,24 +272,37 @@ const handleCloseClick = () => {
             ))}
         </div>
         {showPopup && (
-        <div className="popup-overlay" style={{}}>
-            <div className="popup">
-                <button onClick={() => setShowPopup(false)}>X</button>
-                <iframe width="100%" height="100%" src={pdfDataUri} />
-            </div>
-        </div>
-        // <Dialog
-        //   open={open}
-        //   maxWidth="md"
-        //   TransitionComponent={Transition}
-        //   keepMounted
-        //   onClose={handleClose}
-        //   aria-describedby="alert-dialog-slide-description"
-        // >
-        //   <DialogContent>
-        //     <iframe width="100%" height="100%" src={pdfDataUri} />
-        //   </DialogContent>
-        // </Dialog>
+        // <div className="popup-overlay" style={{}}>
+        //     <div className="popup pallpopup">
+        //         <button onClick={() => setShowPopup(false)}>X</button>
+        //         <iframe width="100%" height="100%" src={pdfDataUri} />
+        //     </div>
+        // </div>
+            <Dialog
+              fullScreen
+              open={open}
+              onClose={handleClose}
+              TransitionComponent={Transition}
+            >
+              <AppBar sx={{ position: 'relative' }}>
+                <Toolbar>
+                  <IconButton
+                    edge="start"
+                    color="inherit"
+                    onClick={handleClose}
+                    aria-label="close"
+                  >
+                    <CloseIcon />
+                  </IconButton>
+                  <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                    {/* Sound */}
+                  </Typography>
+                </Toolbar>
+              </AppBar>
+             <DialogContent>
+               <iframe width="100%" height="100%" src={pdfDataUri} />
+             </DialogContent>
+            </Dialog>
         )}
     </div>
   )
