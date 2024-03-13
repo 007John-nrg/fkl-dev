@@ -141,7 +141,7 @@ const Work = () => {
                 onClose={handleClose}
                 TransitionComponent={Transition}
               >
-                <AppBar sx={{ position: 'relative' }}>
+                <AppBar sx={{ position: 'relative', backgroundColor: '#64a953'}}>
                   <Toolbar>
                     <IconButton
                       edge="start"
@@ -152,7 +152,7 @@ const Work = () => {
                       <CloseIcon />
                     </IconButton>
                     <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-                      Sound
+                      {/* Sound */}
                     </Typography>
                   </Toolbar>
                 </AppBar>
@@ -189,7 +189,7 @@ const Work = () => {
                 onClose={handleClose}
                 TransitionComponent={Transition}
               >
-                <AppBar sx={{ position: 'relative' }}>
+                <AppBar sx={{ position: 'relative', backgroundColor: '#64a953'}}>
                   <Toolbar>
                     <IconButton
                       edge="start"
@@ -200,7 +200,7 @@ const Work = () => {
                       <CloseIcon />
                     </IconButton>
                     <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-                      Sound
+                      {/* Sound */}
                     </Typography>
                   </Toolbar>
                 </AppBar>
@@ -237,7 +237,7 @@ const Work = () => {
                 onClose={handleClose}
                 TransitionComponent={Transition}
               >
-                <AppBar sx={{ position: 'relative' }}>
+                <AppBar sx={{ position: 'relative', backgroundColor: '#64a953'}}>
                   <Toolbar>
                     <IconButton
                       edge="start"
@@ -285,7 +285,7 @@ const Work = () => {
                 onClose={handleClose}
                 TransitionComponent={Transition}
               >
-                <AppBar sx={{ position: 'relative' }}>
+                <AppBar sx={{ position: 'relative', backgroundColor: '#64a953'}}>
                   <Toolbar>
                     <IconButton
                       edge="start"
@@ -333,7 +333,7 @@ const Work = () => {
                   onClose={handleClose}
                   TransitionComponent={Transition}
                 >
-                  <AppBar sx={{ position: 'relative' }}>
+                  <AppBar sx={{ position: 'relative', backgroundColor: '#64a953'}}>
                     <Toolbar>
                       <IconButton
                         edge="start"
@@ -349,7 +349,8 @@ const Work = () => {
                     </Toolbar>
                   </AppBar>
                   <DialogContent>
-                    <embed width="100%" height="100%" src={hr}></embed>
+                    <embed width="100%" height="100%" src="https://futurekenya.com/downloads/Palladium%20Accounting.pdf"></embed>
+
                   </DialogContent>
                 </Dialog>
               )}
@@ -363,7 +364,6 @@ const Work = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
     </div>

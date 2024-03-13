@@ -31,7 +31,7 @@ const Contact = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCountryCode, setSelectedCountryCode] = useState('');
   const [successMessageVisible, setSuccessMessageVisible] = useState(false); // State to manage success message visibility
-  
+  const [isLoading, setIsLoading] = useState(false)
   const [open, setOpen] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
 
@@ -230,6 +230,8 @@ const Contact = () => {
   };
 
     const handleFormSubmit = async (e) => {
+
+      setIsLoading(true)
       e.preventDefault();
     
       try {
@@ -251,11 +253,17 @@ const Contact = () => {
           countryCode: '',
           message: ''
         });
+        //setTimeout(() => setIsLoading(false), 1000)
+        setIsLoading(false)
         setOpen(true); // Show success alert dialog
       } catch (error) {
         // Error sending data, show warning alert
         setOpenError(true);
       }
+      
+      // setTimeout(() => {
+      //   setIsLoading(false)
+      // }, 4000)
     }
 
   return (
@@ -416,10 +424,16 @@ const Contact = () => {
               placeholder="Enter your message here..."
               onChange={handleInputChange}
               rows={4}
-              required
               style={{ resize: 'vertical', borderRadius: '2rem 0 2rem 0' }}
             ></textarea>
-            <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>Submit</button>
+            {/* {isLoading ? (
+              <div>Sending data...</div>
+            ) : (
+              <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>Submit</button>
+            )} */}
+            <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>
+              {!isLoading ? 'Submit' : 'Sending data...'}
+            </button>
           </form>
         </div>
         </div>
