@@ -431,7 +431,10 @@ const Contact = () => {
             ) : (
               <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>Submit</button>
             )} */}
-            <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>
+            {/* <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>
+              {!isLoading ? 'Submit' : 'Sending data...'}
+            </button> */}
+            <button className='btnsubmit' style={{ width: '30%', padding: '.5rem', cursor: 'pointer' }} type='submit' disabled={isLoading}>
               {!isLoading ? 'Submit' : 'Sending data...'}
             </button>
           </form>
