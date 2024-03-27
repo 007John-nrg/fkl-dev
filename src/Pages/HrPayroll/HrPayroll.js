@@ -1,7 +1,7 @@
 import React from 'react'
 import './HrPayroll.css'
 import { FaCloudUploadAlt, FaIoxhost, FaCreditCard, FaTablet, FaExchangeAlt, FaHeart, FaGlobe, FaSyncAlt, FaConnectdevelop, FaLock } from 'react-icons/fa';
-import payspace from '../../assets/payspace.jpg'
+import payspace from '../../assets/payspce.png'
 import Footer from '../../Components/Footer';
 import { BsSendFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';

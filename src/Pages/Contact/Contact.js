@@ -34,6 +34,7 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [open, setOpen] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
+  const [buttonDisabled, setButtonDisabled] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -233,6 +234,7 @@ const Contact = () => {
 
       setIsLoading(true)
       e.preventDefault();
+      setButtonDisabled(true);
     
       try {
         await sendDataWithToken();
@@ -434,7 +436,7 @@ const Contact = () => {
             {/* <button className='btnsubmit' style={{width: '30%', padding: '.5rem', cursor: 'pointer'}} type='submit'>
               {!isLoading ? 'Submit' : 'Sending data...'}
             </button> */}
-            <button className='btnsubmit' style={{ width: '30%', padding: '.5rem', cursor: 'pointer' }} type='submit' disabled={isLoading}>
+            <button disabled={buttonDisabled}  className='btnsubmit' style={{ width: '30%', padding: '.5rem', cursor: 'pointer' }} type='submit' disabled={isLoading}>
               {!isLoading ? 'Submit' : 'Sending data...'}
             </button>
           </form>
