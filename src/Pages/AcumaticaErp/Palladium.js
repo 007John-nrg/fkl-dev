@@ -1,19 +1,33 @@
 import React, {useState} from 'react';
 import './AcumaticaErp.css';
-import image7 from '../../assets/aim106.png';
-import image8 from '../../assets/aim17.png';
-import image9 from '../../assets/aim18.png';
-import image10 from '../../assets/aim19.png';
-import image11 from '../../assets/aim20.png';
-import image12 from '../../assets/aim21.png';
-import image13 from '../../assets/aim22.png';
-import image14 from '../../assets/aim23.png';
-import image15 from '../../assets/aim24.png';
-import image17 from '../../assets/aim25.png';
-import image18 from '../../assets/aim26.png';
-import image19 from '../../assets/aim27.png';
-import image20 from '../../assets/aim28.png';
-import image21 from '../../assets/aim29.png';
+// import image7 from '../../assets/aim106.png';
+// import image8 from '../../assets/aim17.png';
+// import image9 from '../../assets/aim18.png';
+// import image10 from '../../assets/aim19.png';
+// import image11 from '../../assets/aim20.png';
+// import image12 from '../../assets/aim21.png';
+// import image13 from '../../assets/aim22.png';
+// import image14 from '../../assets/aim23.png';
+// import image15 from '../../assets/aim24.png';
+// import image17 from '../../assets/aim25.png';
+// import image18 from '../../assets/aim26.png';
+// import image19 from '../../assets/aim27.png';
+// import image20 from '../../assets/aim28.png';
+// import image21 from '../../assets/aim29.png';
+import image7 from '../../assets/aim106.webp';
+import image8 from '../../assets/aim17.webp';
+import image9 from '../../assets/aim18.webp';
+import image10 from '../../assets/aim19.webp';
+import image11 from '../../assets/aim20.webp';
+import image12 from '../../assets/aim21.webp';
+import image13 from '../../assets/aim22.webp';
+import image14 from '../../assets/aim23.webp';
+import image15 from '../../assets/aim24.webp';
+import image17 from '../../assets/aim25.webp';
+import image18 from '../../assets/aim26.webp';
+import image19 from '../../assets/aim27.webp';
+import image20 from '../../assets/aim28.webp';
+import image21 from '../../assets/aim29.webp';
 import Footer from '../../Components/Footer';
 import p from '../../assets/palladium/P/P_page-0001.jpg';
 import p2 from '../../assets/palladium/P/P_page-0002.jpg';
@@ -112,7 +126,7 @@ const Palladium = () => {
     <div>
     <Navbar />
     <div className='acumaticaContainer pallCont'>
-      <div className="aside" style={{overflowY: 'auto', border: '1px solid red' }}>
+      <div className="aside" style={{overflowY: 'auto' }}>
         <Pall />
       </div>
 

@@ -3,7 +3,7 @@ import './Test.css';
 //import HTMLFlipBook from 'react-pageflip';
 import { jsPDF } from 'jspdf';
 //import html2canvas from 'html2canvas';
-import p from './assets/palladium/P/P_page-0001.jpg';
+//import p from './assets/palladium/P/P_page-0001.jpg';
 import p2 from './assets/palladium/P/P_page-0002.jpg';
 import p3 from './assets/palladium/P/P_page-0003.jpg';
 import p4 from './assets/palladium/P/P_page-0004.jpg';
@@ -15,36 +15,47 @@ import p9 from './assets/palladium/P/P_page-0009.jpg';
 import p10 from './assets/palladium/P/P_page-0010.jpg';
 import p11 from './assets/palladium/P/P_page-0011.jpg';
 import p12 from './assets/palladium/P/P_page-0012.jpg';
-import p13 from './assets/palladium/P(1)/P (1)_page-0001.jpg';
+//import p13 from './assets/palladium/P(1)/P (1)_page-0001.jpg';
+
+import p from './assets/P_page-0001.webp';
+import p13 from './assets/P (1)_page-0001.webp';
+import p19 from './assets/P (2)_page-0001.webp';
+import p23 from './assets/Palladium Accounting Summary Brochure_page-0001.webp';
+import p27 from './assets/Palladium App Suite Brochure 2022_page-0001.webp';
+import p30 from './assets/Palladium Feature_page-0001.webp';
+import p36 from './assets/Palladium Pay_page-0001.webp';
+import p40 from './assets/palladiumAccount.webp'
+
 import p14 from './assets/palladium/P(1)/P (1)_page-0002.jpg';
 import p15 from './assets/palladium/P(1)/P (1)_page-0003.jpg';
 import p16 from './assets/palladium/P(1)/P (1)_page-0004.jpg';
 import p160 from './assets/palladium/P(1)/P (1)_page-0005.jpg';
 import p17 from './assets/palladium/P(1)/P (1)_page-0006.jpg';
 import p18 from './assets/palladium/P(1)/P (1)_page-0007.jpg';
-import p19 from './assets/palladium/P(2)/P (2)_page-0001.jpg';
+//import p19 from './assets/palladium/P(2)/P (2)_page-0001.jpg';
 import p20 from './assets/palladium/P(2)/P (2)_page-0002.jpg';
 import p21 from './assets/palladium/P(2)/P (2)_page-0003.jpg';
 import p22 from './assets/palladium/P(2)/P (2)_page-0004.jpg';
-import p23 from './assets/palladium/palladimAcc/Palladium Accounting Summary Brochure_page-0001.jpg';
+//import p23 from './assets/palladium/palladimAcc/Palladium Accounting Summary Brochure_page-0001.jpg';
 import p24 from './assets/palladium/palladimAcc/Palladium Accounting Summary Brochure_page-0002.jpg';
 import p25 from './assets/palladium/palladimAcc/Palladium Accounting Summary Brochure_page-0003.jpg';
 import p26 from './assets/palladium/palladimAcc/Palladium Accounting Summary Brochure_page-0004.jpg';
-import p27 from './assets/palladium/pallapp/Palladium App Suite Brochure 2022_page-0001.jpg';
+//import p27 from './assets/palladium/pallapp/Palladium App Suite Brochure 2022_page-0001.jpg';
 import p28 from './assets/palladium/pallapp/Palladium App Suite Brochure 2022_page-0002.jpg';
 import p29 from './assets/palladium/pallapp/Palladium App Suite Brochure 2022_page-0003.jpg';
-import p30 from './assets/palladium/pallfeat/Palladium Feature_page-0001.jpg';
+//import p30 from './assets/palladium/pallfeat/Palladium Feature_page-0001.jpg';
 import p31 from './assets/palladium/pallfeat/Palladium Feature_page-0002.jpg';
 import p32 from './assets/palladium/pallfeat/Palladium Feature_page-0003.jpg';
 import p33 from './assets/palladium/pallfeat/Palladium Feature_page-0004.jpg';
 import p34 from './assets/palladium/pallfeat/Palladium Feature_page-0005.jpg';
 import p35 from './assets/palladium/pallfeat/Palladium Feature_page-0006.jpg';
-import p36 from './assets/palladium/pallpay/Palladium Pay_page-0001.jpg';
+//import p36 from './assets/palladium/pallpay/Palladium Pay_page-0001.jpg';
 import p37 from './assets/palladium/pallpay/Palladium Pay_page-0002.jpg';
 import p38 from './assets/palladium/pallpay/Palladium Pay_page-0003.jpg';
 import p39 from './assets/palladium/pallpay/Palladium Pay_page-0004.jpg';
-import p40 from './assets/palladium/palladiumAccount.jpg'
+//import p40 from './assets/palladium/palladiumAccount.jpg'
 import { Link } from 'react-router-dom';
+
 import palladium1 from './assets/Palladium Accounting.pdf'
 import palladium2 from './assets/P.pdf'
 import palladium3 from './assets/Palladium Pay.pdf'
