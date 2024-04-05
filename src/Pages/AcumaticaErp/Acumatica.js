@@ -1,46 +1,27 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React from 'react';
 import './AcumaticaErp.css';
 import video from '../../assets/Acumatica_Cloud_ERP_Software_3_minute_Overview-gsv.mp4';
 import imageDemo from '../../assets/aim7.png';
 //import image from '../../assets/aim778.png';
 import image from '../../assets/aim778.webp'
 import image1 from '../../assets/aim9.png';
-import image2 from '../../assets/aim10.png';
-import image3 from '../../assets/aim11.png';
-import image4 from '../../assets/aim12.png';
-import image5 from '../../assets/aim13.png';
-import image6 from '../../assets/aim14.png';
-import image8 from '../../assets/aim105.PNG';
+// import image2 from '../../assets/aim10.png';
+// import image3 from '../../assets/aim11.png';
+// import image4 from '../../assets/aim12.png';
+// import image5 from '../../assets/aim13.png';
+import image2 from '../../assets/aim10.webp';
+import image3 from '../../assets/aim11.webp';
+import image4 from '../../assets/aim12.webp';
+import image5 from '../../assets/aim13.webp';
+import image6 from '../../assets/aim14.webp';
+import image8 from '../../assets/aim105.webp';
+//import image8 from '../../assets/aim105.PNG';
 import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../../Components/Navbar';
 
 
 const Acumatica = () => {
-  const videoContainerRef = useRef(null);
-  const [isIntersecting, setIsIntersecting] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsIntersecting(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (videoContainerRef.current) {
-      observer.observe(videoContainerRef.current);
-    }
-
-    return () => {
-      if (videoContainerRef.current) {
-        observer.unobserve(videoContainerRef.current);
-      }
-    };
-  }, []);
 
   return (
     <div>
@@ -57,27 +38,11 @@ const Acumatica = () => {
           </p>
         </div>
 
-        <div className="vivid">
-          <div className="videoContainer" ref={videoContainerRef}>
-            {isIntersecting && (
-              <iframe
-                width="660"
-                height="400"
-                src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            )}
-          </div>
-        </div>
-
-        {/* <div className="vivid">   
+        <div className="vivid">   
           <div className='videoContainer'>
             <iframe width="660" height="400" src="https://www.youtube.com/embed/hmNORkJ6kms?si=AgVhdtSzsoUW_J2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-        </div> */}
+        </div>
 
         <div className="acumaticaContent acumatica2">
           <div className='acumatica3'>
