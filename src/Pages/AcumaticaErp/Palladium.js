@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './AcumaticaErp.css';
-import HTMLFlipBook from 'react-pageflip';
 import image7 from '../../assets/aim106.png';
 import image8 from '../../assets/aim17.png';
 import image9 from '../../assets/aim18.png';
@@ -113,7 +112,7 @@ const Palladium = () => {
     <div>
     <Navbar />
     <div className='acumaticaContainer pallCont'>
-      <div className="aside" style={{overflowY: 'auto' }}>
+      <div className="aside" style={{overflowY: 'auto', border: '1px solid red' }}>
         <Pall />
       </div>
 

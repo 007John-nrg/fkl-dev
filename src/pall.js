@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './Test.css';
-import HTMLFlipBook from 'react-pageflip';
+//import HTMLFlipBook from 'react-pageflip';
 import { jsPDF } from 'jspdf';
-import html2canvas from 'html2canvas';
+//import html2canvas from 'html2canvas';
 import p from './assets/palladium/P/P_page-0001.jpg';
 import p2 from './assets/palladium/P/P_page-0002.jpg';
 import p3 from './assets/palladium/P/P_page-0003.jpg';
