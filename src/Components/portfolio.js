@@ -4,11 +4,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Carousel } from 'react-responsive-carousel';
 import './components.css'
-import img1 from '../assets/case1.png';
-import img2 from '../assets/case2.png';
-import img3 from '../assets/case3.png';
-import img5 from '../assets/case4.png';
-import img6 from '../assets/case5.png';
+// import img1 from '../assets/case1.png';
+// import img2 from '../assets/case2.png';
+// import img3 from '../assets/case3.png';
+// import img5 from '../assets/case4.png';
+// import img6 from '../assets/case5.png';
+import img1 from '../assets/case1.webp';
+import img2 from '../assets/case2.webp';
+import img3 from '../assets/case3.webp';
+import img5 from '../assets/case4.webp';
+import img6 from '../assets/case5.webp';
 
 const Portfolio = () => {
 
@@ -74,7 +79,7 @@ const Portfolio = () => {
                 <div key={index}>
                   <div key={image.id}>
                     <div className="img-bod">
-                      <img src={image} alt="portfolio image" />
+                      <img src={image} alt="customer case studies" />
                     </div>
                   </div>
                 </div>
