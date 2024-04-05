@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/fkl1.png';
+// import logo from '../assets/fkl1.png';
+import logo from '../assets/fkl1.webp';
 import './components.css';
 
 const Menu = () => {
