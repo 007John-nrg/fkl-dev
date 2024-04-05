@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import './components.css'
 import { Link } from 'react-router-dom';
-import logo from '../assets/fkl1.png';
+//import logo from '../assets/fkl1.png';
+import logo from '../assets/fkl1.webp';
 import { HiMiniBars3 } from "react-icons/hi2";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';

@@ -1,8 +1,11 @@
 import React from 'react'
 import './components.css'
-import images3 from '../assets/acumatica.jpg'
-import images4 from '../assets/palladium.jpg'
-import images5 from '../assets/payspace.jpg'
+// import images3 from '../assets/acumatica.jpg'
+// import images4 from '../assets/palladium.jpg'
+//import images5 from '../assets/payspace.jpg'
+import images5 from '../assets/payspce.webp'
+import images3 from '../assets/aim7.webp'
+import images4 from '../assets/palladium.webp'
 
 const IndustryErp = () => {
   return (
@@ -15,13 +18,13 @@ const IndustryErp = () => {
       <div className='content'>
         <div className='pictures'>
           <div className='picture'>
-            <a href='https://www.acumatica.com'><img src={images3} width="200" height="200" alt='Solution'></img></a>
+            <a href='https://www.acumatica.com'><img src={images3} width="200" height="200" alt='Acumatica ERP logo'></img></a>
           </div>
           <div className='picture'>
-            <a className='drop' href='https://www.palladium.co.za/palladium-accounting/'><img src={images4} width="300" height="100" alt='Solution'></img></a>
+            <a className='drop' href='https://www.palladium.co.za/palladium-accounting/'><img src={images4} width="300" height="100" alt='Palladium logo'></img></a>
           </div>
           <div className='picture'>
-            <a href='https://www.payspace.com'><img src={images5} width="300" height="200" alt='Solution'></img></a>
+            <a href='https://www.payspace.com'><img src={images5} width="300" height="200" alt='Payspace logo'></img></a>
           </div>
         </div>
 

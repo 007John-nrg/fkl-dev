@@ -1,9 +1,13 @@
 import React from 'react'
 import './components.css'
 import { Link } from 'react-router-dom';
-import images3 from '../assets/aim7.png'
-import images4 from '../assets/palladium.jpg'
-import images5 from '../assets/payspace.jpg'
+// import images3 from '../assets/aim7.png'
+// import images4 from '../assets/palladium.jpg'
+// import images5 from '../assets/payspace.jpg'
+
+import images5 from '../assets/payspce.webp'
+import images3 from '../assets/aim7.webp'
+import images4 from '../assets/palladium.webp'
 
 const Industry = () => {
   return (
